@@ -424,9 +424,16 @@ export const coachesList = [
   {
     name: "Erin Wilson",
     role: "Club Director & SVC 17 Blue Head Coach",
-    team: "SVC 17 Blue",
+    team: "Club Director • SVC 17 Blue",
     image: "/images/coaches/erin.png",
     bio: "25+ years of coaching experience and former collegiate hitter. Qualified her 18s team for USAV Nationals and leads SVC's whole-athlete philosophy."
+  },
+  {
+    name: "Hannah Berry",
+    role: "Assistant Club Director & SVC 14 National Head Coach",
+    team: "Asst. Club Director • SVC 14 National",
+    image: "/images/coaches/hannah.png",
+    bio: "Assistant Club Director and member of the first SVC team to qualify for USAV Nationals as a National-level libero, now entering her 5th year coaching."
   },
   {
     name: "Sarah Armstrong",
@@ -497,13 +504,6 @@ export const coachesList = [
     team: "SVC 15 White",
     image: "/images/coaches/jalyn.png",
     bio: "5th season with Summit and 6th year coaching overall; also coaches Upper School volleyball at HBHA in Overland Park."
-  },
-  {
-    name: "Hannah Berry",
-    role: "SVC 14 National Head Coach",
-    team: "SVC 14 National",
-    image: "/images/coaches/hannah.png",
-    bio: "Member of the first SVC team to qualify for USAV Nationals as a National-level libero, now entering her 5th year coaching."
   },
   {
     name: "Ava Martin",
