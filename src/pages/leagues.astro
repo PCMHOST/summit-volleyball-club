@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clubInfo } from '../data/clubData';
+---
+
+<BaseLayout title="SVC 4v4 Summer League | Summit Volleyball Club">
+  <section class="bg-svc-navy text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 rounded bg-svc-gold text-svc-navy font-display font-extrabold uppercase tracking-widest text-xs mb-3">
+        Summer Series • TM Fieldhouse
+      </span>
+      <h1 class="font-display font-black uppercase text-5xl sm:text-6xl tracking-tight leading-none">
+        SVC <span class="text-svc-sky">4V4 SUMMER LEAGUE</span>
+      </h1>
+      <p class="text-slate-200 text-lg max-w-2xl mt-3">
+        Fast-paced, high-rep 4v4 summer competition hosted at TM Fieldhouse in Lee's Summit, MO.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-svc-ice rounded-2xl p-8 sm:p-12 border border-slate-200 shadow-sm space-y-6">
+        <h2 class="font-display font-black uppercase text-3xl sm:text-4xl text-svc-navy">
+          MORE TOUCHES. FASTER READS. HIGH-ENERGY SUMMER PLAY.
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+          Our <strong>SVC 4v4 Summer League</strong> is designed to keep athletes sharp during the summer months with fast-moving rallies, maximum ball contacts per player, and competitive division play at <strong>TM Fieldhouse (1550 SE Hamblen Rd, Lee's Summit, MO)</strong>.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+          <div class="bg-white p-5 rounded-xl border border-slate-200">
+            <div class="font-display font-extrabold uppercase text-xl text-svc-royal">4v4 Format</div>
+            <p class="text-sm text-slate-600 mt-1">Every player touches the ball on nearly every rally—building all-around court instincts and transition speed.</p>
+          </div>
+          <div class="bg-white p-5 rounded-xl border border-slate-200">
+            <div class="font-display font-extrabold uppercase text-xl text-svc-royal">Home Court</div>
+            <p class="text-sm text-slate-600 mt-1">Hosted in our climate-controlled home facility at TM Fieldhouse in Lee's Summit.</p>
+          </div>
+          <div class="bg-white p-5 rounded-xl border border-slate-200">
+            <div class="font-display font-extrabold uppercase text-xl text-svc-royal">Open Gyms & Clinics</div>
+            <p class="text-sm text-slate-600 mt-1">Pair league play with our Summer Open Gyms and Advanced Skills Clinics ahead of July Tryouts.</p>
+          </div>
+        </div>
+
+        <div class="pt-6 flex flex-wrap gap-4">
+          <a
+            href={`mailto:${clubInfo.email}?subject=SVC%204v4%20Summer%20League%20Inquiry`}
+            class="bg-svc-royal hover:bg-svc-blue text-white font-display font-extrabold uppercase tracking-wider text-lg px-7 py-3.5 rounded shadow transition-colors"
+          >
+            Email {clubInfo.email} to Register a Team
+          </a>
+          <a
+            href="/tryouts"
+            class="bg-white hover:bg-slate-100 text-svc-navy border border-slate-300 font-display font-bold uppercase tracking-wider text-lg px-7 py-3.5 rounded transition-colors"
+          >
+            View Summer Open Gyms & Tryouts
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

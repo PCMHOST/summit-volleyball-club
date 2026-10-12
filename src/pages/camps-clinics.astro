@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clubInfo, boysTryoutSchedule } from '../data/clubData';
+
+const clinics = [
+  {
+    title: "Pre-Tryout Tune-Up & All-Skills Clinics",
+    badge: "GIRLS & BOYS • AGES 10–18",
+    price: "$10 Entry Per Session",
+    schedule: "May – July Sessions at TM Fieldhouse",
+    description: "High-rep technical preparation designed to get athletes comfortable in the gym, meet our 2026–2027 coaching staff, and sharpen serving, passing, setting, and attacking mechanics before July evaluations.",
+    highlights: [
+      "Fast-paced wash drills & competitive 6v6 court play",
+      "Direct instruction from SVC National & Premier head coaches",
+      "Pay via Venmo (@SUMMITVC) or cash at the door"
+    ]
+  },
+  {
+    title: "Setters & Attackers Positional Academy",
+    badge: "POSITIONAL SPECIALIZATION",
+    price: "Small-Group Intensive",
+    schedule: "Weekly Summer & Off-Season Sessions",
+    description: "Focused positional training breaking down hand contact, footwork tempo, out-of-system setting, arm-swing mechanics, and shot selection against a live block.",
+    highlights: [
+      "Setter-hitter tempo connection & offensive IQ",
+      "Video feedback and jump-approach footwork mechanics",
+      "Divided by age & skill tier (11U–14U and 15U–18U)"
+    ]
+  },
+  {
+    title: "Libero, DS & Serve-Receive Pressure Lab",
+    badge: "FIRST-CONTACT MASTERY",
+    price: "High-Rep Defensive Lab",
+    schedule: "Summer & Pre-Season Sessions",
+    description: "Championship volleyball starts with the first contact. Athletes train platform angles, reading server tosses, emergency defensive pursuit, and aggressive float/topspin serving.",
+    highlights: [
+      " cientos of live serve-receive reps per session",
+      "Out-of-system libero setting & seam communication",
+      "Mental reset routines under tournament pressure"
+    ]
+  },
+  {
+    title: "Boys Summer Open Gyms (15U–18U)",
+    badge: "BOYS VOLLEYBALL HUB",
+    price: "$10 Entry",
+    schedule: "May 21, June 22, June 29 & July 21",
+    description: "Open gym sessions for 15U/16U and 17U/18U boys preparing for the upcoming USAV club season and July 25–26 tryouts at TM Fieldhouse.",
+    highlights: [
+      "15U/16U & 17U/18U dedicated court times",
+      "Compete alongside our USA National Bid winners",
+      "Pre-registration required via our online Google Form"
+    ]
+  }
+];
+---
+
+<BaseLayout title="Camps, Clinics & Open Gyms | Summit Volleyball Club">
+  <!-- Hero -->
+  <section class="bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
+        <span class="material-symbols-outlined text-sm">sports_volleyball</span>
+        <span>YEAR-ROUND SKILL DEVELOPMENT AT TM FIELDHOUSE</span>
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+        SVC CAMPS, CLINICS <span class="text-brand-blue">&amp; OPEN GYMS</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mt-3">
+        Elevate your technical fundamentals, positional footwork, and court IQ with Summit Volleyball Club's year-round clinics and summer open gyms in Lee's Summit.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a
+          href={clubInfo.tryoutRegistrationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-6 py-3 rounded-sm font-display text-xl font-black uppercase tracking-wider shadow"
+        >
+          <span>PRE-REGISTER FOR CLINICS &amp; OPEN GYMS</span>
+          <span class="material-symbols-outlined text-lg">arrow_forward</span>
+        </a>
+        <a
+          href="/tryouts"
+          class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/30 px-6 py-3 rounded-sm font-display text-xl font-bold uppercase tracking-wider transition-colors"
+        >
+          <span>VIEW JULY TRYOUT DATES</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Clinic Programs Grid -->
+  <section class="py-14 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {clinics.map((clinic) => (
+          <div class="bg-surface-subtle border border-slate-200 border-t-4 border-t-brand-blue rounded-sm p-7 flex flex-col justify-between shadow-xs hover:shadow-lg transition-all">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <span class="bg-athletic-black text-brand-blue px-2.5 py-1 rounded-sm text-xs font-display font-black uppercase tracking-wider">
+                  {clinic.badge}
+                </span>
+                <span class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark bg-powder-50 px-2.5 py-1 rounded-sm border border-brand-blue/30">
+                  {clinic.price}
+                </span>
+              </div>
+              <h2 class="font-display text-3xl uppercase font-black text-athletic-black leading-tight">
+                {clinic.title}
+              </h2>
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-sm text-brand-blue-dark">calendar_month</span>
+                <span>{clinic.schedule}</span>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                {clinic.description}
+              </p>
+              <ul class="space-y-2 pt-2">
+                {clinic.highlights.map((item) => (
+                  <li class="flex items-start gap-2 text-xs font-semibold text-slate-700">
+                    <span class="material-symbols-outlined text-brand-blue-dark text-base shrink-0">check_circle</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-500">Location: TM Fieldhouse</span>
+              <a
+                href={clubInfo.tryoutRegistrationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 text-xs font-extrabold uppercase tracking-wider text-athletic-black hover:text-brand-blue-dark"
+              >
+                <span>Register Now</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Boys Open Gym Dates Table & Flyer -->
+  <section class="py-14 bg-surface-subtle">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            SUMMER SCHEDULE • $10 ENTRY
+          </span>
+          <h2 class="font-display text-4xl font-black uppercase text-athletic-black">
+            2026 BOYS OPEN GYM SESSIONS
+          </h2>
+          <p class="text-sm text-slate-600 mt-1">
+            All sessions held at TM Fieldhouse ({clubInfo.facility.fullAddress}). Pay via Venmo <strong class="text-athletic-black">{clubInfo.venmo}</strong> or cash at check-in.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {boysTryoutSchedule.openGyms.map((group) => (
+            <div class="bg-white p-5 rounded-sm border border-slate-200 shadow-xs">
+              <div class="font-display text-2xl font-black uppercase text-athletic-black border-b border-slate-100 pb-2 mb-3">
+                {group.division}
+              </div>
+              <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                {group.sessions.map((s) => (
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm text-brand-blue-dark">schedule</span>
+                    <span>{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div class="p-4 rounded-sm bg-powder-50 border border-brand-blue/30 flex items-center justify-between flex-wrap gap-4">
+          <div class="text-xs font-semibold text-slate-700">
+            Looking for <strong>Private or Small-Group Lessons</strong> with an SVC coach?
+          </div>
+          <a href="/contact" class="text-xs font-extrabold uppercase tracking-wider text-athletic-black hover:text-brand-blue-dark underline">
+            Request Private Lesson Info →
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <img
+          src="/images/tryouts/boys-open-gyms-2026.png"
+          alt="SVC Boys Open Gyms & Tryouts Flyer"
+          class="w-full rounded-sm shadow-xl border border-slate-200"
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { currentQualifications, collegeCommits } from '../data/clubData';
+---
+
+<BaseLayout title="National Bids & Qualifications | Summit Volleyball Club (SVC)">
+  <!-- Page Header -->
+  <section class="bg-svc-navy text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 rounded bg-svc-gold text-svc-navy font-display font-extrabold uppercase tracking-widest text-xs mb-3">
+        USAV National Championship Qualifiers
+      </span>
+      <h1 class="font-display font-black uppercase text-5xl sm:text-6xl tracking-tight leading-none">
+        SVC <span class="text-svc-sky">NATIONAL QUALIFICATIONS</span> & TROPHY CASE
+      </h1>
+      <p class="text-slate-200 text-lg max-w-2xl mt-3">
+        Celebrating our Girls and Boys teams earning bids to USA Volleyball Junior National Championships across the country—Reno, Dallas, Minneapolis, Indianapolis, and Las Vegas!
+      </p>
+    </div>
+  </section>
+
+  <!-- Qualifications Cards Grid -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {currentQualifications.map((bid) => (
+          <article class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col">
+            <div class="relative aspect-[4/3] bg-slate-100 overflow-hidden">
+              <img src={bid.image} alt={bid.team} class="w-full h-full object-cover" />
+              <div class="absolute top-3 left-3 bg-svc-gold text-svc-navy font-display font-extrabold uppercase text-xs tracking-wider px-3 py-1 rounded shadow">
+                {bid.badge}
+              </div>
+              <div class="absolute bottom-3 right-3 bg-svc-navy/90 text-white font-display font-bold uppercase text-xs px-2.5 py-1 rounded">
+                {bid.season}
+              </div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-svc-royal">
+                  {bid.destination}
+                </div>
+                <h2 class="font-display font-extrabold uppercase text-2xl text-svc-navy mt-1 leading-tight">
+                  {bid.title}
+                </h2>
+                <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                  {bid.description}
+                </p>
+              </div>
+              <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold uppercase text-slate-500">
+                <span>{bid.team}</span>
+                <span class="text-svc-blue">National Qualifier ★</span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Video Highlights Section -->
+      <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-svc-ice rounded-xl p-6 border border-slate-200 space-y-3">
+          <span class="px-2.5 py-1 rounded bg-svc-royal text-white font-display font-bold uppercase text-xs">
+            Regional Championship Final Point
+          </span>
+          <h3 class="font-display font-extrabold uppercase text-2xl text-svc-navy">
+            SVC 16-1 National Girls Win Region Bid (Vegas Bound!)
+          </h3>
+          <div class="aspect-video rounded-lg overflow-hidden bg-black">
+            <video controls preload="metadata" class="w-full h-full object-cover">
+              <source src="https://cdn4.sportngin.com/attachments/video_file/81c7-503085/SVC_16-1_girls_final_point_at_Regionals_031024_1080.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="bg-svc-ice rounded-xl p-6 border border-slate-200 space-y-3">
+          <span class="px-2.5 py-1 rounded bg-svc-gold text-svc-navy font-display font-extrabold uppercase text-xs">
+            10-0 Undefeated MEQ Champions
+          </span>
+          <h3 class="font-display font-extrabold uppercase text-2xl text-svc-navy">
+            SVC 15-1 Girls Win 64-Team Mideast National Qualifier!
+          </h3>
+          <div class="aspect-video rounded-lg overflow-hidden bg-black">
+            <img src="/images/teams/15-1-meq-champs.jpg" alt="Summit 15-1 MEQ 1st Place" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- College Commitments Section -->
+  <section class="py-16 sm:py-20 bg-svc-ice border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display font-black uppercase text-4xl text-svc-navy mb-8">
+        OUR <span class="text-svc-royal">COLLEGE COMMITS</span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        {collegeCommits.map((athlete) => (
+          <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-xs">
+            <div class="aspect-[3/4] overflow-hidden bg-slate-100">
+              <img src={athlete.image} alt={athlete.name} class="w-full h-full object-cover object-top" />
+            </div>
+            <div class="p-4">
+              <div class="text-xs font-bold uppercase text-svc-royal">{athlete.college}</div>
+              <div class="font-display font-extrabold uppercase text-xl text-svc-navy">{athlete.name}</div>
+              <div class="text-xs text-slate-500">{athlete.mascot}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

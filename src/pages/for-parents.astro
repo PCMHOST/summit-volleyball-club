@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clubInfo } from '../data/clubData';
+
+const parentResources = [
+  {
+    title: "USAV / HOA Age Definition Calculator",
+    desc: "Verify your athlete's official USA Volleyball / Heart of America age division for the 2026–2027 season.",
+    href: clubInfo.ageCalculatorUrl,
+    cta: "Open Age Calculator",
+    icon: "calculate"
+  },
+  {
+    title: "Heart of America (HOA) Region Portal",
+    desc: "Register or renew your athlete's USAV / HOA membership required for tryouts and regional tournaments.",
+    href: clubInfo.hoaMembershipUrl,
+    cta: "Visit HOA Volleyball",
+    icon: "badge"
+  },
+  {
+    title: "SportsEngine Account Dashboard Guide (PDF)",
+    desc: "Step-by-step PDF guide for configuring parent notification preferences, rosters, and billing in SportsEngine.",
+    href: clubInfo.sportsEngineParentGuidePdf,
+    cta: "Download PDF Guide",
+    icon: "picture_as_pdf"
+  },
+  {
+    title: "SportsEngine Parent Help Center",
+    desc: "Quick start guides for creating an account, linking multiple athletes in your household, and using the mobile app.",
+    href: clubInfo.sportsEngineHelpUrl,
+    cta: "View Help Articles",
+    icon: "help"
+  }
+];
+---
+
+<BaseLayout title="For Parents | Summit Volleyball Club">
+  <!-- Hero -->
+  <section class="bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
+        <span class="material-symbols-outlined text-sm">family_restroom</span>
+        <span>FAMILY RESOURCES &amp; TEAM COMMUNICATION</span>
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+        FOR <span class="text-brand-blue">PARENTS &amp; FAMILIES</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mt-3">
+        Everything Summit Volleyball Club parents need to stay connected to schedules, USAV/HOA memberships, SportsEngine accounts, and tournament logistics.
+      </p>
+    </div>
+  </section>
+
+  <!-- Parent Involvement & SportsEngine Overview -->
+  <section class="py-14 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-7 space-y-6">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            THE SUMMIT FAMILY CULTURE
+          </span>
+          <h2 class="font-display text-4xl font-black uppercase text-athletic-black mt-1">
+            PARENT INVOLVEMENT &amp; PARTNERSHIP
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          Parents play many vital roles in youth athletics: current or former athlete, fan, motivator, and role model. Studies consistently show that family members influence an athlete’s enjoyment, resilience, and achievement in sport more than anyone else. At Summit Volleyball Club, we partner closely with parents to foster a positive, growth-oriented environment on and off the court.
+        </p>
+
+        <div class="bg-surface-subtle p-6 rounded-sm border border-slate-200 space-y-3">
+          <h3 class="font-display text-2xl font-black uppercase text-athletic-black">
+            MANAGING YOUR SPORTSENGINE ACCOUNT
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Parents and athletes use their accounts and the SportsEngine mobile app to receive real-time practice updates, tournament schedules, team chat messages, and registration links. With your account properly configured, your family will receive communications according to your preferences and be able to complete season registrations seamlessly.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-3">
+            <a
+              href={clubInfo.sportsEngineParentGuidePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 bg-athletic-black hover:bg-athletic-charcoal text-white px-4 py-2 rounded-sm font-display text-base uppercase font-bold tracking-wider transition-colors"
+            >
+              <span class="material-symbols-outlined text-sm text-brand-blue">download</span>
+              <span>Download User Account Guide (PDF)</span>
+            </a>
+            <a
+              href={clubInfo.sportsEngineHelpUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 bg-white hover:bg-powder-50 text-athletic-black border border-slate-300 px-4 py-2 rounded-sm font-display text-base uppercase font-bold tracking-wider transition-colors"
+            >
+              <span>New to SportsEngine? Quick Start →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Quick Links Grid -->
+      <div class="lg:col-span-5 space-y-4">
+        <div class="font-display text-2xl font-black uppercase text-athletic-black">
+          ESSENTIAL PARENT LINKS
+        </div>
+        {parentResources.map((res) => (
+          <a
+            href={res.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-5 bg-surface-subtle hover:bg-powder-50 border border-slate-200 rounded-sm transition-all group"
+          >
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-sm bg-athletic-black text-brand-blue flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-xl">{res.icon}</span>
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-display text-xl font-black uppercase text-athletic-black group-hover:text-brand-blue-dark">
+                  {res.title}
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed">{res.desc}</p>
+                <div class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark pt-1">
+                  {res.cta} →
+                </div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stay Connected / Mobile App Banner -->
+  <section class="py-14 bg-surface-subtle">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+      <div class="bg-athletic-black text-white p-8 md:p-10 rounded-sm border-t-4 border-brand-blue grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-2">
+          <div class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">STAY CONNECTED TO YOUR TEAM</div>
+          <h3 class="font-display text-3xl sm:text-4xl font-black uppercase">
+            SCHEDULES, RSVP, SCORES &amp; PHOTO SHARING IN ONE PLACE
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Get schedules and team updates for every athlete in the house, message other families on your team, and give coaches a quick heads-up about practice attendance using the SportsEngine mobile app on iOS and Android.
+          </p>
+        </div>
+        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
+          <a
+            href="https://itunes.apple.com/us/app/sport-ngin/id499597400"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black py-3 px-5 rounded-sm font-display text-lg font-black uppercase tracking-wider"
+          >
+            <span class="material-symbols-outlined text-xl">phone_iphone</span>
+            <span>Download on App Store</span>
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.sportngin.android"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 py-3 px-5 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
+          >
+            <span class="material-symbols-outlined text-xl">smartphone</span>
+            <span>Get it on Google Play</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

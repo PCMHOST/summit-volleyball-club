@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  clubInfo,
+  girlsTryoutSchedule,
+  boysTryoutSchedule,
+  rosterOpenings
+} from '../data/clubData';
+---
+
+<BaseLayout title="2026 Tryouts & Open Gyms | Summit Volleyball Club (SVC)">
+  <!-- Page Header -->
+  <section class="bg-svc-navy text-white py-16 sm:py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+      <div>
+        <span class="inline-block px-3 py-1 rounded bg-svc-gold text-svc-navy font-display font-extrabold uppercase tracking-widest text-xs mb-3">
+          2026–2027 Season Evaluations • $10 Entry (Cash, Check, or Venmo @SUMMITVC)
+        </span>
+        <h1 class="font-display font-black uppercase text-5xl sm:text-6xl tracking-tight leading-none">
+          TRYOUTS & <span class="text-svc-sky">OPEN GYMS</span>
+        </h1>
+        <p class="text-slate-200 text-lg max-w-2xl mt-3">
+          Held exclusively at our home facility: <strong>TM Fieldhouse (1550 SE Hamblen Rd, Lee's Summit, MO)</strong>. Please try to attend both days of tryouts!
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+        <a
+          href={clubInfo.tryoutRegistrationUrl}
+          target="_blank"
+          rel="noopener"
+          class="bg-svc-gold hover:bg-amber-400 text-svc-navy font-display font-extrabold uppercase tracking-wider text-lg px-7 py-4 rounded shadow-lg text-center"
+        >
+          Pre-Register Online Now →
+        </a>
+        <a
+          href={clubInfo.ageCalculatorUrl}
+          target="_blank"
+          rel="noopener"
+          class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-display font-bold uppercase tracking-wider text-base px-6 py-4 rounded text-center"
+        >
+          USAV Age Calculator
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Important HOA/USAV Membership Notice -->
+  <section class="bg-svc-sky-light border-b border-svc-sky/40 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-svc-navy">
+        <strong class="font-display uppercase text-base tracking-wider mr-2">⚠️ Important HOA/USAV Requirement:</strong>
+        In order to receive offers in the region's online recruitment system, players must hold a current <strong>HOA/USAV Membership</strong> (or Summer Membership for new-to-club players).
+      </div>
+      <a
+        href={clubInfo.hoaMembershipUrl}
+        target="_blank"
+        rel="noopener"
+        class="shrink-0 px-4 py-2 rounded bg-svc-navy text-white font-display font-bold uppercase text-xs tracking-wider hover:bg-svc-royal transition-colors"
+      >
+        Register at HOAVB.org →
+      </a>
+    </div>
+  </section>
+
+  <!-- GIRLS 2026 TRYOUT SCHEDULE -->
+  <section id="girls" class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <span class="font-display font-extrabold uppercase tracking-[0.2em] text-svc-royal text-sm">
+              19 Competitive Girls Teams • Ages 10U – 18U
+            </span>
+            <h2 class="font-display font-black uppercase text-4xl sm:text-5xl text-svc-navy leading-none mt-1">
+              2026 <span class="text-svc-royal">GIRLS TRYOUT</span> SCHEDULE
+            </h2>
+            <p class="text-slate-600 mt-2 text-sm sm:text-base">
+              Entry is <strong>$10</strong> via Cash, Check, or Venmo (<strong>{clubInfo.venmo}</strong>). We have multiple Premier, National, and Select teams in each age division—please try to attend both Saturday and Sunday sessions!
+            </p>
+          </div>
+
+          <div class="overflow-hidden rounded-xl border border-slate-200 shadow-xs">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-svc-navy text-white font-display uppercase tracking-wider text-sm">
+                  <th class="py-3.5 px-4">Age Division</th>
+                  <th class="py-3.5 px-4">Tryout Dates (Both Days)</th>
+                  <th class="py-3.5 px-4">Session Time</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-sm sm:text-base">
+                {girlsTryoutSchedule.map((row) => (
+                  <tr class="hover:bg-svc-ice transition-colors">
+                    <td class="py-3.5 px-4 font-display font-extrabold text-xl text-svc-blue">
+                      {row.age}
+                    </td>
+                    <td class="py-3.5 px-4 font-semibold text-slate-800">
+                      {row.dates}
+                    </td>
+                    <td class="py-3.5 px-4 font-bold text-svc-royal">
+                      {row.time}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Official Flyer Preview -->
+        <div class="lg:col-span-5">
+          <div class="rounded-xl overflow-hidden border-2 border-slate-200 shadow-lg bg-white p-2">
+            <img
+              src="/images/tryouts/girls-tryouts-2026.png"
+              alt="2026 Girls SVC Tryouts Official Schedule Flyer"
+              class="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOYS 2026 OPEN GYMS & TRYOUT SCHEDULE -->
+  <section id="boys" class="py-16 sm:py-20 bg-svc-ice border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-7 space-y-8">
+          <div>
+            <span class="font-display font-extrabold uppercase tracking-[0.2em] text-svc-royal text-sm">
+              USAV National Bid Program • 15U/16U & 17U/18U
+            </span>
+            <h2 class="font-display font-black uppercase text-4xl sm:text-5xl text-svc-navy leading-none mt-1">
+              2026 <span class="text-svc-royal">BOYS OPEN GYMS</span> & TRYOUTS
+            </h2>
+            <p class="text-slate-600 mt-2 text-sm sm:text-base">
+              All Boys Open Gyms and Tryouts are held at <strong>TM Fieldhouse (1550 SE Hamblen Rd, Lee's Summit, MO)</strong>. Entry is $10 (Cash, Check, or Venmo <strong>@SUMMITVC</strong>).
+            </p>
+          </div>
+
+          <!-- Boys Open Gyms Cards -->
+          <div>
+            <h3 class="font-display font-extrabold uppercase text-2xl text-svc-navy mb-3">
+              Summer Boys Open Gym Sessions
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {boysTryoutSchedule.openGyms.map((group) => (
+                <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-2xs">
+                  <div class="inline-block px-3 py-1 rounded bg-svc-navy text-white font-display font-extrabold uppercase text-sm tracking-wider mb-3">
+                    {group.division}
+                  </div>
+                  <ul class="space-y-2 text-sm font-semibold text-slate-700">
+                    {group.sessions.map((s) => (
+                      <li class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-svc-royal"></span>
+                        <span>{s}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Boys Official Tryouts -->
+          <div>
+            <h3 class="font-display font-extrabold uppercase text-2xl text-svc-navy mb-3">
+              Official Boys Tryout Dates
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {boysTryoutSchedule.tryouts.map((t) => (
+                <div class="bg-svc-navy text-white rounded-xl p-5 shadow-md border border-white/10">
+                  <div class="text-svc-gold font-display font-extrabold uppercase text-sm tracking-wider">
+                    {t.division}
+                  </div>
+                  <div class="font-display font-black uppercase text-2xl mt-1">
+                    {t.dates}
+                  </div>
+                  <div class="text-svc-sky font-bold text-sm mt-1">
+                    ⏰ {t.time}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Boys Flyer Image -->
+        <div class="lg:col-span-5">
+          <div class="rounded-xl overflow-hidden border-2 border-slate-200 shadow-lg bg-white p-2">
+            <img
+              src="/images/tryouts/boys-open-gyms-2026.png"
+              alt="2026 Boys Open Gyms and Tryouts Flyer"
+              class="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Immediate Roster Openings -->
+  <section class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-4">
+        <span class="font-display font-extrabold uppercase tracking-[0.2em] text-svc-royal text-sm">
+          Current Team Positions Available
+        </span>
+        <h2 class="font-display font-black uppercase text-4xl text-svc-navy leading-none">
+          ADDITIONAL <span class="text-svc-royal">PLAYERS NEEDED</span>
+        </h2>
+        <p class="text-slate-600">
+          Interested in filling one of our open Premier or Select spots right away? Email Club Director Erin Wilson at <a href={`mailto:${clubInfo.email}`} class="text-svc-royal font-bold underline">{clubInfo.email}</a>.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          {rosterOpenings.map((open) => (
+            <div class="p-4 rounded-lg bg-svc-ice border border-slate-200 flex items-center justify-between">
+              <span class="font-display font-extrabold uppercase text-xl text-svc-navy">{open.team}</span>
+              <span class="text-xs font-bold uppercase px-2.5 py-1 rounded bg-white text-svc-royal border border-slate-200">{open.positions}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="rounded-xl overflow-hidden border border-slate-200 shadow-md max-w-sm mx-auto">
+          <img src="/images/tryouts/players-needed.png" alt="SVC Girls Players Needed" class="w-full h-auto" />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

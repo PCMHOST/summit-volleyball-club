@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clubInfo } from '../data/clubData';
+
+const merchItems = [
+  {
+    name: "SVC Official Quarter-Zip Pullover",
+    category: "ATHLETE & COACH WARMUP",
+    colors: "Athletic Heather / Powder Blue / Black",
+    badge: "FAN FAVORITE",
+    description: "Embroidered Summit Volleyball Club crest on premium moisture-wicking fleece quarter-zip worn by SVC coaches and athletes."
+  },
+  {
+    name: "Summit Volleyball Heavyweight Hoodie",
+    category: "FAN & PARENT APPAREL",
+    colors: "Athletic Black or Carolina Blue",
+    badge: "BEST SELLER",
+    description: "Ultra-soft fleece hoodie featuring bold 'SUMMIT VOLLEYBALL CLUB' chest print in official Carolina Blue and white."
+  },
+  {
+    name: "SVC Practice & Open Gym Performance Tee",
+    category: "COURT TRAINING GEAR",
+    colors: "Jet Black / Powder Blue / Crisp White",
+    badge: "ON-COURT ESSENTIAL",
+    description: "Lightweight breathable athletic poly-blend tee engineered for high-intensity practices and summer open gyms at TM Fieldhouse."
+  },
+  {
+    name: "SVC Tournament Travel Backpack & Duffel",
+    category: "TRAVEL GEAR",
+    colors: "Black with Powder Blue Embroidery",
+    badge: "CUSTOM NUMBER OPTION",
+    description: "Ventilated shoe compartment, padded laptop sleeve, dual water bottle pockets, and optional custom player name/number embroidery."
+  },
+  {
+    name: "SVC Proud Volleyball Parent Crewneck",
+    category: "SPECTATOR COLLECTION",
+    colors: "Charcoal / Powder Blue / White",
+    badge: "SPECTATOR GEAR",
+    description: "Represent Summit from the mezzanine at TM Fieldhouse and national qualifiers across the Midwest."
+  },
+  {
+    name: "SVC Structured Trucker & Dad Hat",
+    category: "HEADWEAR",
+    colors: "Black / White / Carolina Blue",
+    badge: "ONE SIZE FITS MOST",
+    description: "3D embroidered SVC monogram logo on breathable mesh-back or relaxed cotton twill cap."
+  }
+];
+---
+
+<BaseLayout title="SVC Swag Store & Official Apparel | Summit Volleyball Club">
+  <!-- Hero -->
+  <section class="bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
+        <span class="material-symbols-outlined text-sm">checkroom</span>
+        <span>OFFICIAL CAROLINA BLUE, BLACK &amp; WHITE CLUB GEAR</span>
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+        SVC <span class="text-brand-blue">SWAG STORE</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mt-3">
+        Rep Summit Volleyball Club on the court and in the stands with official player warm-ups, hoodies, practice tees, and parent fan gear.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Store Window Callout -->
+  <section class="py-10 bg-powder-50 border-b border-brand-blue/30">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-start sm:items-center gap-4">
+        <div class="w-12 h-12 rounded-sm bg-athletic-black text-brand-blue flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+        </div>
+        <div>
+          <div class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark">SEASONAL TEAM STORE WINDOWS</div>
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            2026–2027 ONLINE SPIRIT WEAR &amp; UNIFORM ORDERING
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600">
+            Our official online team store opens following July Tryouts and prior to the winter tournament season, plus select stock available at TM Fieldhouse.
+          </p>
+        </div>
+      </div>
+      <a
+        href={`mailto:${clubInfo.email}?subject=SVC%20Swag%20Store%20%26%20Apparel%20Inquiry`}
+        class="inline-flex items-center gap-2 bg-athletic-black hover:bg-athletic-charcoal text-white px-6 py-3 rounded-sm font-display text-lg uppercase font-black tracking-wider shrink-0 transition-colors"
+      >
+        <span>REQUEST STORE LINK / STOCK</span>
+        <span class="material-symbols-outlined text-base text-brand-blue">arrow_forward</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Gear Grid -->
+  <section class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {merchItems.map((item) => (
+          <div class="bg-surface-subtle border border-slate-200 rounded-sm overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-lg transition-all">
+            <div>
+              <div class="h-48 bg-athletic-black relative flex flex-col items-center justify-center p-6 text-center overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-blue/25 via-transparent to-transparent"></div>
+                <img src="/images/logo.png" alt="SVC Crest" class="w-20 h-20 object-contain rounded bg-white p-1.5 shadow-md relative z-10 mb-2" />
+                <span class="relative z-10 text-[11px] font-extrabold uppercase tracking-widest text-brand-blue">
+                  {item.category}
+                </span>
+                <span class="absolute top-3 left-3 bg-brand-blue text-athletic-black px-2 py-0.5 rounded-sm font-display text-xs font-black uppercase tracking-wider">
+                  {item.badge}
+                </span>
+              </div>
+
+              <div class="p-6 space-y-2.5">
+                <h3 class="font-display text-2xl uppercase font-black text-athletic-black leading-tight">
+                  {item.name}
+                </h3>
+                <div class="text-xs font-bold text-brand-blue-dark uppercase tracking-wider">
+                  Colors: {item.colors}
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 py-4 border-t border-slate-200/80 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-500">Youth &amp; Adult Sizes</span>
+              <a
+                href="/contact"
+                class="text-xs font-extrabold uppercase tracking-wider text-athletic-black hover:text-brand-blue-dark underline"
+              >
+                Inquire / Order →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

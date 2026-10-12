@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clubInfo, wholeAthletePillars } from '../data/clubData';
+
+const tiers = [
+  {
+    name: "Court & Facility Banner Partner",
+    amount: "$500 / Season",
+    badge: "COMMUNITY VISIBILITY",
+    perks: [
+      "Custom company banner displayed at TM Fieldhouse during practices & events",
+      "Logo & website link featured on the official Summit Volleyball Club website",
+      "Social media thank-you spotlight across SVC Instagram & Facebook",
+      "Directly supports facility training equipment & youth development"
+    ]
+  },
+  {
+    name: "National Qualifier Team Sponsor",
+    amount: "$1,000 / Season",
+    badge: "MOST POPULAR",
+    featured: true,
+    perks: [
+      "Company logo featured on warm-up or travel gear for an SVC team",
+      "Prominent banner placement at TM Fieldhouse in Lee's Summit",
+      "Featured partner profile & link on SVC website and tournament recaps",
+      "Helps offset national travel tournament entry fees for Kansas City families"
+    ]
+  },
+  {
+    name: "Summit Gold Scholarship Partner",
+    amount: "$2,500+ / Season",
+    badge: "CHAMPIONSHIP IMPACT",
+    perks: [
+      "Headline sponsor recognition on the SVC homepage & practice jerseys",
+      "Funds need-based athlete scholarships so every talented player can compete",
+      "VIP recognition plaque for your business & dedicated social media campaigns",
+      "Custom partnership activation tailored to your local Kansas City business"
+    ]
+  }
+];
+---
+
+<BaseLayout title="Sponsorships & Community Partners | Summit Volleyball Club">
+  <!-- Hero -->
+  <section class="bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
+        <span class="material-symbols-outlined text-sm">handshake</span>
+        <span>INVEST IN KANSAS CITY YOUTH ATHLETES</span>
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+        PARTNERS &amp; <span class="text-brand-blue">SPONSORSHIPS</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mt-3">
+        Want to participate in your local community? Become a sponsor for Summit Volleyball Club and support 200+ youth athletes and families across Lee's Summit, Blue Springs, and Greater Kansas City.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sponsorship Tiers -->
+  <section class="py-14 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
+        <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+          BECOME A SPONSOR
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl text-athletic-black font-black uppercase">
+          2026–2027 SPONSORSHIP OPPORTUNITIES
+        </h2>
+        <p class="text-sm text-slate-600">
+          Every sponsorship directly supports athlete scholarships, training equipment at TM Fieldhouse, and national qualifier travel for our Girls and Boys teams.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {tiers.map((tier) => (
+          <div
+            class:list={[
+              'rounded-sm p-7 flex flex-col justify-between transition-all',
+              tier.featured
+                ? 'bg-athletic-black text-white border-t-4 border-t-brand-blue shadow-xl scale-[1.01]'
+                : 'bg-surface-subtle text-athletic-black border border-slate-200 border-t-4 border-t-athletic-black shadow-xs',
+            ]}
+          >
+            <div class="space-y-4">
+              <span
+                class:list={[
+                  'inline-block px-2.5 py-0.5 rounded-sm text-xs font-display font-black uppercase tracking-wider',
+                  tier.featured ? 'bg-brand-blue text-athletic-black' : 'bg-athletic-black text-brand-blue',
+                ]}
+              >
+                {tier.badge}
+              </span>
+              <h3 class="font-display text-3xl uppercase font-black leading-tight">
+                {tier.name}
+              </h3>
+              <div class:list={['font-display text-4xl font-black', tier.featured ? 'text-brand-blue' : 'text-brand-blue-dark']}>
+                {tier.amount}
+              </div>
+              <ul class="space-y-3 pt-2">
+                {tier.perks.map((perk) => (
+                  <li class="flex items-start gap-2 text-xs font-medium leading-relaxed">
+                    <span class="material-symbols-outlined text-brand-blue text-base shrink-0">check_circle</span>
+                    <span class={tier.featured ? 'text-slate-200' : 'text-slate-600'}>{perk}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-200/20">
+              <a
+                href={`mailto:${clubInfo.email}?subject=${encodeURIComponent(`Sponsorship Inquiry: ${tier.name}`)}`}
+                class:list={[
+                  'flex items-center justify-center gap-2 w-full py-3 rounded-sm font-display text-lg uppercase font-black tracking-wider transition-colors',
+                  tier.featured
+                    ? 'bg-brand-blue hover:bg-brand-blue-dark text-athletic-black'
+                    : 'bg-athletic-black hover:bg-athletic-charcoal text-white',
+                ]}
+              >
+                <span>Become a Sponsor</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Official Whole-Athlete Performance & Medical Partners -->
+  <section class="py-14 bg-surface-subtle">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+          CLUB AFFILIATES &amp; SPECIALISTS
+        </span>
+        <h2 class="font-display text-4xl font-black uppercase text-athletic-black">
+          OUR OFFICIAL PERFORMANCE &amp; WELLNESS PARTNERS
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {wholeAthletePillars.map((partner) => (
+          <div class="bg-white p-6 rounded-sm border border-slate-200 shadow-xs flex gap-4">
+            <div class="w-12 h-12 rounded-sm bg-athletic-black text-brand-blue flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-2xl">verified</span>
+            </div>
+            <div class="space-y-1">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark">{partner.role}</div>
+              <h3 class="font-display text-2xl font-black uppercase text-athletic-black">{partner.expert}</h3>
+              <div class="text-xs font-bold text-slate-500">{partner.affiliation}</div>
+              <p class="text-xs text-slate-600 leading-relaxed pt-1">{partner.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Official Stitch Remix Color Triad (Powder/Carolina Blue, Athletic Black, Crisp White) */
+  --color-brand-blue: #89acd9;
+  --color-brand-blue-dark: #6c97ca;
+  --color-brand-blue-light: #d8e7f8;
+  --color-athletic-black: #0f172a;
+  --color-athletic-charcoal: #1e293b;
+  --color-surface-dim: #f1f5f9;
+  --color-surface-subtle: #f8fafc;
+
+  --color-powder-50: #f0f6fc;
+  --color-powder-100: #e1eef9;
+  --color-powder-200: #c7e0f4;
+  --color-powder-300: #a3cdeb;
+  --color-powder-400: #89acd9;
+  --color-powder-500: #6a97cb;
+  --color-powder-600: #507bb5;
+  --color-powder-700: #416395;
+  --color-powder-800: #38527b;
+  --color-powder-900: #324666;
+
+  /* Mapped legacy tokens so subpages share the Official Colors palette */
+  --color-svc-navy: #0f172a;
+  --color-svc-blue: #1e293b;
+  --color-svc-royal: #6c97ca;
+  --color-svc-sky: #89acd9;
+  --color-svc-sky-light: #d8e7f8;
+  --color-svc-gold: #89acd9;
+  --color-svc-ice: #f8fafc;
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .stroke-athletic-white,
+  .text-stroke-white {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
+    color: transparent;
+  }
+  .stroke-athletic-blue,
+  .text-stroke-sky {
+    -webkit-text-stroke: 1.5px #89acd9;
+    color: transparent;
+  }
+  .text-stroke-navy {
+    -webkit-text-stroke: 1.5px #0f172a;
+    color: transparent;
+  }
+  .clip-badge {
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}

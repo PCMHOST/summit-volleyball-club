@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clubInfo } from '../data/clubData';
+
+const coachChecklists = [
+  {
+    title: "USAV & HOA Membership + Background Screen",
+    desc: "All Summit head and assistant coaches maintain active Heart of America (HOA) / USA Volleyball memberships and pass annual USAV background screenings.",
+    icon: "verified_user"
+  },
+  {
+    title: "SafeSport & IMPACT Certification",
+    desc: "100% of SVC coaching staff complete mandatory USAV IMPACT coaching certification and annual SafeSport athlete safety training prior to stepping on court.",
+    icon: "health_and_safety"
+  },
+  {
+    title: "Team Management & Communication",
+    desc: "Coaches and Team Managers use the SportsEngine mobile app to post court assignments at TM Fieldhouse, manage tournament RSVPs, and communicate with families.",
+    icon: "forum"
+  },
+  {
+    title: "Whole-Athlete Warm-Up & Injury Prevention",
+    desc: "Every SVC practice begins with our standardized KC Rehab & Wellness dynamic injury-prevention warm-up protocol to protect knees, ankles, and shoulders.",
+    icon: "fitness_center"
+  }
+];
+---
+
+<BaseLayout title="For Coaches & Team Managers | Summit Volleyball Club">
+  <!-- Hero -->
+  <section class="bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
+        <span class="material-symbols-outlined text-sm">sports</span>
+        <span>COACHING STANDARDS, TOOLS &amp; TEAM MANAGEMENT</span>
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+        FOR <span class="text-brand-blue">COACHES &amp; MANAGERS</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mt-3">
+        Resources, certifications, and communication tools for Summit Volleyball Club coaches and team managers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-14 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-6 space-y-6">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            TEAM OPERATIONS
+          </span>
+          <h2 class="font-display text-4xl font-black uppercase text-athletic-black mt-1">
+            COACHES &amp; TEAM MANAGERS GUIDE
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          One of the essential functions of coaches and team managers is managing clear, timely team communications with players and their families. SportsEngine provides our <em>Team Management Guide for Coaches and Team Managers</em> so our staff can efficiently manage rosters, practice schedules at TM Fieldhouse, and tournament travel updates.
+        </p>
+
+        <div class="bg-powder-50 border border-brand-blue/30 p-6 rounded-sm space-y-3">
+          <h3 class="font-display text-2xl font-black uppercase text-athletic-black">
+            THE SUMMIT COACHING STANDARD
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            At Summit Volleyball Club, we coach the complete athlete — teaching players to respect their game, coaches, families, teammates, and themselves. We pair high-intensity technical instruction with positive reinforcement, clear accountability, and fearless tournament preparation.
+          </p>
+          <div class="pt-2">
+            <a
+              href="/coaches"
+              class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-athletic-black hover:text-brand-blue-dark underline"
+            >
+              <span>Meet Our 2026–2027 Coaching Staff →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {coachChecklists.map((item) => (
+          <div class="bg-surface-subtle border border-slate-200 p-5 rounded-sm space-y-2.5">
+            <div class="w-10 h-10 rounded-sm bg-athletic-black text-brand-blue flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">{item.icon}</span>
+            </div>
+            <h3 class="font-display text-xl font-black uppercase text-athletic-black leading-tight">
+              {item.title}
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              {item.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply to Coach at SVC -->
+  <section class="py-14 bg-surface-subtle">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+      <div class="bg-athletic-black text-white p-8 rounded-sm border-l-4 border-brand-blue flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-1">
+          <div class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">COACHING OPPORTUNITIES</div>
+          <h3 class="font-display text-3xl font-black uppercase">INTERESTED IN COACHING WITH SUMMIT?</h3>
+          <p class="text-sm text-slate-300 max-w-xl">
+            Contact Club Director Erin Wilson ({clubInfo.phone} or {clubInfo.email}) to inquire about head coach, assistant coach, or clinic instructor openings.
+          </p>
+        </div>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-6 py-3 rounded-sm font-display text-xl uppercase font-black tracking-wider shrink-0 transition-colors"
+        >
+          <span>CONTACT CLUB DIRECTOR</span>
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

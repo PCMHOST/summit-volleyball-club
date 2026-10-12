@@ -1,0 +1,330 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { girlsTeams, boysTeams, rosterOpenings } from '../data/clubData';
+---
+
+<BaseLayout title="SVC Club Teams & 17 National Spotlight | Summit Volleyball Club">
+  <!-- ========================================================= -->
+  <!-- TOP HERO & 17 NATIONAL BID SPOTLIGHT                      -->
+  <!-- ========================================================= -->
+  <section id="spotlight-17-national" class="relative bg-athletic-black text-white py-14 md:py-20 overflow-hidden border-b-4 border-brand-blue">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-blue/15 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-blue/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10">
+      <!-- Page Eyebrow & Title -->
+      <div class="mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
+          <span class="material-symbols-outlined text-sm">emoji_events</span>
+          <span>2026–2027 COMPETITIVE ROSTERS • GIRLS 10U–18U &amp; BOYS 14U–18U</span>
+        </div>
+        <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight text-white leading-none">
+          SUMMIT VOLLEYBALL CLUB <span class="text-brand-blue">TEAMS</span>
+        </h1>
+      </div>
+
+      <!-- Featured 17s National Bid Spotlight Card (From Previous Design) -->
+      <div class="bg-athletic-charcoal border border-white/15 border-l-4 border-l-brand-blue rounded-sm overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12">
+        <!-- Left Photo Column -->
+        <div class="lg:col-span-6 relative min-h-[320px] lg:min-h-[420px] bg-black overflow-hidden group">
+          <img
+            src="/images/teams/17-national-meq.jpg"
+            alt="SVC 17 National 11-0 Undefeated Mideast Qualifier Champions"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-athletic-black/90 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-athletic-charcoal/90"></div>
+          <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+            <span class="bg-brand-blue text-athletic-black px-3 py-1 rounded-sm font-display text-sm font-black uppercase tracking-wider shadow">
+              ★ 11-0 UNDEFEATED MEQ CHAMPIONS
+            </span>
+            <span class="bg-athletic-black/90 text-white border border-white/20 px-3 py-1 rounded-sm font-display text-sm font-bold uppercase tracking-wider">
+              1ST OUT OF 120 TEAMS
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Editorial Column -->
+        <div class="lg:col-span-6 p-7 md:p-10 flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-brand-blue">
+              <span class="material-symbols-outlined text-base">workspace_premium</span>
+              <span>NATIONAL QUALIFIER SPOTLIGHT • INDIANAPOLIS, IN</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl md:text-[2.75rem] font-black uppercase leading-[1.05] text-white">
+              "QUALIFIED BABY!" — SVC 17 NATIONAL GOES 11-0 TO WIN THE MIDEAST QUALIFIER!
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              Competing against <strong class="text-white">120 of the nation's premier club teams</strong> in Indianapolis, <strong class="text-brand-blue">Summit 17 National</strong> went a spotless <strong class="text-white">11-0 undefeated</strong> to capture the Mideast Qualifier championship banner and earn the prestigious <strong class="text-white">American Bid to the USAV Girls Junior National Championships in Dallas, TX!</strong>
+            </p>
+          </div>
+
+          <!-- 4 Championship Mini-Stats -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="bg-athletic-black/80 border border-white/10 p-3 rounded-sm text-center">
+              <div class="font-display text-3xl font-black text-brand-blue">11-0</div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-300">Match Record</div>
+            </div>
+            <div class="bg-athletic-black/80 border border-white/10 p-3 rounded-sm text-center">
+              <div class="font-display text-3xl font-black text-white">120</div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-300">Teams Defeated</div>
+            </div>
+            <div class="bg-athletic-black/80 border border-white/10 p-3 rounded-sm text-center">
+              <div class="font-display text-3xl font-black text-brand-blue">1ST</div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-300">MEQ Gold Medal</div>
+            </div>
+            <div class="bg-athletic-black/80 border border-white/10 p-3 rounded-sm text-center">
+              <div class="font-display text-3xl font-black text-white">USAV</div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-300">American Bid</div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+            <div class="text-xs text-slate-300">
+              <span class="font-bold text-white uppercase">17 National Coaching Staff:</span> Sarah Armstrong (HC), Ciera Cory (AC), Dakota Hearn (AC)
+            </div>
+            <a
+              href="/qualifications"
+              class="inline-flex items-center gap-1.5 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-4 py-2 rounded-sm font-display text-base font-black uppercase tracking-wider transition-colors"
+            >
+              <span>All National Bids</span>
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- QUICK JUMP BAR FOR ALL TEAMS                              -->
+  <!-- ========================================================= -->
+  <div class="bg-surface-subtle border-b border-slate-200 py-4 sticky top-[68px] z-30 shadow-xs">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex flex-wrap items-center gap-2">
+        <a href="#girls" class="px-3.5 py-1.5 rounded-sm bg-athletic-black text-white text-xs font-extrabold uppercase tracking-wider hover:bg-athletic-charcoal transition-colors">
+          Girls Teams (11U–18U)
+        </a>
+        <a href="#boys" class="px-3.5 py-1.5 rounded-sm bg-brand-blue text-athletic-black text-xs font-extrabold uppercase tracking-wider hover:bg-brand-blue-dark transition-colors">
+          Boys Teams (15U–18U)
+        </a>
+        <a href="#openings" class="px-3.5 py-1.5 rounded-sm bg-white border border-slate-300 text-athletic-black text-xs font-extrabold uppercase tracking-wider hover:bg-powder-50 transition-colors">
+          Current Roster Openings
+        </a>
+      </div>
+      <a href="/tryouts" class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark hover:text-athletic-black flex items-center gap-1">
+        <span>2026–2027 Tryout Schedule</span>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- GIRLS CLUB TEAMS DIRECTORY (18U DOWN TO 11U)              -->
+  <!-- ========================================================= -->
+  <section id="girls" class="py-14 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            19 COMPETITIVE ROSTERS • AGES 10–18
+          </span>
+          <h2 class="font-display text-4xl md:text-5xl text-athletic-black font-black uppercase tracking-tight">
+            GIRLS CLUB TEAMS (11U–18U)
+          </h2>
+        </div>
+        <p class="text-sm text-slate-600 max-w-md">
+          Our girls program competes across National, Premier, and Select tiers in the Heart of America (HOA) Region and national USAV/JVA qualifiers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {girlsTeams.map((team) => (
+          <div
+            id={team.id}
+            class="scroll-mt-36 bg-surface-subtle border border-slate-200 rounded-sm overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-lg transition-all duration-200"
+          >
+            <div>
+              <div class="relative h-48 bg-athletic-black overflow-hidden">
+                <img
+                  src={team.image}
+                  alt={team.name}
+                  class="w-full h-full object-cover object-center"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-athletic-black via-athletic-black/30 to-transparent"></div>
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span class="bg-brand-blue text-athletic-black px-2.5 py-0.5 rounded-sm font-display text-xs font-black uppercase tracking-wider">
+                    {team.ageGroup}
+                  </span>
+                  <span class="bg-athletic-black/90 text-white border border-white/20 px-2.5 py-0.5 rounded-sm font-display text-xs font-bold uppercase tracking-wider">
+                    {team.tier}
+                  </span>
+                </div>
+                {team.badge && (
+                  <div class="absolute bottom-3 left-3 right-3">
+                    <span class="inline-flex items-center gap-1 bg-white/95 text-athletic-black px-2.5 py-0.5 rounded-sm text-[11px] font-extrabold uppercase tracking-wider shadow">
+                      <span class="material-symbols-outlined text-xs text-brand-blue-dark">emoji_events</span>
+                      {team.badge}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              <div class="p-5 space-y-3">
+                <h3 class="font-display text-2xl uppercase font-black text-athletic-black leading-none">
+                  {team.name}
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  {team.description}
+                </p>
+              </div>
+            </div>
+
+            <div class="px-5 pb-5 pt-3 border-t border-slate-200/80 space-y-3">
+              <div>
+                <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
+                  2026–2027 COACHING STAFF
+                </div>
+                <div class="text-xs font-bold text-athletic-black mt-0.5">
+                  {team.coaches.join(' • ')}
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-1">
+                <a
+                  href="/coaches"
+                  class="text-xs font-bold text-brand-blue-dark hover:text-athletic-black uppercase tracking-wider"
+                >
+                  Coach Bios →
+                </a>
+                <a
+                  href="/tryouts"
+                  class="inline-flex items-center gap-1 bg-athletic-black hover:bg-athletic-charcoal text-white px-3 py-1.5 rounded-sm text-[11px] font-extrabold uppercase tracking-wider transition-colors"
+                >
+                  <span>Tryout Info</span>
+                  <span class="material-symbols-outlined text-xs text-brand-blue">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- BOYS CLUB TEAMS DIRECTORY (15U–18U)                       -->
+  <!-- ========================================================= -->
+  <section id="boys" class="py-14 bg-athletic-black text-white border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue">
+            USAV NATIONAL BID WINNERS • AGES 14–18
+          </span>
+          <h2 class="font-display text-4xl md:text-5xl text-white font-black uppercase tracking-tight">
+            BOYS CLUB TEAMS (15U–18U)
+          </h2>
+        </div>
+        <p class="text-sm text-slate-300 max-w-md">
+          Summit Boys Volleyball has earned consecutive USAV Boys Junior National Championship bids and HOA Regional Championships.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {boysTeams.map((team) => (
+          <div
+            id={team.id}
+            class="scroll-mt-36 bg-athletic-charcoal border border-white/10 border-t-4 border-t-brand-blue rounded-sm overflow-hidden flex flex-col justify-between shadow-xl"
+          >
+            <div class="relative h-64 bg-black overflow-hidden">
+              <img
+                src={team.image}
+                alt={team.name}
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-athletic-charcoal via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4 flex gap-2">
+                <span class="bg-brand-blue text-athletic-black px-3 py-1 rounded-sm font-display text-xs font-black uppercase tracking-wider">
+                  {team.ageGroup}
+                </span>
+                <span class="bg-athletic-black/90 text-white px-3 py-1 rounded-sm font-display text-xs font-bold uppercase tracking-wider border border-white/15">
+                  {team.badge}
+                </span>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <h3 class="font-display text-3xl uppercase font-black text-white">
+                {team.name}
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                {team.description}
+              </p>
+              <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                <span class="text-xs font-bold text-brand-blue uppercase tracking-wider">
+                  Open Gyms: May–July • Tryouts: July 25–26
+                </span>
+                <a
+                  href="/tryouts#boys"
+                  class="inline-flex items-center gap-1.5 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-4 py-2 rounded-sm font-display text-base font-black uppercase tracking-wider transition-colors"
+                >
+                  <span>Boys Tryout Schedule</span>
+                  <span class="material-symbols-outlined text-base">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- CURRENT ROSTER OPENINGS                                   -->
+  <!-- ========================================================= -->
+  <section id="openings" class="py-14 bg-surface-subtle">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+      <div class="bg-white border border-slate-200 rounded-sm p-8 shadow-sm">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-200">
+          <div>
+            <span class="font-display text-lg uppercase tracking-wider font-extrabold text-brand-blue-dark">
+              IMMEDIATE SPOTS AVAILABLE
+            </span>
+            <h3 class="font-display text-3xl text-athletic-black font-black uppercase">
+              SELECT ROSTER OPENINGS BY TEAM
+            </h3>
+          </div>
+          <a
+            href="/contact"
+            class="inline-flex items-center gap-2 bg-athletic-black hover:bg-athletic-charcoal text-white px-5 py-2.5 rounded-sm font-display text-lg uppercase font-extrabold tracking-wider transition-colors self-start"
+          >
+            <span>INQUIRE ABOUT A ROSTER SPOT</span>
+            <span class="material-symbols-outlined text-base text-brand-blue">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {rosterOpenings.map((slot) => (
+            <div class="p-4 rounded-sm bg-surface-subtle border border-slate-200 flex items-center justify-between">
+              <div>
+                <div class="font-display text-xl font-black uppercase text-athletic-black">
+                  SVC {slot.team}
+                </div>
+                <div class="text-xs font-semibold text-brand-blue-dark">
+                  Seeking: {slot.positions}
+                </div>
+              </div>
+              <a
+                href="/tryouts"
+                class="text-xs font-extrabold uppercase tracking-wider text-athletic-black hover:text-brand-blue-dark underline"
+              >
+                Apply →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
