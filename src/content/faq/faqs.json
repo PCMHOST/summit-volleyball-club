@@ -1,0 +1,677 @@
+[
+  {
+    "id": "faq-1",
+    "number": 1,
+    "audience": "parents",
+    "section": "A. Registrations, Memberships & Governance",
+    "category": "Registrations & Compliance",
+    "question": "How do I link my player to Summit Volleyball Club in SportsEngine?",
+    "answer": "Use the official SVC 26–27 Club Assignment link sent by the club director. Log into your household SportsEngine account, select your player, and accept the club assignment to bind them to Summit Volleyball Club for the HOA region."
+  },
+  {
+    "id": "faq-2",
+    "number": 2,
+    "audience": "parents",
+    "section": "A. Registrations, Memberships & Governance",
+    "category": "Registrations & Compliance",
+    "question": "Which USAV/HOA membership is needed for 11U–17U girls and boys?",
+    "answer": "Choose the <strong>26-27 HOA-F3 Junior Player</strong> membership ($60 total). The payment is split between Heart of America ($46) and USA Volleyball ($14)."
+  },
+  {
+    "id": "faq-3",
+    "number": 3,
+    "audience": "parents",
+    "section": "A. Registrations, Memberships & Governance",
+    "category": "Registrations & Compliance",
+    "question": "What membership is required if my player turns 18 during the season?",
+    "answer": "Players in 17s/18s who turn 18 on or before September 1, 2027 must choose the <strong>26-27 HOA-F8 Junior Player - SafeSport Required</strong> membership ($60). They must finish the SafeSport core module in USAV Academy before they can be officially rostered on any tournament roster."
+  },
+  {
+    "id": "faq-4",
+    "number": 4,
+    "audience": "parents",
+    "section": "A. Registrations, Memberships & Governance",
+    "category": "Registrations & Compliance",
+    "question": "When is the absolute cutoff for player HOA/USAV registration?",
+    "answer": "September 15th. Players not registered by this date cannot be added to official team rosters submitted to the region for fall and winter tournament entry windows."
+  },
+  {
+    "id": "faq-5",
+    "number": 5,
+    "audience": "parents",
+    "section": "A. Registrations, Memberships & Governance",
+    "category": "Registrations & Compliance",
+    "question": "Can my athlete play for another club while playing for SVC?",
+    "answer": "No. Under HOA and USAV regulations, an athlete may only be affiliated with and compete for one indoor junior club during a sanctioned season. Dual-club participation is strictly prohibited."
+  },
+  {
+    "id": "faq-6",
+    "number": 6,
+    "audience": "parents",
+    "section": "A. Registrations, Memberships & Governance",
+    "category": "Registrations & Compliance",
+    "question": "Where do I upload our medical release and waiver forms?",
+    "answer": "Medical Release forms and the Parent/Player Code of Ethics must be printed, filled out, signed, and turned in directly during the mandatory Uniform Try-On event at TM Fieldhouse."
+  },
+  {
+    "id": "faq-7",
+    "number": 7,
+    "audience": "parents",
+    "section": "A. Registrations, Memberships & Governance",
+    "category": "Registrations & Compliance",
+    "question": "What is the club policy if a player decides to quit mid-season?",
+    "answer": "Committing to an SVC roster is a full-season financial and athletic commitment. Club dues are non-refundable, as tournament fees, facility leases, and coach compensation are contracted upfront based on full team rosters."
+  },
+  {
+    "id": "faq-8",
+    "number": 8,
+    "audience": "parents",
+    "section": "A. Registrations, Memberships & Governance",
+    "category": "Registrations & Compliance",
+    "question": "What secondary insurance is provided through USAV?",
+    "answer": "Active USAV membership provides secondary excess medical insurance for accidental injuries sustained during sanctioned team practices, clinics, scrimmages, and tournaments."
+  },
+  {
+    "id": "faq-9",
+    "number": 9,
+    "audience": "parents",
+    "section": "B. Uniforms, Sizing & Gear",
+    "category": "Uniforms & Apparel",
+    "question": "When is Uniform Try-On, and what if we cannot make our time slot?",
+    "answer": "Uniform Try-On takes place on Sunday, September 20th at TM Fieldhouse, broken into staggered 1-hour windows by team. Because this is the single sizing event before custom manufacturer print runs, players who cannot attend must arrange with the club director to size up beforehand."
+  },
+  {
+    "id": "faq-10",
+    "number": 10,
+    "audience": "parents",
+    "section": "B. Uniforms, Sizing & Gear",
+    "category": "Uniforms & Apparel",
+    "question": "What items are included in the mandatory uniform package?",
+    "answer": "Game jerseys, team warmups, practice t-shirts, and compression arm sleeves (girls). Spandex/shorts packages depend on the team tier (National vs. Regional)."
+  },
+  {
+    "id": "faq-11",
+    "number": 11,
+    "audience": "parents",
+    "section": "B. Uniforms, Sizing & Gear",
+    "category": "Uniforms & Apparel",
+    "question": "How do we get our player's second practice shirt?",
+    "answer": "The 2nd practice shirt is distributed directly at TM Fieldhouse during the September 20th Uniform Try-On event."
+  },
+  {
+    "id": "faq-12",
+    "number": 12,
+    "audience": "parents",
+    "section": "B. Uniforms, Sizing & Gear",
+    "category": "Uniforms & Apparel",
+    "question": "Can family members order extra gear and spirit wear?",
+    "answer": "Yes. An initial SVC Flash Sale opens in late August through Game One with discounted pricing. Following that, the general Game One SVC Team Store stays open all season long for parents, siblings, and fans."
+  },
+  {
+    "id": "faq-13",
+    "number": 13,
+    "audience": "parents",
+    "section": "B. Uniforms, Sizing & Gear",
+    "category": "Uniforms & Apparel",
+    "question": "Are players required to wear knee pads and specific court shoes?",
+    "answer": "Knee pads and non-marking rubber court shoes (volleyball or basketball specific) are mandatory for all practices and tournament play at TM Fieldhouse and tournament facilities."
+  },
+  {
+    "id": "faq-14",
+    "number": 14,
+    "audience": "parents",
+    "section": "B. Uniforms, Sizing & Gear",
+    "category": "Uniforms & Apparel",
+    "question": "What should my player bring to practice each day?",
+    "answer": "Assigned practice t-shirt, spandex/shorts, court shoes (carried into the gym, not worn outside on asphalt), knee pads, a large refillable water bottle, and their personal volleyball (clearly labeled with their name)."
+  },
+  {
+    "id": "faq-15",
+    "number": 15,
+    "audience": "parents",
+    "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
+    "category": "Officiating Clinics",
+    "question": "Are all junior players required to be certified to ref and keep score?",
+    "answer": "Yes. Under USAV and HOA rules, every rostered athlete must complete online officiating education to be certified to work matches as a line judge, scorekeeper, libero tracker, and down ref."
+  },
+  {
+    "id": "faq-16",
+    "number": 16,
+    "audience": "parents",
+    "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
+    "category": "Officiating Clinics",
+    "question": "Do 11U, 12U, 13U, and 14U players need to take the R1 (First Referee) module?",
+    "answer": "No. Players aged 14 and under are officially exempt from the R1 module. In their USAV Academy course list, anything labeled \"Not Required\" can be skipped."
+  },
+  {
+    "id": "faq-17",
+    "number": 17,
+    "audience": "parents",
+    "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
+    "category": "Officiating Clinics",
+    "question": "When must score and ref clinics be completed?",
+    "answer": "Clinics open in early October and must be completed no later than <strong>October 25th</strong>."
+  },
+  {
+    "id": "faq-18",
+    "number": 18,
+    "audience": "parents",
+    "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
+    "category": "Officiating Clinics",
+    "question": "Can my player do the clinic on a phone?",
+    "answer": "While USAV Academy functions on mobile browsers, it is strongly recommended to use a desktop or laptop computer, as several interactive scoring scenarios require clicking specific score sheet cells and rotation trackers."
+  },
+  {
+    "id": "faq-19",
+    "number": 19,
+    "audience": "parents",
+    "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
+    "category": "Officiating Clinics",
+    "question": "What happens if a player does not finish their clinic by the deadline?",
+    "answer": "The player is marked ineligible on the official HOA tournament roster and cannot sit on the team bench or participate in pool play until the certificate clears through SportsEngine."
+  },
+  {
+    "id": "faq-20",
+    "number": 20,
+    "audience": "parents",
+    "section": "D. Club Budgets, Payments & Installments",
+    "category": "Budgets & Payments",
+    "question": "When will our finalized season budget be sent?",
+    "answer": "Finalized team budgets are emailed individually to each family by September 10th, once the head coach confirms whether they are attending travel qualifiers, shell tournaments, or regional single-day events."
+  },
+  {
+    "id": "faq-21",
+    "number": 21,
+    "audience": "parents",
+    "section": "D. Club Budgets, Payments & Installments",
+    "category": "Budgets & Payments",
+    "question": "How is the total club fee determined for each team?",
+    "answer": "Total dues are calculated by dividing direct team costs (tournament entry fees, court lease hours, coaching stipends, uniform packs, speed & agility, sports psychology) across the total number of committed rostered players (typically 10–12 players)."
+  },
+  {
+    "id": "faq-22",
+    "number": 22,
+    "audience": "parents",
+    "section": "D. Club Budgets, Payments & Installments",
+    "category": "Budgets & Payments",
+    "question": "What payment options and installment schedules does SVC provide?",
+    "answer": "Payment can be made in full or broken into scheduled installments (typically Deposit in July/August, 2nd payment at Uniform Try-On in late September, and monthly payments through winter). Payments are accepted via check, cash, Venmo, or credit card invoices via SportsEngine."
+  },
+  {
+    "id": "faq-23",
+    "number": 23,
+    "audience": "parents",
+    "section": "D. Club Budgets, Payments & Installments",
+    "category": "Budgets & Payments",
+    "question": "Is there an extra fee for credit card payments?",
+    "answer": "Yes. Standard card processing fees apply to credit/debit card transactions invoiced through SportsEngine. Paying by cash or check avoids added transaction fees."
+  },
+  {
+    "id": "faq-24",
+    "number": 24,
+    "audience": "parents",
+    "section": "D. Club Budgets, Payments & Installments",
+    "category": "Budgets & Payments",
+    "question": "Are travel lodging and food included in club dues?",
+    "answer": "No. Families are responsible for all personal hotel stays, travel, and dining costs during out-of-town qualifiers and multi-day tournaments."
+  },
+  {
+    "id": "faq-25",
+    "number": 25,
+    "audience": "parents",
+    "section": "D. Club Budgets, Payments & Installments",
+    "category": "Budgets & Payments",
+    "question": "What is a \"Stay and Play\" tournament requirement?",
+    "answer": "For national qualifiers (such as Show-Me or MEQ), tournaments mandate that out-of-town teams book lodging through their contracted travel housing partner. Booking outside this system can result in team disqualification."
+  },
+  {
+    "id": "faq-26",
+    "number": 26,
+    "audience": "parents",
+    "section": "E. Facility, Practice Logistics & Training Services",
+    "category": "Facility & Training",
+    "question": "Where does Summit Volleyball Club practice?",
+    "answer": "All indoor team practices and clinics take place at <strong>TM Fieldhouse</strong>, located at 1550 SE Hamblen Rd, Lee's Summit, MO 64081."
+  },
+  {
+    "id": "faq-27",
+    "number": 27,
+    "audience": "parents",
+    "section": "E. Facility, Practice Logistics & Training Services",
+    "category": "Facility & Training",
+    "question": "Can players use TM Fieldhouse outside of team practice?",
+    "answer": "Yes. SVC players receive club privileges for open gym time outside regular team slots for $10 per drop-in session, or via an unlimited $35 monthly open play membership pass."
+  },
+  {
+    "id": "faq-28",
+    "number": 28,
+    "audience": "parents",
+    "section": "E. Facility, Practice Logistics & Training Services",
+    "category": "Facility & Training",
+    "question": "When does regular team practice begin for the winter season?",
+    "answer": "Official winter practices kick off the first week of November (November 2nd/3rd)."
+  },
+  {
+    "id": "faq-29",
+    "number": 29,
+    "audience": "parents",
+    "section": "E. Facility, Practice Logistics & Training Services",
+    "category": "Facility & Training",
+    "question": "What days are Speed & Agility training, and is it mandatory?",
+    "answer": "Speed and agility training is integrated into regular court time weekly on Tuesdays or Wednesdays (starting mid-October for boys, November 10/11 for girls). It is mandatory for team conditioning and injury prevention."
+  },
+  {
+    "id": "faq-30",
+    "number": 30,
+    "audience": "parents",
+    "section": "E. Facility, Practice Logistics & Training Services",
+    "category": "Facility & Training",
+    "question": "How does the Sport Psychology consulting program work?",
+    "answer": "Professional sports psychology consultants visit team practices courtside on rotating Monday/Thursday evenings to work with players on mental toughness, focus, and handling on-court pressure."
+  },
+  {
+    "id": "faq-31",
+    "number": 31,
+    "audience": "parents",
+    "section": "E. Facility, Practice Logistics & Training Services",
+    "category": "Facility & Training",
+    "question": "What is the nutrition education program provided by SVC?",
+    "answer": "SVC provides a dedicated family Facebook group with 2–2.5 minute video lessons released bi-weekly, along with regular court-side visits by nutrition staff to discuss proper hydration, recovery snacks, and tournament fueling."
+  },
+  {
+    "id": "faq-32",
+    "number": 32,
+    "audience": "parents",
+    "section": "E. Facility, Practice Logistics & Training Services",
+    "category": "Facility & Training",
+    "question": "Can parents stay and watch practice at TM Fieldhouse?",
+    "answer": "Yes. Parents may observe from the designated mezzanine and spectator areas. Spectators must stay off active court surfaces and refrain from coaching from the sidelines."
+  },
+  {
+    "id": "faq-33",
+    "number": 33,
+    "audience": "parents",
+    "section": "E. Facility, Practice Logistics & Training Services",
+    "category": "Facility & Training",
+    "question": "What is the inclement weather policy for winter practices?",
+    "answer": "Weather closures are communicated via club-wide email alerts and posted on the TM Fieldhouse / SVC website banner. If road conditions are hazardous, safety comes first—practices may be consolidated or rescheduled."
+  },
+  {
+    "id": "faq-34",
+    "number": 34,
+    "audience": "parents",
+    "section": "E. Facility, Practice Logistics & Training Services",
+    "category": "Facility & Training",
+    "question": "What should we do if our player must miss a practice?",
+    "answer": "Notify the head coach via email or the team communication app at least 24 hours in advance (or as early as possible in case of illness/emergency) so the coach can adjust drill rotations."
+  },
+  {
+    "id": "faq-35",
+    "number": 35,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "When does the weekend tournament season begin and end?",
+    "answer": "Boys’ seasons run from late fall through late February (culminating in Region Bids). Girls’ competitive seasons run from January through late March / mid-April (culminating in HOA Regionals and National Qualifiers)."
+  },
+  {
+    "id": "faq-36",
+    "number": 36,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "Where do I find tournament pool play schedules and playing waves?",
+    "answer": "Most events use <strong>Advanced Event Systems (AES)</strong> (<code>results.advancedeventsystems.com</code>). Tournament directors publish pool assignments, court numbers, and morning/afternoon wave schedules the Wednesday or Thursday prior to tournament weekend."
+  },
+  {
+    "id": "faq-37",
+    "number": 37,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "What is the difference between an AM wave and a PM wave?",
+    "answer": "Morning (AM) waves typically begin pool play matches at 8:00 AM (gym doors open at 7:00 AM). Afternoon (PM) waves typically begin around 2:30 PM or 3:00 PM."
+  },
+  {
+    "id": "faq-38",
+    "number": 38,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "What are the rules regarding food and coolers at tournament venues?",
+    "answer": "Major venues (such as Bartle Hall, Hy-Vee Arena, and Davies) have strict venue policies prohibiting outside coolers, plug-in appliances (crockpots), and outside food inside the playing areas. Teams that violate facility rules face point penalties and fines from HOA."
+  },
+  {
+    "id": "faq-39",
+    "number": 39,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "How is playing time determined on game day?",
+    "answer": "<ul class=\"list-disc pl-5 space-y-1.5\"><li><strong>Developmental Teams (11U–13U):</strong> Coaches emphasize core fundamental growth and balanced opportunities across pool play.</li><li><strong>Competitive / National Teams (14U–18U):</strong> Playing time is earned, merit-based, and situational. Practice attendance, work ethic, attitude, and tactical match matchups dictate playing time during bracket play.</li></ul>"
+  },
+  {
+    "id": "faq-40",
+    "number": 40,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "Are players permitted to leave the tournament venue early?",
+    "answer": "No. All players must remain with the team until all pool play matches, officiating/work duties, and referee assignments are completely finished. Leaving before work duties are done can result in team forfeiture."
+  },
+  {
+    "id": "faq-41",
+    "number": 41,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "What is the 24-Hour Rule regarding parent-coach discussions?",
+    "answer": "Parents are strictly required to wait 24 hours after the conclusion of a tournament before contacting a coach regarding playing time, substitutions, or game management issues. Emotional discussions during tournaments or immediately post-match are prohibited."
+  },
+  {
+    "id": "faq-42",
+    "number": 42,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "How does Hudl film access work for our athletes?",
+    "answer": "Each player receives access to the team's Hudl account once the parent submits the Hudl Google Form at try-on. Matches recorded courtside are uploaded so players can review rotations and build highlight reels for recruiting."
+  },
+  {
+    "id": "faq-43",
+    "number": 43,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "What is the policy on jewelry and hair accessories during play?",
+    "answer": "Under USAV rules, all jewelry (earrings, necklaces, rings, hard wristbands) must be removed before stepping onto the court. Tape over earrings is not permitted. Soft hair ties and non-metallic headbands are required."
+  },
+  {
+    "id": "faq-44",
+    "number": 44,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "What happens if our team wins an HOA Regional Bid or National Qualifier Bid?",
+    "answer": "Winning a bid qualifies the team to compete at the USAV Girls/Boys Junior National Championships (GJNC/BJNC) in late June / early July. If a team earns a bid, the season extends, and an adjusted post-season training budget is calculated."
+  },
+  {
+    "id": "faq-45",
+    "number": 45,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "Who should I contact if I have a billing or roster issue?",
+    "answer": "Direct all administrative, billing, and membership verification questions directly to Club Director Erin Wilson at <a href=\"mailto:erinsummitvc@gmail.com\" class=\"text-brand-blue-dark font-bold underline\">erinsummitvc@gmail.com</a>."
+  },
+  {
+    "id": "faq-46",
+    "number": 46,
+    "audience": "coaches",
+    "section": "A. Credentials, Compliance & Background Screening",
+    "category": "Registrations & Compliance",
+    "question": "What coaching membership do I register for in SportsEngine?",
+    "answer": "Use the SVC Coach Assignment link to select the <strong>26-27 HOA-F2 Adult Coach of Juniors</strong> membership ($60 total: $46 HOA regional fee + $14 background screen)."
+  },
+  {
+    "id": "faq-47",
+    "number": 47,
+    "audience": "coaches",
+    "section": "A. Credentials, Compliance & Background Screening",
+    "category": "Budgets & Payments",
+    "question": "How and when do coaches get reimbursed for membership and background check fees?",
+    "answer": "The $60 fee is reimbursed directly by Summit Volleyball Club on your first seasonal coaching stipend disbursement in late November."
+  },
+  {
+    "id": "faq-48",
+    "number": 48,
+    "audience": "coaches",
+    "section": "A. Credentials, Compliance & Background Screening",
+    "category": "Registrations & Compliance",
+    "question": "What is the deadline for coaching background checks and SafeSport training?",
+    "answer": "All background checks, SafeSport renewals, and memberships must be completed before the first day of team practices in early November. Coaches who are not fully cleared are legally barred from the gym floor."
+  },
+  {
+    "id": "faq-49",
+    "number": 49,
+    "audience": "coaches",
+    "section": "A. Credentials, Compliance & Background Screening",
+    "category": "Registrations & Compliance",
+    "question": "Do I need to take the IMPACT coaching certification?",
+    "answer": "Only first-time USAV coaches are required to take the USAV IMPACT course. It is an online, self-paced certification located in your USAV Academy account that never expires once completed."
+  },
+  {
+    "id": "faq-50",
+    "number": 50,
+    "audience": "coaches",
+    "section": "A. Credentials, Compliance & Background Screening",
+    "category": "Officiating Clinics",
+    "question": "Why must I upload my photo to HOA Online before taking the score & ref clinic?",
+    "answer": "Heart of America prints hard-copy coaching credential badges automatically overnight once your coursework is completed. If you do not have a headshot uploaded to your HOA profile beforehand, your badge cannot print, requiring a manual reissue fee."
+  },
+  {
+    "id": "faq-51",
+    "number": 51,
+    "audience": "coaches",
+    "section": "A. Credentials, Compliance & Background Screening",
+    "category": "Officiating Clinics",
+    "question": "When are coach Score and Ref clinics due?",
+    "answer": "Coaches must finish their online officiating and scorekeeper modules no later than <strong>October 25th</strong>."
+  },
+  {
+    "id": "faq-52",
+    "number": 52,
+    "audience": "coaches",
+    "section": "A. Credentials, Compliance & Background Screening",
+    "category": "Registrations & Compliance",
+    "question": "What credentials must I have physically with me on tournament game days?",
+    "answer": "You must wear your laminated <strong>HOA Coach Credential Badge</strong> with your printed photo, USAV member ID, and current year validation on a lanyard at all times during HOA and USAV tournaments."
+  },
+  {
+    "id": "faq-53",
+    "number": 53,
+    "audience": "coaches",
+    "section": "B. Practice Scheduling, Drills & Roving Staff Support",
+    "category": "Facility & Training",
+    "question": "How do head coaches request practice days and court times?",
+    "answer": "Submit your top choices via the SVC Practice Days/Time Request Google Form in mid-August. You must select at least one practice slot on a Tuesday or Wednesday to align with the Speed and Agility training schedule."
+  },
+  {
+    "id": "faq-54",
+    "number": 54,
+    "audience": "coaches",
+    "section": "B. Practice Scheduling, Drills & Roving Staff Support",
+    "category": "Facility & Training",
+    "question": "What specialized staff support is available to assist my team at practices?",
+    "answer": "<ul class=\"list-disc pl-5 space-y-1.5\"><li><strong>Roving Passing Support (Kenzi Niemann):</strong> Available to jump onto your court for high-rep 15–20 minute passing mechanics drills.</li><li><strong>Roving Practice Support (Ben Hoog):</strong> Available on Monday nights to help facilitate drills, toss, hit, or run defensive transitions.</li></ul>"
+  },
+  {
+    "id": "faq-55",
+    "number": 55,
+    "audience": "coaches",
+    "section": "B. Practice Scheduling, Drills & Roving Staff Support",
+    "category": "Facility & Training",
+    "question": "How do I book roving passing support for my court?",
+    "answer": "The club director circulates a weekly sign-up sheet. Coaches claim an open 20-minute block for their practice night."
+  },
+  {
+    "id": "faq-56",
+    "number": 56,
+    "audience": "coaches",
+    "section": "B. Practice Scheduling, Drills & Roving Staff Support",
+    "category": "Facility & Training",
+    "question": "What is the court schedule for Speed & Agility training?",
+    "answer": "Speed & Agility takes place on Court 2B/3A for 30 minutes during your assigned practice night. Coaches transition their team immediately to the strength trainer at the top of their block."
+  },
+  {
+    "id": "faq-57",
+    "number": 57,
+    "audience": "coaches",
+    "section": "B. Practice Scheduling, Drills & Roving Staff Support",
+    "category": "Facility & Training",
+    "question": "How do I integrate the courtside sports psychology consultant?",
+    "answer": "Consultants visit on Monday or Thursday evenings every other week. Coaches pause normal ball-handling drills for 15 minutes while the consultant leads a targeted team discussion on communication, error recovery, or match focus."
+  },
+  {
+    "id": "faq-58",
+    "number": 58,
+    "audience": "coaches",
+    "section": "B. Practice Scheduling, Drills & Roving Staff Support",
+    "category": "Facility & Training",
+    "question": "Can coaches hold extra practices or private lessons at TM Fieldhouse?",
+    "answer": "Yes. Coaches can use TM Fieldhouse outside regular practice windows for $10 per player or utilize open courts during scheduled open-play blocks, provided courts are available."
+  },
+  {
+    "id": "faq-59",
+    "number": 59,
+    "audience": "coaches",
+    "section": "C. Tournaments, AES Entries & Scheduling",
+    "category": "Tournaments & Game Days",
+    "question": "How do coaches submit their team tournament entry selections?",
+    "answer": "Fill out the official <strong>SVC Tournament Entry Form</strong> by late October. Review your families’ conflict submissions on the Tournament Availability spreadsheet before finalizing dates."
+  },
+  {
+    "id": "faq-60",
+    "number": 60,
+    "audience": "coaches",
+    "section": "C. Tournaments, AES Entries & Scheduling",
+    "category": "Tournaments & Game Days",
+    "question": "When does official registration open for HOA 1-day tournaments?",
+    "answer": "Registration opens on <strong>November 10th</strong>. The club administration executes all tournament entries directly on opening day to ensure teams secure spots before brackets cap out."
+  },
+  {
+    "id": "faq-61",
+    "number": 61,
+    "audience": "coaches",
+    "section": "C. Tournaments, AES Entries & Scheduling",
+    "category": "Budgets & Payments",
+    "question": "What is a \"Shell Price\" on a team budget?",
+    "answer": "A shell price is an allocated contingency built into a team's tournament budget that allows the coach to substitute or add premium multi-day/regional entry fees without rebilling parents multiple times throughout the season."
+  },
+  {
+    "id": "faq-62",
+    "number": 62,
+    "audience": "coaches",
+    "section": "C. Tournaments, AES Entries & Scheduling",
+    "category": "Tournaments & Game Days",
+    "question": "How do I find our team's AES Event ID and match schedule?",
+    "answer": "Log into AES (<code>advancedeventsystems.com</code>), navigate to the host event, and search by your official team code (e.g., <code>G13SUMMT1HA</code>). Save the public URL to share with parents."
+  },
+  {
+    "id": "faq-63",
+    "number": 63,
+    "audience": "coaches",
+    "section": "C. Tournaments, AES Entries & Scheduling",
+    "category": "Officiating Clinics",
+    "question": "What is the procedure if our team is assigned work/ref duties on court?",
+    "answer": "A certified coach must remain at the scorer’s table (or serve as the R2 down ref) during the entire officiating assignment. Junior players may never officiate without an adult coach courtside."
+  },
+  {
+    "id": "faq-64",
+    "number": 64,
+    "audience": "coaches",
+    "section": "C. Tournaments, AES Entries & Scheduling",
+    "category": "Tournaments & Game Days",
+    "question": "What should a coach do if a match runs behind schedule at a multi-court venue?",
+    "answer": "Have players stay together near the court. Monitor the AES live scores on your mobile device. Do not allow athletes to disperse to food areas, as tournament directors will issue penalty points for delayed match starts."
+  },
+  {
+    "id": "faq-65",
+    "number": 65,
+    "audience": "coaches",
+    "section": "C. Tournaments, AES Entries & Scheduling",
+    "category": "Tournaments & Game Days",
+    "question": "Are coaches responsible for submitting match scores?",
+    "answer": "When your team serves as the officiating work crew, the head coach must review the final paper or electronic scoresheet, verify set scores and substitutions, and ensure both team captains and officials have signed before delivering it to Championship Desk."
+  },
+  {
+    "id": "faq-66",
+    "number": 66,
+    "audience": "coaches",
+    "section": "D. Team Management, Uniforms & Apparel",
+    "category": "Uniforms & Apparel",
+    "question": "How do coaches order their club apparel?",
+    "answer": "Each coach chooses three club-provided apparel pieces by filling out the Coach Apparel Google Form by late September."
+  },
+  {
+    "id": "faq-67",
+    "number": 67,
+    "audience": "coaches",
+    "section": "D. Team Management, Uniforms & Apparel",
+    "category": "Uniforms & Apparel",
+    "question": "Are coaches required to attend the September Uniform Try-On event?",
+    "answer": "Coaches are not mandatory attendees, but being present during your team’s 1-hour window is strongly encouraged to meet families, answer season questions, and introduce yourself to new players."
+  },
+  {
+    "id": "faq-68",
+    "number": 68,
+    "audience": "coaches",
+    "section": "D. Team Management, Uniforms & Apparel",
+    "category": "Coaching Logistics",
+    "question": "How should coaches communicate weekly schedules with parents?",
+    "answer": "Coaches should set up their team messaging hub (SportsEngine Team App, GroupMe, or Heja) by late September. All practice updates, tournament arrival times, jersey color schedules, and wave assignments should be posted by Wednesday evening prior to game day."
+  },
+  {
+    "id": "faq-69",
+    "number": 69,
+    "audience": "coaches",
+    "section": "D. Team Management, Uniforms & Apparel",
+    "category": "Uniforms & Apparel",
+    "question": "How many practice t-shirts should coaches instruct players to bring?",
+    "answer": "Players receive two practice t-shirts. For multi-day weekend tournaments or consecutive practice nights, instruct players to bring both jerseys/shirts to prevent jersey mix-ups."
+  },
+  {
+    "id": "faq-70",
+    "number": 70,
+    "audience": "coaches",
+    "section": "E. Player Development, Code of Conduct & Policies",
+    "category": "Facility & Training",
+    "question": "What is the coach’s role during player nutrition modules?",
+    "answer": "Coaches are expected to reinforce healthy habits during breaks: discussing water intake, monitoring hydration during intense drill blocks, and encouraging wholesome pre-match snacks over sodas or candy."
+  },
+  {
+    "id": "faq-71",
+    "number": 71,
+    "audience": "coaches",
+    "section": "E. Player Development, Code of Conduct & Policies",
+    "category": "Coaching Logistics",
+    "question": "How should a coach handle a parent who breaks the 24-Hour Rule?",
+    "answer": "Politely and firmly inform the parent: <em>\"Our club policy requires a 24-hour waiting period following tournaments. I want to give your concern full attention—let’s set up a call or meet tomorrow evening once the 24 hours have passed.\"</em> Notify Club Director Erin Wilson if the parent persists."
+  },
+  {
+    "id": "faq-72",
+    "number": 72,
+    "audience": "coaches",
+    "section": "E. Player Development, Code of Conduct & Policies",
+    "category": "Coaching Logistics",
+    "question": "What should a coach do if a player sustains a suspected concussion or serious injury?",
+    "answer": "Immediately remove the player from drills or match play. Do not permit return-to-play on the same day. Complete an incident report and require written medical clearance from a licensed physician before they return to the court."
+  },
+  {
+    "id": "faq-73",
+    "number": 73,
+    "audience": "coaches",
+    "section": "E. Player Development, Code of Conduct & Policies",
+    "category": "Registrations & Compliance",
+    "question": "Can a coach recruit players from other teams or clubs during the season?",
+    "answer": "No. HOA bylaws enforce strict anti-recruiting rules. Coaches may not initiate discussions with rostered players from other clubs regarding transfers or future club commitments."
+  },
+  {
+    "id": "faq-74",
+    "number": 74,
+    "audience": "coaches",
+    "section": "E. Player Development, Code of Conduct & Policies",
+    "category": "Coaching Logistics",
+    "question": "What is the policy for severe player discipline or code of conduct violations?",
+    "answer": "For minor issues, handle internally with benching or fitness consequences. For severe incidents (bullying, SafeSport violations, substance use), immediately bench the athlete, notify the parents, and submit a written summary to Club Director Erin Wilson."
+  },
+  {
+    "id": "faq-75",
+    "number": 75,
+    "audience": "coaches",
+    "section": "E. Player Development, Code of Conduct & Policies",
+    "category": "Budgets & Payments",
+    "question": "When are coach coaching stipends distributed?",
+    "answer": "Stipend checks are disbursed in scheduled intervals across the season (first distribution in late November, with remaining distributions tied to mid-season and post-season tournament completion)."
+  }
+]

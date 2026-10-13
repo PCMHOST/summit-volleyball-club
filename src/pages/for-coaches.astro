@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { clubInfo } from '../data/clubData';
+import FaqDirectory from '../components/FaqDirectory.astro';
 
 const coachChecklists = [
   {
@@ -96,8 +97,11 @@ const coachChecklists = [
     </div>
   </section>
 
+  <!-- Coaching Staff 30-Question Expandable FAQ Directory -->
+  <FaqDirectory audience="coaches" />
+
   <!-- Apply to Coach at SVC -->
-  <section class="py-14 bg-surface-subtle">
+  <section class="py-14 bg-white">
     <div class="max-w-7xl mx-auto px-5 md:px-12">
       <div class="bg-athletic-black text-white p-8 rounded-sm border-l-4 border-brand-blue flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="space-y-1">

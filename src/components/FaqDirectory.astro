@@ -1,0 +1,265 @@
+---
+import faqsData from '../content/faq/faqs.json';
+
+interface Props {
+  audience: 'parents' | 'coaches';
+  title?: string;
+  subtitle?: string;
+  badgeText?: string;
+}
+
+const {
+  audience,
+  title = audience === 'parents' ? 'PARENT & PLAYER FAQ DIRECTORY' : 'COACHING STAFF FAQ DIRECTORY',
+  subtitle = audience === 'parents'
+    ? 'Comprehensive answers covering SportsEngine linking, HOA/USAV memberships, uniforms, officiating clinics, budgets, TM Fieldhouse training, and tournament rules.'
+    : 'Operational guide covering coaching credentials, SafeSport & IMPACT compliance, roving practice support, AES tournament entries, apparel, and club policies.',
+  badgeText = audience === 'parents' ? '45 ESSENTIAL FAMILY & PLAYER FAQS' : '30 ESSENTIAL COACHING & STAFF FAQS',
+} = Astro.props;
+
+const filteredFaqs = faqsData.filter((item) => item.audience === audience);
+
+// Group by section in order of appearance
+const sectionsMap = new Map<string, typeof filteredFaqs>();
+for (const faq of filteredFaqs) {
+  if (!sectionsMap.has(faq.section)) {
+    sectionsMap.set(faq.section, []);
+  }
+  sectionsMap.get(faq.section)!.push(faq);
+}
+
+const sections = Array.from(sectionsMap.entries()).map(([sectionName, items], idx) => {
+  const letterMatch = sectionName.match(/^([A-Z])\.\s*(.+)$/);
+  const letter = letterMatch ? letterMatch[1] : String(idx + 1);
+  const cleanTitle = letterMatch ? letterMatch[2] : sectionName;
+  return {
+    id: `section-${audience}-${letter.toLowerCase()}`,
+    letter,
+    fullTitle: sectionName,
+    cleanTitle,
+    items,
+  };
+});
+
+const sectionIcons: Record<string, string> = {
+  A: 'verified_user',
+  B: audience === 'parents' ? 'checkroom' : 'sports_volleyball',
+  C: audience === 'parents' ? 'sports' : 'emoji_events',
+  D: audience === 'parents' ? 'payments' : 'checkroom',
+  E: audience === 'parents' ? 'fitness_center' : 'policy',
+  F: 'emoji_events',
+};
+---
+
+<section id="faq" class="py-16 bg-surface-subtle border-b border-slate-200" data-faq-root={audience}>
+  <div class="max-w-7xl mx-auto px-5 md:px-12 space-y-8">
+    <!-- Header & Search Controls -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-athletic-black border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider">
+          <span class="material-symbols-outlined text-sm text-brand-blue-dark">quiz</span>
+          <span>{badgeText}</span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-athletic-black leading-none">
+          {title}
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 max-w-3xl">
+          {subtitle}
+        </p>
+      </div>
+
+      <!-- Search & Expand/Collapse All Controls -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+        <div class="relative min-w-[260px]">
+          <span class="material-symbols-outlined text-slate-400 text-lg absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+            search
+          </span>
+          <input
+            type="search"
+            placeholder="Search questions or keywords..."
+            data-faq-search
+            class="w-full pl-9 pr-4 py-2.5 bg-white border border-slate-300 rounded-sm text-sm text-athletic-black placeholder:text-slate-400 focus:outline-none focus:border-brand-blue"
+          />
+        </div>
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            data-faq-expand-all
+            class="px-3.5 py-2.5 bg-athletic-black hover:bg-athletic-charcoal text-white font-display text-sm font-bold uppercase tracking-wider rounded-sm transition-colors cursor-pointer"
+          >
+            Expand All
+          </button>
+          <button
+            type="button"
+            data-faq-collapse-all
+            class="px-3.5 py-2.5 bg-white hover:bg-powder-50 text-athletic-black border border-slate-300 font-display text-sm font-bold uppercase tracking-wider rounded-sm transition-colors cursor-pointer"
+          >
+            Collapse All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Section Navigation Bar -->
+    <div class="flex flex-wrap gap-2 pt-1">
+      {sections.map((sec) => (
+        <button
+          type="button"
+          data-faq-jump={sec.id}
+          class="inline-flex items-center gap-2 px-3.5 py-2 rounded-sm bg-white hover:bg-brand-blue/20 border border-slate-200 hover:border-brand-blue text-xs font-extrabold uppercase tracking-wider text-athletic-black transition-all cursor-pointer shadow-2xs"
+        >
+          <span class="w-5 h-5 rounded-xs bg-athletic-black text-brand-blue font-display text-sm font-black flex items-center justify-center">
+            {sec.letter}
+          </span>
+          <span>{sec.cleanTitle}</span>
+          <span class="text-[11px] text-slate-400 font-bold">({sec.items.length})</span>
+        </button>
+      ))}
+    </div>
+
+    <!-- Expandable Section Tabs -->
+    <div class="space-y-4">
+      {sections.map((sec) => (
+        <details
+          id={sec.id}
+          data-faq-section
+          class="group bg-white border-2 border-slate-200 open:border-athletic-black rounded-sm shadow-xs overflow-hidden transition-all"
+        >
+          <summary class="list-none cursor-pointer select-none p-5 sm:p-6 bg-white group-open:bg-athletic-black group-open:text-white hover:bg-powder-50/70 group-open:hover:bg-athletic-charcoal transition-colors flex items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-sm bg-athletic-black group-open:bg-brand-blue text-brand-blue group-open:text-athletic-black flex items-center justify-center shrink-0 font-display text-2xl font-black transition-colors">
+                {sec.letter}
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-base text-brand-blue-dark group-open:text-brand-blue">
+                    {sectionIcons[sec.letter] || 'help'}
+                  </span>
+                  <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-blue-dark group-open:text-brand-blue">
+                    SECTION {sec.letter} • {sec.items.length} QUESTIONS
+                  </span>
+                </div>
+                <h3 class="font-display text-2xl sm:text-3xl font-black uppercase tracking-tight leading-tight mt-0.5">
+                  {sec.cleanTitle}
+                </h3>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 shrink-0">
+              <span class="hidden sm:inline-block text-xs font-extrabold uppercase tracking-wider text-slate-500 group-open:text-brand-blue">
+                <span class="group-open:hidden">Click to Expand</span>
+                <span class="hidden group-open:inline">Expanded</span>
+              </span>
+              <div class="w-9 h-9 rounded-sm bg-surface-subtle group-open:bg-white/10 flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl transition-transform duration-200 group-open:rotate-180">
+                  expand_more
+                </span>
+              </div>
+            </div>
+          </summary>
+
+          <!-- Expanded Section Body: All Questions & Answers in this Section -->
+          <div class="p-5 sm:p-8 bg-white border-t border-slate-200 divide-y divide-slate-200">
+            {sec.items.map((faq) => (
+              <div
+                data-faq-item
+                data-faq-text={`${faq.question} ${faq.answer} ${faq.category}`.toLowerCase()}
+                class="py-5 first:pt-0 last:pb-0"
+              >
+                <div class="flex items-start gap-3.5">
+                  <span class="inline-flex items-center justify-center px-2.5 py-1 rounded-xs bg-powder-100 text-athletic-black font-display text-sm font-black shrink-0 mt-0.5 border border-brand-blue/30">
+                    Q{faq.number}
+                  </span>
+                  <div class="space-y-2 flex-1">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                      <h4 class="font-display text-xl sm:text-2xl font-black uppercase text-athletic-black leading-snug">
+                        {faq.question}
+                      </h4>
+                      <span class="text-[10px] font-extrabold uppercase tracking-widest px-2 py-0.5 rounded-xs bg-surface-subtle text-slate-500 border border-slate-200 shrink-0">
+                        {faq.category}
+                      </span>
+                    </div>
+                    <div
+                      class="text-sm sm:text-base text-slate-600 leading-relaxed"
+                      set:html={faq.answer}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <!-- Empty search state -->
+    <div data-faq-empty class="hidden bg-white border border-slate-200 p-8 rounded-sm text-center space-y-2">
+      <span class="material-symbols-outlined text-3xl text-slate-400">search_off</span>
+      <p class="font-display text-2xl font-black uppercase text-athletic-black">No matching FAQ found</p>
+      <p class="text-sm text-slate-500">Try clearing your search filter or clicking "Expand All" above.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-faq-root]').forEach((root) => {
+    const sections = Array.from(root.querySelectorAll<HTMLDetailsElement>('details[data-faq-section]'));
+    const items = Array.from(root.querySelectorAll<HTMLElement>('[data-faq-item]'));
+    const expandAllBtn = root.querySelector<HTMLButtonElement>('[data-faq-expand-all]');
+    const collapseAllBtn = root.querySelector<HTMLButtonElement>('[data-faq-collapse-all]');
+    const searchInput = root.querySelector<HTMLInputElement>('[data-faq-search]');
+    const jumpBtns = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-faq-jump]'));
+    const emptyState = root.querySelector<HTMLElement>('[data-faq-empty]');
+
+    expandAllBtn?.addEventListener('click', () => {
+      sections.forEach((sec) => (sec.open = true));
+    });
+
+    collapseAllBtn?.addEventListener('click', () => {
+      sections.forEach((sec) => (sec.open = false));
+    });
+
+    jumpBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-faq-jump');
+        if (!targetId) return;
+        const targetSection = root.querySelector<HTMLDetailsElement>(`#${targetId}`);
+        if (targetSection) {
+          targetSection.open = true;
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    searchInput?.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
+      let totalVisible = 0;
+
+      sections.forEach((sec) => {
+        const secItems = Array.from(sec.querySelectorAll<HTMLElement>('[data-faq-item]'));
+        let visibleInSec = 0;
+
+        secItems.forEach((item) => {
+          const text = item.getAttribute('data-faq-text') || '';
+          const match = !query || text.includes(query);
+          item.classList.toggle('hidden', !match);
+          if (match) visibleInSec++;
+        });
+
+        if (!query) {
+          sec.classList.remove('hidden');
+        } else if (visibleInSec > 0) {
+          sec.classList.remove('hidden');
+          sec.open = true;
+          totalVisible += visibleInSec;
+        } else {
+          sec.classList.add('hidden');
+        }
+      });
+
+      if (emptyState) {
+        emptyState.classList.toggle('hidden', !query || totalVisible > 0);
+      }
+    });
+  });
+</script>
