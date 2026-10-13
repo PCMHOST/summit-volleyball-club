@@ -1,106 +1,49 @@
 ---
 import { clubInfo } from '../data/clubData';
+
+const fbPageUrl = encodeURIComponent(clubInfo.socials.facebook);
+const fbEmbedSrc = `https://www.facebook.com/plugins/page.php?href=${fbPageUrl}&tabs=timeline&width=340&height=320&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false`;
+const igEmbedSrc = 'https://www.instagram.com/svc_kcmetro/embed';
 ---
 
-<!-- High-Energy Social Strip (Carolina Blue with Black Contrast) -->
-<div class="bg-brand-blue py-5 text-athletic-black">
-  <div class="max-w-7xl mx-auto px-5 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-    <div class="flex items-center gap-3">
-      <span class="material-symbols-outlined text-3xl text-athletic-black">photo_camera</span>
-      <div>
-        <div class="font-display text-2xl sm:text-[1.75rem] uppercase font-black tracking-wider leading-none text-athletic-black">
-          FOLLOW @SUMMITVOLLEYBALLCLUB ON INSTAGRAM &amp; FACEBOOK
-        </div>
-        <div class="text-xs text-slate-800 font-medium mt-1">
-          Live match highlights, tournament updates, and behind-the-scenes club life.
-        </div>
-      </div>
-    </div>
-    <a
-      class="bg-athletic-black text-white hover:bg-athletic-charcoal px-5 py-2.5 rounded-sm font-display text-lg uppercase font-extrabold tracking-wider transition-colors shrink-0 shadow"
-      href={clubInfo.socials.instagram}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      FOLLOW OUR JOURNEY ➔
-    </a>
-  </div>
-</div>
-
-<!-- Sleek Black / Dark Charcoal Footer -->
-<footer class="bg-athletic-black text-white border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-5 md:px-12 py-14 grid grid-cols-1 md:grid-cols-4 gap-6">
-    <!-- Col 1: Brand & Logo -->
-    <div class="space-y-4">
-      <a href="/" class="flex items-center gap-3">
+<!-- Sleek Black / Dark Charcoal Footer with FB & IG Widgets -->
+<footer class="bg-athletic-black text-white border-t-4 border-brand-blue">
+  <div class="max-w-7xl mx-auto px-5 md:px-12 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-start">
+    <!-- Col 1 (3 cols): Logo + Quick Navigation -->
+    <div class="lg:col-span-3 space-y-5">
+      <a href="/" class="inline-flex items-center group" aria-label="Summit Volleyball Club Home">
         <img
           alt="Summit Volleyball Club Kansas City Logo"
-          class="h-14 w-14 rounded-md object-contain border border-brand-blue/40 shadow-sm bg-white p-0.5"
+          class="h-14 w-auto rounded-md object-contain bg-white p-1 border border-brand-blue/40 shadow-sm group-hover:scale-105 transition-transform"
           src="/images/logo.png"
         />
-        <div>
-          <div class="font-display text-[1.75rem] font-black tracking-wider text-white uppercase leading-none">
-            SVC
-          </div>
-          <div class="text-xs uppercase font-bold tracking-widest text-brand-blue">
-            Summit Volleyball Club
-          </div>
-        </div>
       </a>
-      <p class="text-sm text-slate-400 leading-relaxed">
-        Summit Volleyball Club is Lee's Summit and Kansas City's premier destination for youth volleyball training, national travel teams, and athlete development.
-      </p>
-      <div class="flex items-center gap-2 pt-2">
-        <span class="px-2 py-1 bg-athletic-charcoal text-[11px] font-bold rounded uppercase border border-white/10 text-brand-blue">
-          USAV HOA MEMBER
-        </span>
-        <span class="px-2 py-1 bg-athletic-charcoal text-[11px] font-bold rounded uppercase border border-white/10 text-brand-blue">
-          JVA AFFILIATE
-        </span>
+
+      <div class="space-y-3">
+        <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold border-b border-white/10 pb-1.5">
+          QUICK NAVIGATION
+        </h3>
+        <ul class="space-y-2 text-xs font-bold uppercase tracking-wider text-slate-300">
+          <li><a class="hover:text-brand-blue transition-colors" href="/">Home</a></li>
+          <li><a class="hover:text-brand-blue transition-colors" href="/teams">Teams</a></li>
+          <li><a class="hover:text-brand-blue transition-colors" href="/tryouts">Tryouts</a></li>
+          <li><a class="hover:text-brand-blue transition-colors" href="/camps-clinics#boys-open-gyms">Open Gyms</a></li>
+          <li><a class="hover:text-brand-blue transition-colors" href="/camps-clinics">Camps &amp; Clinics</a></li>
+          <li><a class="hover:text-brand-blue transition-colors" href="/contact">Contact Us</a></li>
+        </ul>
       </div>
     </div>
 
-    <!-- Col 2: Quick Links -->
-    <div class="space-y-3">
-      <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold border-b border-white/10 pb-1.5">
-        QUICK NAVIGATION
-      </h3>
-      <ul class="space-y-2 text-xs font-semibold text-slate-300">
-        <li><a class="hover:text-brand-blue transition-colors" href="/">Home Page</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/about">About Summit VC</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/teams">Club Teams (Girls &amp; Boys)</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/tryouts">Tryout Schedule &amp; Age Groups</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/camps-clinics">Camps, Clinics &amp; Open Gyms</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/qualifications">National Qualifications</a></li>
-      </ul>
-    </div>
-
-    <!-- Col 3: Information & Resources -->
-    <div class="space-y-3">
-      <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold border-b border-white/10 pb-1.5">
-        INFORMATION &amp; RESOURCES
-      </h3>
-      <ul class="space-y-2 text-xs font-semibold text-slate-300">
-        <li><a class="hover:text-brand-blue transition-colors" href="/coaches">2026–2027 Coaching Staff</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/sponsorships">Sponsorships &amp; Partners</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/for-parents">For Parents &amp; Families</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/for-coaches">For Coaches &amp; Managers</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/swag-store">SVC Swag Store</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/facility">Our Facility (TM Fieldhouse)</a></li>
-        <li><a class="hover:text-brand-blue transition-colors" href="/contact">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <!-- Col 4: Location & Contact -->
-    <div class="space-y-3">
+    <!-- Col 2 (3 cols): Location & Contact -->
+    <div class="lg:col-span-3 space-y-3">
       <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold border-b border-white/10 pb-1.5">
         LOCATION &amp; CONTACT
       </h3>
-      <div class="space-y-2 text-xs text-slate-300">
+      <div class="space-y-2.5 text-xs text-slate-300">
         <p class="flex items-start gap-2">
-          <span class="material-symbols-outlined text-sm text-brand-blue mt-0.5">home</span>
+          <span class="material-symbols-outlined text-sm text-brand-blue mt-0.5">location_on</span>
           <span>
-            <strong>{clubInfo.facility.name}</strong><br />
+            <strong class="text-white">{clubInfo.facility.name}</strong><br />
             {clubInfo.facility.address}<br />
             {clubInfo.facility.city}
           </span>
@@ -117,6 +60,71 @@ import { clubInfo } from '../data/clubData';
           <span class="material-symbols-outlined text-sm text-brand-blue">schedule</span>
           <span>Mon–Sun: 4:00 PM – 10:00 PM</span>
         </p>
+        <div class="flex items-center gap-2 pt-2">
+          <span class="px-2 py-1 bg-athletic-charcoal text-[10px] font-bold rounded uppercase border border-white/10 text-brand-blue">
+            USAV HOA MEMBER
+          </span>
+          <span class="px-2 py-1 bg-athletic-charcoal text-[10px] font-bold rounded uppercase border border-white/10 text-brand-blue">
+            JVA AFFILIATE
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Col 3 (3 cols): Facebook Feed Widget / Embed -->
+    <div class="lg:col-span-3 space-y-3">
+      <div class="flex items-center justify-between border-b border-white/10 pb-1.5">
+        <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold">
+          FACEBOOK FEED
+        </h3>
+        <a
+          href={clubInfo.socials.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[11px] font-bold uppercase tracking-wider text-slate-300 hover:text-brand-blue"
+        >
+          Follow FB →
+        </a>
+      </div>
+      <div class="bg-white rounded-sm overflow-hidden border border-white/15 shadow-md h-[320px] flex justify-center">
+        <iframe
+          title="Summit Volleyball Club Facebook Page Feed"
+          src={fbEmbedSrc}
+          width="340"
+          height="320"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Col 4 (3 cols): Instagram Feed Widget / Embed -->
+    <div class="lg:col-span-3 space-y-3">
+      <div class="flex items-center justify-between border-b border-white/10 pb-1.5">
+        <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold">
+          INSTAGRAM @SVC_KCMETRO
+        </h3>
+        <a
+          href={clubInfo.socials.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[11px] font-bold uppercase tracking-wider text-slate-300 hover:text-brand-blue"
+        >
+          Follow IG →
+        </a>
+      </div>
+      <div class="bg-white rounded-sm overflow-hidden border border-white/15 shadow-md h-[320px]">
+        <iframe
+          title="Summit Volleyball Club Instagram Embed"
+          src={igEmbedSrc}
+          class="w-full h-full border-0"
+          scrolling="no"
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
   </div>
