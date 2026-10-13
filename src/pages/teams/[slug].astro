@@ -69,8 +69,13 @@ const placeholderTournaments = [
   <!-- TEAM HERO BANNER                                          -->
   <!-- ========================================================= -->
   <section class="relative bg-athletic-black text-white py-12 md:py-16 border-b-4 border-brand-blue overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-0 right-0 w-[480px] h-[480px] bg-brand-blue/15 rounded-full blur-3xl"></div>
+    <div class="absolute inset-0 z-0">
+      <img
+        src={team.image}
+        alt={team.name}
+        class="w-full h-full object-cover object-center opacity-20 blur-[1px]"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-athletic-black via-athletic-black/90 to-athletic-black/70"></div>
     </div>
 
     <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10 space-y-6">

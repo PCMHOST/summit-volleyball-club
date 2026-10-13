@@ -88,9 +88,16 @@ const page2Sections = [
 ---
 
 <BaseLayout title="Code of Conduct & Player/Parent Contract (2026–2027) | Summit Volleyball Club">
-  <!-- Hero -->
+  <!-- Hero with Background Image -->
   <section class="bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/facility/tm-courts-wide.jpg"
+        alt="Summit Volleyball Club Home Courts"
+        class="w-full h-full object-cover object-center opacity-20"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-athletic-black via-athletic-black/90 to-athletic-black/75"></div>
+    </div>
     <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
       <div class="space-y-3">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider">

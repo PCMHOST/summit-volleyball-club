@@ -9,37 +9,55 @@ import {
 ---
 
 <BaseLayout title="2026 Tryouts & Open Gyms | Summit Volleyball Club (SVC)">
-  <!-- Page Header -->
-  <section class="bg-svc-navy text-white py-16 sm:py-20 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-      <div>
-        <span class="inline-block px-3 py-1 rounded bg-svc-gold text-svc-navy font-display font-extrabold uppercase tracking-widest text-xs mb-3">
+  <!-- Page Header with Background & Action Photos -->
+  <section class="bg-svc-navy text-white py-16 sm:py-20 relative overflow-hidden border-b-4 border-brand-blue">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/facility/tm-courts-wide.jpg"
+        alt="TM Fieldhouse Volleyball Courts for SVC Tryouts"
+        class="w-full h-full object-cover object-center opacity-25"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-svc-navy via-svc-navy/90 to-svc-navy/70"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 space-y-4">
+        <span class="inline-block px-3 py-1 rounded bg-svc-gold text-svc-navy font-display font-extrabold uppercase tracking-widest text-xs">
           2026–2027 Season Evaluations • $10 Entry (Cash, Check, or Venmo @SUMMITVC)
         </span>
         <h1 class="font-display font-black uppercase text-5xl sm:text-6xl tracking-tight leading-none">
-          TRYOUTS & <span class="text-svc-sky">OPEN GYMS</span>
+          TRYOUTS &amp; <span class="text-svc-sky">OPEN GYMS</span>
         </h1>
-        <p class="text-slate-200 text-lg max-w-2xl mt-3">
+        <p class="text-slate-200 text-lg max-w-2xl">
           Held exclusively at our home facility: <strong>TM Fieldhouse (1550 SE Hamblen Rd, Lee's Summit, MO)</strong>. Please try to attend both days of tryouts!
         </p>
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a
+            href={clubInfo.tryoutRegistrationUrl}
+            target="_blank"
+            rel="noopener"
+            class="bg-svc-gold hover:bg-amber-400 text-svc-navy font-display font-extrabold uppercase tracking-wider text-lg px-7 py-3.5 rounded shadow-lg text-center"
+          >
+            Pre-Register Online Now →
+          </a>
+          <a
+            href={clubInfo.ageCalculatorUrl}
+            target="_blank"
+            rel="noopener"
+            class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-display font-bold uppercase tracking-wider text-base px-6 py-3.5 rounded text-center"
+          >
+            USAV Age Calculator
+          </a>
+        </div>
       </div>
-      <div class="flex flex-col sm:flex-row gap-3 shrink-0">
-        <a
-          href={clubInfo.tryoutRegistrationUrl}
-          target="_blank"
-          rel="noopener"
-          class="bg-svc-gold hover:bg-amber-400 text-svc-navy font-display font-extrabold uppercase tracking-wider text-lg px-7 py-4 rounded shadow-lg text-center"
-        >
-          Pre-Register Online Now →
-        </a>
-        <a
-          href={clubInfo.ageCalculatorUrl}
-          target="_blank"
-          rel="noopener"
-          class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-display font-bold uppercase tracking-wider text-base px-6 py-4 rounded text-center"
-        >
-          USAV Age Calculator
-        </a>
+      <div class="lg:col-span-5 grid grid-cols-2 gap-3">
+        <div class="rounded-sm overflow-hidden border-2 border-svc-sky/60 shadow-xl aspect-4/3 bg-black relative">
+          <img src="/images/gallery/action-3.jpg" alt="SVC Girls Tryouts and Teams" class="w-full h-full object-cover" />
+          <div class="absolute bottom-2 left-2 bg-black/80 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded-xs">Girls 11U–18U</div>
+        </div>
+        <div class="rounded-sm overflow-hidden border-2 border-white/25 shadow-xl aspect-4/3 bg-black relative">
+          <img src="/images/gallery/action-1.jpg" alt="SVC Boys Tryouts and Open Gyms" class="w-full h-full object-cover" />
+          <div class="absolute bottom-2 left-2 bg-black/80 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded-xs">Boys 16U–18U</div>
+        </div>
       </div>
     </div>
   </section>

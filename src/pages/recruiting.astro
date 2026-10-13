@@ -112,50 +112,69 @@ const upperSchoolTeams = [
 
 <BaseLayout title="Collegiate Recruiting & Commitments | Summit Volleyball Club">
   <!-- ========================================================= -->
-  <!-- HERO BANNER                                               -->
+  <!-- HERO BANNER WITH BACKGROUND & SIGNING SHOWCASE            -->
   <!-- ========================================================= -->
   <section class="relative bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-blue/15 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-blue/10 rounded-full blur-3xl"></div>
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/teams/18-national-girls.jpg"
+        alt="SVC 18 National Collegiate Recruiting Showcase"
+        class="w-full h-full object-cover object-center opacity-25"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-athletic-black via-athletic-black/90 to-athletic-black/65"></div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10 space-y-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider">
-        <span class="material-symbols-outlined text-sm">school</span>
-        <span>NEXT-LEVEL ATHLETE PATHWAY • NCAA, NAIA &amp; NJCAA RECRUITING</span>
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider">
+          <span class="material-symbols-outlined text-sm">school</span>
+          <span>NEXT-LEVEL ATHLETE PATHWAY • NCAA, NAIA &amp; NJCAA RECRUITING</span>
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+          COLLEGIATE <span class="text-brand-blue">RECRUITING</span> &amp; COMMITMENTS
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
+          Our mission at Summit Volleyball Club is to help every student-athlete who aspires to compete at the collegiate level find the right academic, athletic, and cultural fit. Through courtside Hudl match film, national qualifier exposure, and direct coaching advocacy, we guide families and college recruiters every step of the way.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-3 pt-1">
+          <a
+            href="#college-coaches"
+            class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-5 py-3 rounded-sm font-display text-lg font-black uppercase tracking-wider transition-colors"
+          >
+            <span class="material-symbols-outlined text-base">sports</span>
+            <span>For College Coaches</span>
+          </a>
+          <a
+            href="#commitments"
+            class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-3 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
+          >
+            <span class="material-symbols-outlined text-base">workspace_premium</span>
+            <span>Commitments &amp; Signings</span>
+          </a>
+          <a
+            href="#alumni-commits"
+            class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-3 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
+          >
+            <span class="material-symbols-outlined text-base">history_edu</span>
+            <span>Alumni Tracker by Year</span>
+          </a>
+        </div>
       </div>
 
-      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight leading-none">
-        COLLEGIATE <span class="text-brand-blue">RECRUITING</span> &amp; COMMITMENTS
-      </h1>
-
-      <p class="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed">
-        Our mission at Summit Volleyball Club is to help every student-athlete who aspires to compete at the collegiate level find the right academic, athletic, and cultural fit. Through courtside Hudl match film, national qualifier exposure, and direct coaching advocacy, we guide families and college recruiters every step of the way.
-      </p>
-
-      <div class="flex flex-wrap items-center gap-3 pt-2">
-        <a
-          href="#college-coaches"
-          class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-5 py-3 rounded-sm font-display text-lg font-black uppercase tracking-wider transition-colors"
-        >
-          <span class="material-symbols-outlined text-base">sports</span>
-          <span>For College Coaches</span>
-        </a>
-        <a
-          href="#commitments"
-          class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-3 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
-        >
-          <span class="material-symbols-outlined text-base">workspace_premium</span>
-          <span>Commitments &amp; Signings</span>
-        </a>
-        <a
-          href="#alumni-commits"
-          class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-3 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
-        >
-          <span class="material-symbols-outlined text-base">history_edu</span>
-          <span>Alumni Tracker by Year</span>
-        </a>
+      <!-- Right 5 Cols: 3 Featured Collegiate Signing Cards -->
+      <div class="lg:col-span-5 grid grid-cols-3 gap-2.5">
+        <div class="rounded-sm overflow-hidden border-2 border-brand-blue/60 shadow-xl aspect-4/5 bg-black">
+          <img src="/images/commits/keastin-kitchen.jpg" alt="Keastin Kitchen - Sterling College Commit" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="rounded-sm overflow-hidden border-2 border-white/25 shadow-xl aspect-4/5 bg-black">
+          <img src="/images/commits/micah-reid.jpg" alt="Micah Reid - Central Christian College Commit" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="rounded-sm overflow-hidden border-2 border-white/25 shadow-xl aspect-4/5 bg-black">
+          <img src="/images/commits/grace-lowry.jpg" alt="Grace Lowry - Avila University Commit" class="w-full h-full object-cover object-top" />
+        </div>
       </div>
     </div>
   </section>

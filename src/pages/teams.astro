@@ -8,21 +8,41 @@ import { girlsTeams, boysTeams, rosterOpenings } from '../data/clubData';
   <!-- TOP HERO & 17 NATIONAL BID SPOTLIGHT                      -->
   <!-- ========================================================= -->
   <section id="spotlight-17-national" class="relative bg-athletic-black text-white py-14 md:py-20 overflow-hidden border-b-4 border-brand-blue">
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-blue/15 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-blue/10 rounded-full blur-3xl"></div>
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/teams/15-1-meq-champs.jpg"
+        alt="Summit Volleyball Club Championship Teams"
+        class="w-full h-full object-cover object-center opacity-25"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-athletic-black/90 via-athletic-black/85 to-athletic-black"></div>
     </div>
 
     <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10">
-      <!-- Page Eyebrow & Title -->
-      <div class="mb-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
-          <span class="material-symbols-outlined text-sm">emoji_events</span>
-          <span>2026–2027 COMPETITIVE ROSTERS • GIRLS 10U–18U &amp; BOYS 14U–18U</span>
+      <!-- Page Eyebrow, Title & Hero Photo Strip -->
+      <div class="mb-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
+            <span class="material-symbols-outlined text-sm">emoji_events</span>
+            <span>2026–2027 COMPETITIVE ROSTERS • GIRLS 11U–18U &amp; BOYS 16U–18U</span>
+          </div>
+          <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight text-white leading-none">
+            SUMMIT VOLLEYBALL CLUB <span class="text-brand-blue">TEAMS</span>
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
+            Explore our 20 competitive Girls and Boys club teams training exclusively at TM Fieldhouse in Lee's Summit, MO.
+          </p>
         </div>
-        <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight text-white leading-none">
-          SUMMIT VOLLEYBALL CLUB <span class="text-brand-blue">TEAMS</span>
-        </h1>
+        <div class="lg:col-span-5 grid grid-cols-3 gap-2.5">
+          <div class="rounded-sm overflow-hidden border border-brand-blue/50 aspect-4/3 bg-black">
+            <img src="/images/teams/18-national-girls.jpg" alt="SVC 18 National Girls" class="w-full h-full object-cover" />
+          </div>
+          <div class="rounded-sm overflow-hidden border border-white/20 aspect-4/3 bg-black">
+            <img src="/images/teams/16-boys-bid.jpg" alt="SVC 16 Boys National Bid" class="w-full h-full object-cover" />
+          </div>
+          <div class="rounded-sm overflow-hidden border border-white/20 aspect-4/3 bg-black">
+            <img src="/images/gallery/action-6.jpg" alt="SVC Girls Gold Medalists" class="w-full h-full object-cover" />
+          </div>
+        </div>
       </div>
 
       <!-- Featured 17s National Bid Spotlight Card (From Previous Design) -->

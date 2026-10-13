@@ -14,72 +14,115 @@ const matchPointVideoUrl = "https://cdn4.sportngin.com/attachments/video_file/81
   <!-- ========================================================= -->
   <!-- 2. FULL-WIDTH ACTION HERO BANNER (Carolina Blue / Black / White Triad) -->
   <!-- ========================================================= -->
-  <section class="relative bg-athletic-black text-white overflow-hidden min-h-[580px] lg:min-h-[660px] flex items-center">
+  <section class="relative bg-athletic-black text-white overflow-hidden min-h-[600px] lg:min-h-[680px] flex items-center border-b-4 border-brand-blue">
     <!-- Action Imagery Background & Atmospheric Gradients -->
     <div class="absolute inset-0 z-0">
       <img
         class="w-full h-full object-cover object-center opacity-35 mix-blend-luminosity filter contrast-125"
         alt="Summit Volleyball Club athletes in action during a competitive national tournament match"
-        src="/images/teams/18-national-girls.jpg"
+        src="/images/facility/tm-volleyball-courts.jpg"
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-athletic-black via-athletic-black/90 to-athletic-black/60"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-blue/20 via-transparent to-transparent"></div>
-    </div>
-
-    <!-- Court Line Watermark Overlay -->
-    <div class="absolute inset-0 pointer-events-none opacity-15">
-      <div class="w-full h-full border-r-4 border-l-4 border-brand-blue max-w-6xl mx-auto flex justify-between">
-        <div class="w-1/3 border-r-2 border-dashed border-white"></div>
-        <div class="w-1/3 border-r-2 border-brand-blue"></div>
-      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-athletic-black via-athletic-black/90 to-athletic-black/65"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-blue/25 via-transparent to-transparent"></div>
     </div>
 
     <!-- Main Content Container -->
     <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-12 py-14 w-full">
-      <div class="max-w-4xl space-y-5">
-        <!-- Prominent Season Badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/50 backdrop-blur-sm">
-          <span class="material-symbols-outlined text-sm font-bold text-brand-blue">bolt</span>
-          <span class="font-display text-sm uppercase tracking-wider font-extrabold">
-            2026–2027 CLUB SEASON • REGISTRATION NOW OPEN
-          </span>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left 7 Cols: Headline & CTAs -->
+        <div class="lg:col-span-7 space-y-5">
+          <!-- Prominent Season Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/50 backdrop-blur-sm">
+            <span class="material-symbols-outlined text-sm font-bold text-brand-blue">bolt</span>
+            <span class="font-display text-sm uppercase tracking-wider font-extrabold">
+              2026–2027 CLUB SEASON • REGISTRATION NOW OPEN
+            </span>
+          </div>
+
+          <!-- Headline Stack with Athletic Stroke Outlines -->
+          <div class="space-y-1">
+            <h2 class="stroke-athletic-blue font-display text-5xl sm:text-7xl md:text-[5rem] leading-[0.95] tracking-wider uppercase font-extrabold select-none">
+              REACH THE SUMMIT
+            </h2>
+            <h1 class="font-display text-4xl sm:text-5xl md:text-[3.35rem] text-white uppercase leading-[1.05] font-black tracking-wide">
+              ELEVATING YOUTH VOLLEYBALL IN KANSAS CITY
+            </h1>
+          </div>
+
+          <!-- Subheadline -->
+          <p class="text-base sm:text-lg text-slate-200 max-w-2xl font-normal leading-relaxed">
+            20 Competitive Girls &amp; Boys Teams (Ages 11–18) • Exclusively Training at TM Fieldhouse in Lee's Summit, MO. Comprehensive player development, elite recruiting exposure, and championship culture.
+          </p>
+
+          <!-- Dual Call-to-Actions -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a
+              class="inline-flex justify-center items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-7 py-3.5 rounded-sm font-display text-2xl tracking-wider uppercase font-black shadow-lg transition-all active:translate-y-px"
+              href="/tryouts"
+            >
+              <span>2026–2027 TRYOUT SCHEDULE</span>
+              <span class="material-symbols-outlined text-xl">chevron_right</span>
+            </a>
+            <a
+              class="inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border-2 border-white backdrop-blur-sm px-6 py-3.5 rounded-sm font-display text-2xl tracking-wider uppercase font-bold transition-all"
+              href="/teams"
+            >
+              <span>EXPLORE 20 TEAMS</span>
+            </a>
+          </div>
         </div>
 
-        <!-- Headline Stack with Athletic Stroke Outlines -->
-        <div class="space-y-1">
-          <h2 class="stroke-athletic-blue font-display text-5xl sm:text-7xl md:text-[5.25rem] leading-[0.95] tracking-wider uppercase font-extrabold select-none">
-            REACH THE SUMMIT
-          </h2>
-          <h1 class="font-display text-4xl sm:text-5xl md:text-[3.5rem] text-white uppercase leading-[1.05] font-black tracking-wide">
-            ELEVATING YOUTH VOLLEYBALL IN KANSAS CITY
-          </h1>
-        </div>
+        <!-- Right 5 Cols: Multi-Image Hero Showcase Collage -->
+        <div class="lg:col-span-5 grid grid-cols-2 gap-3.5">
+          <div class="col-span-2 relative rounded-sm overflow-hidden border-2 border-brand-blue/60 shadow-2xl group aspect-16/10 bg-black">
+            <img
+              src="/images/teams/17-national-meq.jpg"
+              alt="SVC 17 National 11-0 Undefeated MEQ Champions"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+              <div>
+                <span class="bg-brand-blue text-athletic-black px-2 py-0.5 rounded-xs font-display text-[11px] font-black uppercase tracking-wider">
+                  NATIONAL QUALIFIERS
+                </span>
+                <div class="font-display text-lg font-black uppercase text-white mt-0.5">
+                  SVC 17 National • 11-0 MEQ Champions
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <!-- Subheadline -->
-        <p class="text-lg text-slate-200 max-w-2xl font-normal leading-relaxed">
-          20+ Competitive Girls &amp; Boys Teams (Ages 10–18) • Exclusively Training at TM Fieldhouse in Lee's Summit, MO. Comprehensive player development, elite recruiting exposure, and championship culture.
-        </p>
+          <div class="relative rounded-sm overflow-hidden border border-white/25 shadow-xl group aspect-4/3 bg-black">
+            <img
+              src="/images/teams/18-boys-bid.jpg"
+              alt="SVC Boys 18-1 National Bid Winners"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent"></div>
+            <div class="absolute bottom-2.5 left-2.5 right-2.5">
+              <div class="text-[10px] font-extrabold uppercase tracking-wider text-brand-blue">3X USAV NATIONAL BIDS</div>
+              <div class="font-display text-sm font-black uppercase text-white leading-tight">SVC Boys Program</div>
+            </div>
+          </div>
 
-        <!-- Dual Call-to-Actions (Carolina Blue Primary, Sharp Outline Secondary) -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-3">
-          <a
-            class="inline-flex justify-center items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-8 py-3.5 rounded-sm font-display text-2xl sm:text-[1.75rem] tracking-wider uppercase font-black shadow-lg transition-all active:translate-y-px"
-            href="/tryouts"
-          >
-            <span>2026–2027 TRYOUT SCHEDULE &amp; DATES</span>
-            <span class="material-symbols-outlined text-xl">chevron_right</span>
-          </a>
-          <a
-            class="inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border-2 border-white backdrop-blur-sm px-6 py-3.5 rounded-sm font-display text-2xl sm:text-[1.75rem] tracking-wider uppercase font-bold transition-all"
-            href="#programs"
-          >
-            <span>EXPLORE TEAMS &amp; PROGRAMS</span>
-          </a>
+          <div class="relative rounded-sm overflow-hidden border border-white/25 shadow-xl group aspect-4/3 bg-black">
+            <img
+              src="/images/facility/tm-courts-wide.jpg"
+              alt="TM Fieldhouse Home of Summit Volleyball Club"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent"></div>
+            <div class="absolute bottom-2.5 left-2.5 right-2.5">
+              <div class="text-[10px] font-extrabold uppercase tracking-wider text-brand-blue">LEE'S SUMMIT HOME</div>
+              <div class="font-display text-sm font-black uppercase text-white leading-tight">TM Fieldhouse Courts</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Trust Badge Bar along Hero Bottom -->
-      <div class="mt-12 pt-6 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-semibold uppercase tracking-wider text-slate-300">
+      <div class="mt-10 pt-6 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-semibold uppercase tracking-wider text-slate-300">
         <div class="flex items-center gap-2">
           <span class="text-brand-blue font-black text-sm">✦</span>
           <span>3x Consecutive USA National Bids</span>

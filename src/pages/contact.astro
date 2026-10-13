@@ -4,20 +4,37 @@ import { clubInfo } from '../data/clubData';
 ---
 
 <BaseLayout title="Contact Us | Summit Volleyball Club">
-  <!-- Hero -->
+  <!-- Hero with Background & Facility/Team Photos -->
   <section class="bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
-        <span class="material-symbols-outlined text-sm">mail</span>
-        <span>WE'RE HERE TO HELP YOUR ATHLETE REACH THE SUMMIT</span>
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/facility/tm-court-8415.jpg"
+        alt="TM Fieldhouse Entrance in Lee's Summit"
+        class="w-full h-full object-cover object-center opacity-25"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-athletic-black via-athletic-black/90 to-athletic-black/65"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
+          <span class="material-symbols-outlined text-sm">mail</span>
+          <span>WE'RE HERE TO HELP YOUR ATHLETE REACH THE SUMMIT</span>
+        </div>
+        <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+          CONTACT <span class="text-brand-blue">SUMMIT VOLLEYBALL CLUB</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-200 max-w-2xl mt-3">
+          Have questions about 2026–2027 tryouts, age divisions, roster openings, or sponsorships? Reach out directly to our Club Director and staff.
+        </p>
       </div>
-      <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
-        CONTACT <span class="text-brand-blue">SUMMIT VOLLEYBALL CLUB</span>
-      </h1>
-      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mt-3">
-        Have questions about 2026–2027 tryouts, age divisions, roster openings, or sponsorships? Reach out directly to our Club Director and staff.
-      </p>
+      <div class="lg:col-span-5 grid grid-cols-2 gap-3">
+        <div class="rounded-sm overflow-hidden border-2 border-brand-blue/50 shadow-xl aspect-4/3 bg-black">
+          <img src="/images/facility/tm-hero-exterior.jpg" alt="TM Fieldhouse Lee's Summit" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-sm overflow-hidden border-2 border-white/20 shadow-xl aspect-4/3 bg-black">
+          <img src="/images/gallery/action-3.jpg" alt="SVC Team at TM Fieldhouse" class="w-full h-full object-cover" />
+        </div>
+      </div>
     </div>
   </section>
 
