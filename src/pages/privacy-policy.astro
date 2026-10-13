@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clubInfo } from '../data/clubData';
+---
+
+<BaseLayout title="Privacy Policy | Summit Volleyball Club">
+  <!-- Hero -->
+  <section class="bg-athletic-black text-white py-14 md:py-16 border-b-4 border-brand-blue relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10 space-y-2">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider">
+        <span class="material-symbols-outlined text-sm">privacy_tip</span>
+        <span>DATA PROTECTION &amp; FAMILY PRIVACY</span>
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+        PRIVACY <span class="text-brand-blue">POLICY</span>
+      </h1>
+      <p class="text-sm sm:text-base text-slate-300 max-w-2xl">
+        Effective Date: July 1, 2026 • Last Updated: 2026–2027 Season
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-14 bg-surface-subtle">
+    <div class="max-w-4xl mx-auto px-5 md:px-12">
+      <div class="bg-white border border-slate-200 rounded-sm shadow-xs p-6 sm:p-10 space-y-8 text-sm sm:text-base text-slate-600 leading-relaxed">
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            1. OVERVIEW
+          </h2>
+          <p>
+            Summit Volleyball Club ("SVC", "we", "our", or "us") respects the privacy of our athletes, parents, guardians, coaches, and website visitors. This Privacy Policy explains how we collect, use, and safeguard information provided through our website, tryout and camp registrations, SportsEngine household affiliations, and club operations at {clubInfo.facility.name} ({clubInfo.facility.fullAddress}).
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            2. INFORMATION WE COLLECT
+          </h2>
+          <p>We may collect the following categories of information when you register an athlete, contact the club, or participate in SVC programs:</p>
+          <ul class="list-disc pl-6 space-y-1.5">
+            <li><strong>Parent/Guardian &amp; Athlete Contact Information:</strong> Names, email addresses, phone numbers, mailing addresses, emergency contacts, and graduation years.</li>
+            <li><strong>Athletic &amp; Governing Body Records:</strong> USA Volleyball (USAV) / Heart of America (HOA) membership numbers, age division eligibility, uniform sizing, and medical release forms turned in at club events.</li>
+            <li><strong>Account &amp; Billing Information:</strong> Payment and invoicing records processed securely through third-party platforms such as SportsEngine, Venmo, or check/cash ledger records. SVC does not store raw credit card numbers on this website.</li>
+            <li><strong>Media, Film &amp; Recruiting Footage:</strong> Action photography, tournament results, and match video uploaded to team platforms such as Hudl or shared on official SVC communications.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            3. HOW WE USE YOUR INFORMATION
+          </h2>
+          <ul class="list-disc pl-6 space-y-1.5">
+            <li>To manage team rosters, tryout evaluations, camps, clinics, and practice schedules at TM Fieldhouse.</li>
+            <li>To submit required team rosters and coaching credentials to Heart of America (HOA) Volleyball, USA Volleyball (USAV), JVA, and tournament platforms such as Advanced Event Systems (AES).</li>
+            <li>To send timely team updates, inclement weather alerts, tournament wave schedules, and billing statements.</li>
+            <li>To support collegiate recruiting profiles, Hudl video review, and celebrating athlete accomplishments.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            4. THIRD-PARTY SERVICES &amp; LINKS
+          </h2>
+          <p>
+            Our website links to trusted third-party platforms used for club administration, including <strong>SportsEngine</strong>, <strong>Heart of America Volleyball (hoavb.org)</strong>, <strong>Advanced Event Systems (AES)</strong>, <strong>Google Forms</strong>, <strong>Hudl</strong>, and the <strong>Game One Team Store</strong>. Each third-party service is governed by its own privacy policy and security practices.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            5. CHILDREN'S &amp; YOUTH ATHLETE PRIVACY
+          </h2>
+          <p>
+            All youth athlete registrations, memberships, and waivers must be completed and authorized by a parent or legal guardian. Publicly displayed team rosters or athlete recognitions are limited to appropriate athletic directory information. Parents may contact the Club Director at any time to request updates or restrictions regarding their athlete's profile.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            6. CONTACT US
+          </h2>
+          <p>
+            If you have any questions about this Privacy Policy or wish to update your family's contact records, please reach out to:
+          </p>
+          <div class="bg-surface-subtle border border-slate-200 p-4 rounded-sm text-sm text-athletic-black space-y-1">
+            <div class="font-bold uppercase">Summit Volleyball Club — Club Director {clubInfo.director}</div>
+            <div>Practice Facility: {clubInfo.facility.name}, {clubInfo.facility.fullAddress}</div>
+            <div>Mailing Address: {clubInfo.mailingAddress}</div>
+            <div>Phone: <a href="tel:8166008383" class="text-brand-blue-dark underline font-bold">{clubInfo.phone}</a> • Email: <a href={`mailto:${clubInfo.email}`} class="text-brand-blue-dark underline font-bold">{clubInfo.email}</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

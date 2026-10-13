@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clubInfo } from '../data/clubData';
+---
+
+<BaseLayout title="Terms of Service | Summit Volleyball Club">
+  <!-- Hero -->
+  <section class="bg-athletic-black text-white py-14 md:py-16 border-b-4 border-brand-blue relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10 space-y-2">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider">
+        <span class="material-symbols-outlined text-sm">description</span>
+        <span>WEBSITE TERMS, CLUB POLICIES &amp; CONDITIONS</span>
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+        TERMS OF <span class="text-brand-blue">SERVICE</span>
+      </h1>
+      <p class="text-sm sm:text-base text-slate-300 max-w-2xl">
+        Effective Date: July 1, 2026 • Last Updated: 2026–2027 Season
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-14 bg-surface-subtle">
+    <div class="max-w-4xl mx-auto px-5 md:px-12">
+      <div class="bg-white border border-slate-200 rounded-sm shadow-xs p-6 sm:p-10 space-y-8 text-sm sm:text-base text-slate-600 leading-relaxed">
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            1. ACCEPTANCE OF TERMS
+          </h2>
+          <p>
+            By accessing and using the Summit Volleyball Club ("SVC") website and participating in SVC tryouts, camps, clinics, or competitive club teams, you agree to comply with these Terms of Service as well as the official <a href="/code-of-conduct" class="text-brand-blue-dark underline font-bold">2026–2027 SVC Player/Parent Contract &amp; Code of Conduct</a>.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            2. CLUB MEMBERSHIP, DUES &amp; FINANCIAL COMMITMENT
+          </h2>
+          <p>
+            Accepting a roster spot with Summit Volleyball Club is a binding full-season athletic and financial commitment for the 2026–2027 season. As detailed in the <a href="/code-of-conduct" class="text-brand-blue-dark underline font-bold">Player/Parent Contract</a>, initial deposits ($300 due by 7/17/26) and seasonal club fees are non-refundable, as facility leases, tournament entry fees, uniforms, and coaching contracts are allocated across committed team rosters upfront.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            3. USAV, HOA &amp; SAFESPORT GOVERNANCE
+          </h2>
+          <p>
+            All rostered players and coaching staff must maintain active memberships with the Heart of America (HOA) Region and USA Volleyball (USAV), complete required officiating/scorekeeping clinics by the stated deadline, and abide by all SafeSport and anti-recruiting bylaws.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            4. FACILITY RULES AT TM FIELDHOUSE &amp; TOURNAMENT VENUES
+          </h2>
+          <p>
+            Athletes, parents, and spectators must follow all posted facility rules at {clubInfo.facility.name} ({clubInfo.facility.fullAddress}) and all regional/national tournament venues, including wearing non-marking court shoes, bringing only closed-lid water bottles (no straws), staying in designated spectator areas, and respecting the 24/48-Hour Parent Communication Rule.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            5. INTELLECTUAL PROPERTY &amp; WEBSITE CONTENT
+          </h2>
+          <p>
+            All logos, graphics, team photography, training materials, and content on this website are the property of Summit Volleyball Club or used with permission. Unauthorized commercial reproduction or distribution is prohibited.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            6. QUESTIONS &amp; CONTACT INFORMATION
+          </h2>
+          <p>
+            For questions regarding these Terms of Service or club policies, please contact Club Director {clubInfo.director} at <a href={`mailto:${clubInfo.email}`} class="text-brand-blue-dark underline font-bold">{clubInfo.email}</a> or <a href="tel:8166008383" class="text-brand-blue-dark underline font-bold">{clubInfo.phone}</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

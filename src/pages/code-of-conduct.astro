@@ -1,0 +1,232 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clubInfo } from '../data/clubData';
+
+const page1Sections = [
+  {
+    title: 'Binding Document',
+    content: 'We understand that signing this contract is binding for the 2026-2027 Season.',
+  },
+  {
+    title: 'Dual-Sport Athletes',
+    content:
+      'Summit Volleyball Club is willing to work with dual-sport athletes. However, to maintain a position on a Summit Volleyball Club team you are required to attend 90% of all practices and attend all tournaments. The player must attend practices the week of the tournament or they can lose play time at the tournament. If a guest player must be taken, that guest player is contracted to the team for the entire tournament regardless of days. Therefore, your player may see limited play upon return as the guest player can receive play time the entire tournament.',
+  },
+  {
+    title: 'Tournament Attendance',
+    content:
+      'We understand that the signed player will attend ALL tournaments unless notification is given 4 weeks prior to the coaching staff and club director. We further understand that our season may include Regionals, National Qualifiers (travel and local), travel tournaments, which includes Nationals (Club division, AAU, or through qualification), and the signed player is CONTRACTED to attend those tournaments. Not attending said tournaments can result in a fee being charged and will forfeit the player Nationals deposit, of which the responsible party of the signed player, will also be responsible for any hotels and entry fees that are often non-refundable. Non-attendance to Regionals, National Qualifiers (travel and local) or travel tournaments that Summit Volleyball Club deems harmful to the success of the team may result in expulsion from the club at the end of the season, if not during the season.',
+  },
+  {
+    title: 'Behavior / Club Culture',
+    content:
+      'We understand that a negative attitude from players or parents will not be tolerated, and that player will be dismissed from the club should the Club Director or Board determine that a player or parent is being disruptive for the coach and team. Club dues will not be refunded. All players and parents will respect and adhere to the club and team culture which includes all team functions but not limited to team breakfasts, team dinners, leaving for tournaments together (travel and home). As a USAV/HOA/SVC member, the Code of Conduct considers it a violation to possess, consume, sell, or distribute marijuana, illegal drugs, or controlled substances and when doing so is illegal and violates USAV and/or Regional policy and is not limited to in social media, at events, and practices.',
+  },
+  {
+    title: 'Community Health',
+    content:
+      'In circumstances where a pandemic or communicable disease forces the season to come to an end, I understand that Summit Volleyball Club will issue refunds based on tournament entry fees lost and refunded to Summit Volleyball Club and any coach hotel room expenses lost that are refunded to Summit Volleyball Club. I understand that portions of the tournament entry fees, hotel fees, or any travel fees may not be refunded if those expenses are not refunded to Summit Volleyball Club. I understand that all other expenses (i.e. gym/practice time, uniforms, coach pay, etc.) are paid out on contract and cannot be refunded unless refunded to Summit Volleyball Club.',
+  },
+  {
+    title: 'Duration in Club',
+    content:
+      'We understand that we are responsible for all club fees for the 2026-2027 Season. We understand that players can be hurt in USA volleyball and communicable illness may occur. No refunds are issued for injury or illness that causes the player to terminate play during the season. We understand that the individual player must pay all fees in full regardless of the duration of practice/play. This is necessary because membership to the club is limited, others were denied a position because of your acceptance of a position in the club, and budgets are divided evenly amongst the total number of players. We understand that fees will not be refunded if the parent/player chooses to leave voluntarily due to disagreement with coaches on player performance, play time, or any coaching decisions.',
+  },
+  {
+    title: 'Transportation',
+    content:
+      'Parent/Guardian is responsible for all transportation to practices and tournament sites. Remaining on the same Summit Volleyball Club junior team will be at the sole discretion of the board of directors and coaches of the club.',
+  },
+  {
+    title: 'Nationals Deposit (Those teams seeking a qualification)',
+    content:
+      'I acknowledge that there is a separate Nationals attendance budget for the post-season and it is not included in the Regular Season budget. We understand that a Nationals non-refundable deposit is within the Regular Season budget and is intended to offset costs to attend Nationals whether it be in the Club division, AAU, or qualification. Should you breach your contract which states you will attend all events including Nationals, said Nationals deposit will remain with the team/Summit Volleyball Club to pay for but not limited to reserving practice space, tournament registration, and any coach/team travel expenses secured in advance.',
+  },
+];
+
+const page2Sections = [
+  {
+    title: 'Team / Club Culture',
+    content:
+      'In signing this contract, the player/parents/guardian understands and will abide by all team/Club functions that include but are not limited to team meetings, team dinners, team breakfasts regardless of travel or home based events. Players and parents will abide by the club culture and maintain a respectful and meaningful relationship with coaches, their players, the Club staff, other parents, facility personnel, and referees.',
+  },
+  {
+    title: 'Parent Code of Ethics / 48 Hour Rule',
+    content:
+      'All parents, players, and coaches will abide by the Parent/Player Code of Ethics upon which parents/players will refrain from communications with coaches, parents, or Summit Volleyball Club staff in reference to tournaments, play time, practices, etc for 48 hours, upon which all parties may have a reflection time to communicate in a calm and clear demeanor.',
+  },
+  {
+    title: 'Participant Fundraising Policy',
+    paragraphs: [
+      'Only players who participate in a fundraiser are eligible to receive funds generated by the fundraiser. Players who do not participate will not receive any share of the funds collected.',
+      'Funds raised by participants are considered funds for the club/organization and not the personal property of the individual participant.',
+      'If a participant withdraws, becomes ineligible, or chooses not to attend the event, any funds raised on their behalf will remain with the club and may be used to offset event expenses, support other participants, or fund future club activities consistent with the purpose of the fundraiser. Funds are non-transferable and non-refundable to participants.',
+      'Participants who withdraw after fundraising has occurred may be responsible for any non-refundable expenses already incurred by the club on their behalf.',
+    ],
+  },
+  {
+    title: 'Acceptance',
+    content:
+      'Understanding the stipulations and having discussed these with our child, we agree to and we will support participation in Summit Volleyball Club. We understand that once registered and/or having competed with Summit Volleyball Club, the player will be unable to transfer to another club and compete in the USAV/JVA competitions for the 2026-2027 Season.',
+  },
+  {
+    title: 'Membership Fees',
+    content:
+      'I understand I will have an initial non-refundable payment of $300 due by 7/17/26. The deposit is subtracted from the total club fee for each player, and said deposit will go toward securing services and uniforms/equipment. I further understand that I am signing this agreement on or after 7/14/2026.',
+  },
+  {
+    title: 'Final Payment Terms',
+    content:
+      'I acknowledge and accept that my complete club payment for the 2026-2027 Season will be paid in full by the All Club Meeting/Team Meetings in late October/early November 2026 (date/time TBA). I also understand that if payment is not received in full, my player’s play will be halted whether it is at practice or a tournament until full payment is received, with no exceptions.',
+  },
+  {
+    title: 'Player / Parent Signature',
+    content:
+      'It is important that all players read and understand the commitment to their team/Club, and accept and sign the contract in agreement to all terms and conditions of the 2026-2027 season as much as their parent/guardian.',
+  },
+];
+---
+
+<BaseLayout title="Code of Conduct & Player/Parent Contract (2026–2027) | Summit Volleyball Club">
+  <!-- Hero -->
+  <section class="bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div class="space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider">
+          <span class="material-symbols-outlined text-sm">gavel</span>
+          <span>2026–2027 OFFICIAL MEMBERSHIP AGREEMENT &amp; CODE OF CONDUCT</span>
+        </div>
+        <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+          PLAYER / PARENT <span class="text-brand-blue">CONTRACT &amp; CODE OF CONDUCT</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 max-w-2xl">
+          We, the parents and player(s), are aware of the policies and practices of Summit Volleyball Club as stated in this membership information. We agree that our daughter/son may join the club for the 2026–2027 Season.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 shrink-0">
+        <button
+          type="button"
+          onclick="window.print()"
+          class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-5 py-3 rounded-sm font-display text-lg font-black uppercase tracking-wider cursor-pointer transition-colors"
+        >
+          <span class="material-symbols-outlined text-lg">print</span>
+          <span>Print Contract</span>
+        </button>
+        <a
+          href="/for-parents"
+          class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-3 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
+        >
+          <span>Parent Resources</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contract Body -->
+  <section class="py-14 bg-surface-subtle">
+    <div class="max-w-5xl mx-auto px-5 md:px-12 space-y-10">
+      <!-- Page 1 Card -->
+      <div class="bg-white border border-slate-200 rounded-sm shadow-sm overflow-hidden">
+        <div class="p-6 sm:p-8 bg-athletic-black text-white border-b-4 border-brand-blue flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <div class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">
+              SUMMIT VOLLEYBALL CLUB • 2026–2027 SEASON
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-black uppercase">
+              PLAYER / PARENT CONTRACT — PAGE 1
+            </h2>
+          </div>
+          <span class="px-3 py-1 rounded-xs bg-white/10 text-xs font-bold uppercase tracking-wider text-brand-blue">
+            2026–2027 Binding Agreement
+          </span>
+        </div>
+
+        <div class="p-6 sm:p-8 space-y-6 divide-y divide-slate-200">
+          <div class="pb-2">
+            <p class="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
+              We, the parents and player(s), are aware of the policies and practices of Summit Volleyball Club as stated in this membership information. We agree that our daughter/son may join the club for the 2026-2027 Season.
+            </p>
+          </div>
+
+          {page1Sections.map((sec) => (
+            <div class="pt-6 space-y-2">
+              <h3 class="font-display text-2xl font-black uppercase text-athletic-black flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+                <span>{sec.title}</span>
+              </h3>
+              <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                {sec.content}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Page 2 Card -->
+      <div class="bg-white border border-slate-200 rounded-sm shadow-sm overflow-hidden">
+        <div class="p-6 sm:p-8 bg-athletic-black text-white border-b-4 border-brand-blue flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <div class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">
+              SUMMIT VOLLEYBALL CLUB • 2026–2027 SEASON
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-black uppercase">
+              PLAYER / PARENT CONTRACT — PAGE 2
+            </h2>
+          </div>
+          <span class="px-3 py-1 rounded-xs bg-white/10 text-xs font-bold uppercase tracking-wider text-brand-blue">
+            Code of Ethics &amp; Financial Terms
+          </span>
+        </div>
+
+        <div class="p-6 sm:p-8 space-y-6 divide-y divide-slate-200">
+          {page2Sections.map((sec) => (
+            <div class="pt-6 first:pt-0 space-y-2">
+              <h3 class="font-display text-2xl font-black uppercase text-athletic-black flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+                <span>{sec.title}</span>
+              </h3>
+              {sec.paragraphs ? (
+                <div class="space-y-3">
+                  {sec.paragraphs.map((p) => (
+                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed">{p}</p>
+                  ))}
+                </div>
+              ) : (
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">{sec.content}</p>
+              )}
+            </div>
+          ))}
+
+          <!-- Printable Signature Block -->
+          <div class="pt-8 space-y-6">
+            <div class="bg-surface-subtle border border-slate-200 p-6 rounded-sm space-y-6">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark">
+                2026–2027 ACKNOWLEDGMENT &amp; SIGNATURES
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                <div class="space-y-6">
+                  <div class="border-b border-slate-400 pb-2 text-xs font-bold uppercase text-slate-500">
+                    Player Printed Name &amp; Team
+                  </div>
+                  <div class="border-b border-slate-400 pb-2 text-xs font-bold uppercase text-slate-500">
+                    Player Signature &amp; Date
+                  </div>
+                </div>
+                <div class="space-y-6">
+                  <div class="border-b border-slate-400 pb-2 text-xs font-bold uppercase text-slate-500">
+                    Parent / Guardian Printed Name
+                  </div>
+                  <div class="border-b border-slate-400 pb-2 text-xs font-bold uppercase text-slate-500">
+                    Parent / Guardian Signature &amp; Date
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
