@@ -48,17 +48,27 @@ import {
   <section class="bg-svc-sky-light border-b border-svc-sky/40 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="text-sm text-svc-navy">
-        <strong class="font-display uppercase text-base tracking-wider mr-2">⚠️ Important HOA/USAV Requirement:</strong>
-        In order to receive offers in the region's online recruitment system, players must hold a current <strong>HOA/USAV Membership</strong> (or Summer Membership for new-to-club players).
+        <strong class="font-display uppercase text-base tracking-wider mr-2">⚠️ Important HOA/USAV &amp; SportsEngine Requirement:</strong>
+        In order to receive offers and affiliate with Summit Volleyball Club in the region's online system, players must hold a current <strong>HOA/USAV Membership</strong> via SportsEngine.
       </div>
-      <a
-        href={clubInfo.hoaMembershipUrl}
-        target="_blank"
-        rel="noopener"
-        class="shrink-0 px-4 py-2 rounded bg-svc-navy text-white font-display font-bold uppercase text-xs tracking-wider hover:bg-svc-royal transition-colors"
-      >
-        Register at HOAVB.org →
-      </a>
+      <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+        <a
+          href={clubInfo.sportsEngineClubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-4 py-2 rounded bg-svc-navy text-white font-display font-bold uppercase text-xs tracking-wider hover:bg-svc-royal transition-colors"
+        >
+          SVC SportsEngine Portal →
+        </a>
+        <a
+          href={clubInfo.hoaMembershipUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-4 py-2 rounded bg-white text-svc-navy border border-svc-navy/20 font-display font-bold uppercase text-xs tracking-wider hover:bg-svc-ice transition-colors"
+        >
+          Visit HOAVB.org →
+        </a>
+      </div>
     </div>
   </section>
 

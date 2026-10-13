@@ -5,6 +5,13 @@ import FaqDirectory from '../components/FaqDirectory.astro';
 
 const parentResources = [
   {
+    title: "SVC SportsEngine Club Assignment & Membership Portal",
+    desc: "Official Heart of America / SportsEngine affiliation link to bind your player to Summit Volleyball Club and purchase your 26–27 USAV/HOA membership.",
+    href: clubInfo.sportsEngineClubUrl,
+    cta: "Open SVC SportsEngine Portal",
+    icon: "verified"
+  },
+  {
     title: "2026–2027 Player/Parent Contract & Code of Conduct",
     desc: "Official binding membership agreement, tournament attendance policy, 48-hour rule, and fee schedule for the 2026–2027 season.",
     href: "/code-of-conduct",
@@ -20,7 +27,7 @@ const parentResources = [
   },
   {
     title: "Heart of America (HOA) Region Portal",
-    desc: "Register or renew your athlete's USAV / HOA membership required for tryouts and regional tournaments.",
+    desc: "Regional tournament schedules, officiating clinics, and HOA governance information.",
     href: clubInfo.hoaMembershipUrl,
     cta: "Visit HOA Volleyball",
     icon: "badge"
@@ -57,6 +64,26 @@ const parentResources = [
       <p class="text-base sm:text-lg text-slate-300 max-w-2xl mt-3">
         Everything Summit Volleyball Club parents need to stay connected to schedules, USAV/HOA memberships, SportsEngine accounts, and tournament logistics.
       </p>
+      <div class="pt-5 flex flex-wrap gap-3">
+        <a
+          href={clubInfo.sportsEngineClubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-5 py-3 rounded-sm font-display text-lg font-black uppercase tracking-wider transition-colors"
+        >
+          <span class="material-symbols-outlined text-base">how_to_reg</span>
+          <span>SVC SportsEngine Affiliation Portal</span>
+        </a>
+        <a
+          href={clubInfo.sportsEngineLoginUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-3 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
+        >
+          <span class="material-symbols-outlined text-base">login</span>
+          <span>SportsEngine Household Login</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -84,6 +111,15 @@ const parentResources = [
             Parents and athletes use their accounts and the SportsEngine mobile app to receive real-time practice updates, tournament schedules, team chat messages, and registration links. With your account properly configured, your family will receive communications according to your preferences and be able to complete season registrations seamlessly.
           </p>
           <div class="pt-2 flex flex-wrap gap-3">
+            <a
+              href={clubInfo.sportsEngineClubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-4 py-2 rounded-sm font-display text-base uppercase font-black tracking-wider transition-colors"
+            >
+              <span class="material-symbols-outlined text-sm">how_to_reg</span>
+              <span>Link Athlete to SVC in SportsEngine</span>
+            </a>
             <a
               href={clubInfo.sportsEngineParentGuidePdf}
               target="_blank"

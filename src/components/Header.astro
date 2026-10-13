@@ -52,9 +52,13 @@ const isTeamsActive = currentPath.startsWith('/teams');
         <span>/</span>
         <a aria-label="Instagram" class="hover:text-white transition-colors" href={clubInfo.socials.instagram} target="_blank" rel="noopener noreferrer">IG</a>
       </div>
-      <a class="inline-flex items-center gap-1 text-brand-blue hover:text-white font-bold transition-colors" href={clubInfo.tryoutRegistrationUrl} target="_blank" rel="noopener noreferrer">
+      <a class="inline-flex items-center gap-1 text-slate-300 hover:text-brand-blue font-bold transition-colors" href={clubInfo.swagStoreUrl} target="_blank" rel="noopener noreferrer">
+        <span class="material-symbols-outlined text-xs text-brand-blue">shopping_bag</span>
+        SWAG STORE
+      </a>
+      <a class="inline-flex items-center gap-1 text-brand-blue hover:text-white font-bold transition-colors" href={clubInfo.sportsEngineClubUrl} target="_blank" rel="noopener noreferrer">
         <span class="material-symbols-outlined text-xs">login</span>
-        PARENT PORTAL
+        SPORTSENGINE PORTAL
       </a>
     </div>
   </div>

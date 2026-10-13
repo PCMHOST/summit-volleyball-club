@@ -4,75 +4,185 @@ import { clubInfo } from '../data/clubData';
 
 const matchPointVideoUrl = "https://cdn4.sportngin.com/attachments/video_file/81c7-503085/SVC_16-1_girls_final_point_at_Regionals_031024_1080.mp4";
 
+const volleyballSpecs = [
+  { value: "52,000", unit: "SQ. FT.", label: "Climate-Controlled Indoor Facility" },
+  { value: "4 FULL", unit: "COURTS", label: "Regulation Championship Volleyball Courts" },
+  { value: "8 SHORT", unit: "COURTS", label: "Short-Serve & Positional Training Courts" },
+  { value: "2ND FL", unit: "MEZZANINE", label: "Elevated Spectator & Scout Viewing Deck" }
+];
+
 const amenities = [
   {
-    title: "Championship Volleyball Courts",
+    title: "4 Full-Size / 8 Short-Serve Volleyball Courts",
     icon: "grid_on",
-    desc: "Dedicated multi-court indoor training environment engineered for high-level volleyball practices, open gyms, and positional clinics."
+    desc: "TM Fieldhouse features premier indoor volleyball space configurable for 4 full-size regulation courts or 8 short-serve training courts — purpose-built for SVC practices, open gyms, positional clinics, and tournament play."
   },
   {
-    title: "Strength, Plyometric & Jump Zone",
+    title: "TM Performance, Speed & Jump Training",
     icon: "fitness_center",
-    desc: "Dedicated athletic performance space for vertical jump training, lateral agility work, and our KC Rehab & Wellness injury-prevention warm-ups."
+    desc: "Dedicated athletic development space inside the Fieldhouse for vertical jump training, footwork speed & agility, and our standardized KC Rehab & Wellness injury-prevention warm-up protocol."
   },
   {
-    title: "Elevated Spectator Mezzanine",
+    title: "Elevated Spectator Mezzanine & Video Walls",
     icon: "chair",
-    desc: "Comfortable viewing areas for parents, families, and college scouts to watch practices, scrimmages, and seasonal leagues."
+    desc: "Second-story mezzanine overlooking the volleyball courts with café tables, barstool rail seating, and giant video walls — giving parents and visiting college scouts an unobstructed bird's-eye view."
   },
   {
-    title: "Live Court Video & Film Breakdown",
-    icon: "videocam",
-    desc: "Equipped for match streaming, recruiting highlight capture, and technical coaching film analysis."
+    title: "TM Fit Fast-Casual Eatery & Outdoor Patio",
+    icon: "restaurant",
+    desc: "Health-focused fast-casual fuel station ('not your typical concession stand') serving protein shakes, energy teas, fresh salads, and brick-oven pizza, plus a string-lit outdoor family patio."
+  }
+];
+
+const facilityGallery = [
+  {
+    src: "/images/facility/tm-volleyball-courts.jpg",
+    title: "Championship Volleyball Court Setup",
+    caption: "Full-size regulation volleyball court at TM Fieldhouse with competition net systems, antennas, wall padding, digital scoreboard, and mezzanine viewing."
+  },
+  {
+    src: "/images/facility/tm-courts-wide.jpg",
+    title: "Home of Summit Volleyball Club",
+    caption: "Multi-court indoor training floor featuring the official Summit Volleyball Club banner hanging on the upper mezzanine."
+  },
+  {
+    src: "/images/facility/tm-hero-exterior.jpg",
+    title: "52,000 Sq. Ft. Lee's Summit Destination",
+    caption: "Located at 1550 SE Hamblen Rd in Lee's Summit, MO — all SVC practices, tryouts, and clinics take place under one roof."
+  },
+  {
+    src: "/images/facility/tm-mezzanine.jpg",
+    title: "Upper-Level Parent & Scout Mezzanine",
+    caption: "Spacious second-floor viewing lounge with tables, seating, and multi-screen video wall overlooking the courts."
+  },
+  {
+    src: "/images/facility/tm-action-court.jpg",
+    title: "TM Fit Athlete Fuel & Brick-Oven Kitchen",
+    caption: "On-site health-focused eatery offering protein shakes, energy teas, fresh salads, and brick-oven pizza for athletes and families."
+  },
+  {
+    src: "/images/facility/tm-court-8415.jpg",
+    title: "Outdoor Patio & Team Gathering Space",
+    caption: "Welcoming entrance and outdoor patio seating area for SVC families before and after practice sessions."
   }
 ];
 ---
 
 <BaseLayout title="Our Facility: TM Fieldhouse | Summit Volleyball Club">
-  <!-- Hero -->
-  <section class="bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- Hero with Authentic TM Fieldhouse Volleyball Court Background -->
+  <section class="bg-athletic-black text-white py-16 md:py-24 border-b-4 border-brand-blue relative overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <img
+        src="/images/facility/tm-volleyball-courts.jpg"
+        alt="TM Fieldhouse Volleyball Courts in Lee's Summit, MO"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-athletic-black via-athletic-black/90 to-athletic-black/60"></div>
+    </div>
+
     <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
         <span class="material-symbols-outlined text-sm">stadium</span>
         <span>EXCLUSIVE TRAINING HOME OF SUMMIT VOLLEYBALL CLUB</span>
       </div>
-      <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight leading-none">
         OUR FACILITY: <span class="text-brand-blue">TM FIELDHOUSE</span>
       </h1>
-      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mt-3">
-        All Summit Volleyball Club practices, tryouts, open gyms, and positional clinics are held exclusively at TM Fieldhouse in Lee's Summit, MO.
+      <p class="text-base sm:text-lg text-slate-200 max-w-2xl mt-3 leading-relaxed">
+        All Summit Volleyball Club practices, tryouts, open gyms, and positional clinics are held exclusively inside <strong class="text-white">TM Fieldhouse</strong> — Lee's Summit's premier 52,000 sq. ft. indoor sports performance facility.
       </p>
+
+      <div class="pt-6 flex flex-wrap gap-3">
+        <a
+          href={clubInfo.facility.mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-6 py-3 rounded-sm font-display text-lg font-black uppercase tracking-wider transition-colors"
+        >
+          <span class="material-symbols-outlined text-base">directions</span>
+          <span>Get Directions (1550 SE Hamblen Rd)</span>
+        </a>
+        <a
+          href="https://tmfieldhouse.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-6 py-3 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
+        >
+          <span class="material-symbols-outlined text-base">open_in_new</span>
+          <span>Visit TMFieldhouse.com</span>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Main Facility Showcase -->
-  <section class="py-14 bg-white border-b border-slate-200">
+  <!-- Volleyball Facility Quick Specs Bar -->
+  <section class="bg-athletic-charcoal text-white border-b border-white/10 py-8">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 grid grid-cols-2 lg:grid-cols-4 gap-6">
+      {volleyballSpecs.map((spec) => (
+        <div class="border-l-4 border-brand-blue pl-4">
+          <div class="flex items-baseline gap-1.5">
+            <span class="font-display text-3xl sm:text-4xl font-black text-white leading-none">{spec.value}</span>
+            <span class="font-display text-lg font-extrabold text-brand-blue uppercase">{spec.unit}</span>
+          </div>
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-300 mt-1">{spec.label}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Main Volleyball Facility Showcase -->
+  <section class="py-16 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <!-- Left Info -->
       <div class="lg:col-span-6 space-y-6">
         <div>
           <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
-            LEE'S SUMMIT, MISSOURI
+            1550 SE HAMBLEN RD • LEE'S SUMMIT, MO 64081
           </span>
-          <h2 class="font-display text-4xl font-black uppercase text-athletic-black mt-1">
-            BUILT FOR ELITE PLAYER DEVELOPMENT
+          <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-athletic-black leading-none mt-1">
+            PURPOSE-BUILT FOR <span class="text-brand-blue-dark">VOLLEYBALL EXCELLENCE</span>
           </h2>
         </div>
+
         <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-          Having a consistent, premier home facility is a game-changer for our families. Rather than bouncing between distant gyms across the metro, Summit Volleyball Club athletes train under one roof at <strong class="text-athletic-black">TM Fieldhouse</strong> ({clubInfo.facility.fullAddress}).
+          Having a consistent, state-of-the-art home facility is a major advantage for Summit Volleyball Club families. Instead of driving across the metro to different school gyms each night, all 20 SVC Girls and Boys teams train under one roof at <strong class="text-athletic-black">TM Fieldhouse</strong>.
         </p>
 
-        <!-- Location Card -->
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          The 52,000 square-foot facility accommodates <strong class="text-athletic-black">4 full-size regulation volleyball courts</strong> or <strong class="text-athletic-black">8 short-serve training courts</strong>, giving our coaching staff the space to run high-rep positional training, 6-on-6 competitive wash drills, and specialized setter/libero academies simultaneously.
+        </p>
+
+        <!-- Volleyball Court Rules & Hydration Callout -->
+        <div class="bg-powder-50 border-l-4 border-brand-blue p-5 rounded-sm space-y-2">
+          <div class="flex items-center gap-2 font-display text-xl font-black uppercase text-athletic-black">
+            <span class="material-symbols-outlined text-brand-blue-dark">verified_user</span>
+            <span>SVC Volleyball Court &amp; Athlete Guidelines at TM Fieldhouse</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5 list-disc pl-5">
+            <li><strong>Closed-Lid Water Bottles Only (No Straws):</strong> Athletes may bring water onto the court sideline, but bottles must have a sealed, closed lid and no open straws to protect the court surface.</li>
+            <li><strong>Non-Marking Court Shoes:</strong> Players must wear clean, non-marking volleyball or basketball court shoes (please carry court shoes inside rather than wearing them across the parking lot).</li>
+            <li><strong>Mezzanine Spectator Viewing:</strong> Parents and guests are encouraged to watch practices from the upstairs mezzanine or designated courtside seating areas so players and coaches have full perimeter safety clearance.</li>
+          </ul>
+        </div>
+
+        <!-- Location & Contact Card -->
         <div class="bg-surface-subtle border border-slate-200 p-6 rounded-sm space-y-3">
-          <div class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-brand-blue-dark text-2xl mt-0.5">location_on</span>
-            <div>
-              <div class="font-display text-2xl font-black uppercase text-athletic-black">
-                {clubInfo.facility.name}
+          <div class="flex items-start justify-between flex-wrap gap-4">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-brand-blue-dark text-2xl mt-0.5">location_on</span>
+              <div>
+                <div class="font-display text-2xl font-black uppercase text-athletic-black">
+                  {clubInfo.facility.name}
+                </div>
+                <div class="text-sm font-semibold text-slate-700">{clubInfo.facility.address}</div>
+                <div class="text-sm font-semibold text-slate-700">{clubInfo.facility.city}</div>
               </div>
-              <div class="text-sm font-semibold text-slate-700">{clubInfo.facility.address}</div>
-              <div class="text-sm font-semibold text-slate-700">{clubInfo.facility.city}</div>
+            </div>
+            <div class="text-xs text-slate-600 space-y-0.5">
+              <div class="font-extrabold uppercase tracking-wider text-athletic-black">Facility Hours</div>
+              <div>Mon / Wed / Fri: 8:00 AM – 10:00 PM</div>
+              <div>Tue / Thu: 10:00 AM – 10:00 PM</div>
+              <div>Sat: 9:00 AM – 10:00 PM • Sun: 9:00 AM – 7:00 PM</div>
             </div>
           </div>
           <div class="pt-3 border-t border-slate-200 flex flex-wrap gap-3">
@@ -83,7 +193,7 @@ const amenities = [
               class="inline-flex items-center gap-1.5 bg-athletic-black hover:bg-athletic-charcoal text-white px-4 py-2 rounded-sm font-display text-base uppercase font-bold tracking-wider transition-colors"
             >
               <span class="material-symbols-outlined text-sm text-brand-blue">directions</span>
-              <span>Get Google Maps Directions</span>
+              <span>Google Maps Directions</span>
             </a>
             <a
               href="/tryouts"
@@ -95,43 +205,146 @@ const amenities = [
         </div>
       </div>
 
-      <!-- Right Video & Photo -->
-      <div class="lg:col-span-6 space-y-4">
-        <div class="rounded-sm overflow-hidden border border-slate-200 bg-athletic-black shadow-xl">
+      <!-- Right Column: Featured Volleyball Court Photo + SVC Highlight Video -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="rounded-sm overflow-hidden border-2 border-slate-200 bg-athletic-black shadow-xl">
+          <img
+            src="/images/facility/tm-volleyball-courts.jpg"
+            alt="TM Fieldhouse Regulation Volleyball Court with Net and Mezzanine"
+            class="w-full h-80 sm:h-96 object-cover"
+          />
+          <div class="px-4 py-3 bg-athletic-black text-white text-xs flex items-center justify-between border-t border-white/10">
+            <span class="font-bold">TM Fieldhouse Regulation Volleyball Court &amp; Mezzanine</span>
+            <span class="text-brand-blue font-extrabold uppercase">4 Full / 8 Short Courts</span>
+          </div>
+        </div>
+
+        <div class="rounded-sm overflow-hidden border border-slate-200 bg-athletic-black shadow-lg">
           <video
             controls
             preload="metadata"
-            poster="/images/teams/16-boys-regionals.jpg"
-            class="w-full h-80 object-cover"
+            poster="/images/facility/tm-courts-wide.jpg"
+            class="w-full h-64 object-cover"
           >
             <source src={matchPointVideoUrl} type="video/mp4" />
           </video>
-          <div class="px-4 py-3 bg-athletic-black text-white text-xs flex items-center justify-between">
+          <div class="px-4 py-2.5 bg-athletic-black text-white text-xs flex items-center justify-between">
             <span class="font-bold">SVC Championship Action</span>
-            <span class="text-brand-blue font-extrabold uppercase">TM Fieldhouse Home Turf</span>
+            <span class="text-brand-blue font-extrabold uppercase">Summit Volleyball Club</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4 Amenities Grid -->
-  <section class="py-14 bg-surface-subtle">
-    <div class="max-w-7xl mx-auto px-5 md:px-12">
+  <!-- 4 Volleyball & Family Amenities Grid -->
+  <section class="py-16 bg-surface-subtle border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 space-y-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            THE "TM WAY" EXPERIENCE FOR ATHLETES &amp; PARENTS
+          </span>
+          <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-athletic-black leading-none mt-1">
+            VOLLEYBALL &amp; <span class="text-brand-blue-dark">FACILITY AMENITIES</span>
+          </h2>
+        </div>
+        <p class="text-sm text-slate-600 max-w-md">
+          Designed for both high-intensity volleyball development on the court and a welcoming, comfortable experience for families off the court.
+        </p>
+      </div>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {amenities.map((item) => (
-          <div class="bg-white border border-slate-200 p-6 rounded-sm shadow-xs space-y-3">
+          <div class="bg-white border border-slate-200 border-t-4 border-t-brand-blue p-6 rounded-sm shadow-xs space-y-3">
             <div class="w-11 h-11 rounded-sm bg-athletic-black text-brand-blue flex items-center justify-center">
               <span class="material-symbols-outlined text-2xl">{item.icon}</span>
             </div>
             <h3 class="font-display text-2xl font-black uppercase text-athletic-black leading-tight">
               {item.title}
             </h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               {item.desc}
             </p>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Authentic TM Fieldhouse Photo Tour (6 Photos) -->
+  <section class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 space-y-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            INSIDE OUR LEE'S SUMMIT HOME
+          </span>
+          <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-athletic-black leading-none mt-1">
+            TM FIELDHOUSE <span class="text-brand-blue-dark">PHOTO TOUR</span>
+          </h2>
+        </div>
+        <p class="text-sm text-slate-600 max-w-md">
+          Explore the indoor volleyball courts, upper-level spectator mezzanine, TM Fit eatery, and outdoor patio at 1550 SE Hamblen Rd.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {facilityGallery.map((photo) => (
+          <div class="bg-surface-subtle border border-slate-200 rounded-sm overflow-hidden shadow-xs hover:shadow-lg transition-all flex flex-col justify-between group">
+            <div class="aspect-16/10 bg-athletic-black overflow-hidden relative">
+              <img
+                src={photo.src}
+                alt={photo.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-5 space-y-1.5">
+              <h3 class="font-display text-2xl font-black uppercase text-athletic-black">
+                {photo.title}
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                {photo.caption}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Google Map Section -->
+  <section class="bg-athletic-black text-white py-14">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">DIRECTIONS &amp; PARKING</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-black uppercase text-white mt-0.5">
+            FIND TM FIELDHOUSE IN LEE'S SUMMIT
+          </h2>
+        </div>
+        <a
+          href={clubInfo.facility.mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-5 py-2.5 rounded-sm font-display text-base font-black uppercase tracking-wider transition-colors self-start sm:self-auto"
+        >
+          <span class="material-symbols-outlined text-sm">map</span>
+          <span>Open in Google Maps</span>
+        </a>
+      </div>
+
+      <div class="rounded-sm overflow-hidden border-2 border-white/15 h-80 sm:h-96 bg-athletic-charcoal">
+        <iframe
+          title="TM Fieldhouse 1550 SE Hamblen Road Lee's Summit MO Map"
+          src="https://maps.google.com/maps?q=TM%20Fieldhouse%201550%20SE%20Hamblen%20Road%20Lee's%20Summit%2C%20MO%2064081&t=m&z=14&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
   </section>

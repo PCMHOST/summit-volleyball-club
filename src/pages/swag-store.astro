@@ -63,6 +63,18 @@ const merchItems = [
       <p class="text-base sm:text-lg text-slate-300 max-w-2xl mt-3">
         Rep Summit Volleyball Club on the court and in the stands with official player warm-ups, hoodies, practice tees, and parent fan gear.
       </p>
+      <div class="pt-6">
+        <a
+          href={clubInfo.swagStoreUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-7 py-3.5 rounded-sm font-display text-xl uppercase font-black tracking-wider shadow-lg transition-colors"
+        >
+          <span class="material-symbols-outlined text-lg">shopping_cart</span>
+          <span>SHOP OFFICIAL SVC SWAG STORE</span>
+          <span class="material-symbols-outlined text-base">open_in_new</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -74,21 +86,23 @@ const merchItems = [
           <span class="material-symbols-outlined text-2xl">shopping_bag</span>
         </div>
         <div>
-          <div class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark">SEASONAL TEAM STORE WINDOWS</div>
+          <div class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark">OFFICIAL ONLINE TEAM STORE</div>
           <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
-            2026–2027 ONLINE SPIRIT WEAR &amp; UNIFORM ORDERING
+            2026–2027 SPIRIT WEAR &amp; FAN APPAREL PORTAL
           </h2>
           <p class="text-xs sm:text-sm text-slate-600">
-            Our official online team store opens following July Tryouts and prior to the winter tournament season, plus select stock available at TM Fieldhouse.
+            Order official Summit Volleyball Club hoodies, quarter-zips, practice tees, and fan gear directly through our online storefront.
           </p>
         </div>
       </div>
       <a
-        href={`mailto:${clubInfo.email}?subject=SVC%20Swag%20Store%20%26%20Apparel%20Inquiry`}
+        href={clubInfo.swagStoreUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         class="inline-flex items-center gap-2 bg-athletic-black hover:bg-athletic-charcoal text-white px-6 py-3 rounded-sm font-display text-lg uppercase font-black tracking-wider shrink-0 transition-colors"
       >
-        <span>REQUEST STORE LINK / STOCK</span>
-        <span class="material-symbols-outlined text-base text-brand-blue">arrow_forward</span>
+        <span>OPEN ONLINE SWAG STORE</span>
+        <span class="material-symbols-outlined text-base text-brand-blue">open_in_new</span>
       </a>
     </div>
   </section>
@@ -127,10 +141,12 @@ const merchItems = [
             <div class="px-6 py-4 border-t border-slate-200/80 flex items-center justify-between">
               <span class="text-xs font-bold text-slate-500">Youth &amp; Adult Sizes</span>
               <a
-                href="/contact"
+                href={clubInfo.swagStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-xs font-extrabold uppercase tracking-wider text-athletic-black hover:text-brand-blue-dark underline"
               >
-                Inquire / Order →
+                Shop Online Store →
               </a>
             </div>
           </div>
