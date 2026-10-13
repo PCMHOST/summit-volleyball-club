@@ -1,0 +1,446 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { allTeams, coachesList, clubInfo, type TeamItem } from '../../data/clubData';
+
+export function getStaticPaths() {
+  return allTeams.map((team) => ({
+    params: { slug: team.slug },
+    props: { team },
+  }));
+}
+
+interface Props {
+  team: TeamItem;
+}
+
+const { team } = Astro.props;
+
+// Match coach profiles from coachesList if their team string or role matches this team's name
+const matchedCoaches = coachesList.filter(
+  (c) =>
+    c.team.toLowerCase().includes(team.name.toLowerCase()) ||
+    c.role.toLowerCase().includes(team.name.toLowerCase()) ||
+    (team.slug === '17-white' && c.name === 'Amanda Chaney')
+);
+
+const placeholderRosterSlots = Array.from({ length: 10 }, (_, i) => ({
+  jersey: `--`,
+  name: `Roster Spot #${i + 1} (2026–2027 Season)`,
+  position: i === 0 ? 'Setter (S)' : i === 1 ? 'Libero / DS' : i < 5 ? 'Outside / Right Side (OH/RS)' : 'Middle / All-Around',
+  gradYear: 'TBD',
+}));
+
+const placeholderTournaments = [
+  {
+    window: team.gender === 'Boys' ? 'November – December 2026' : 'January 2027',
+    event: 'HOA Early Season Regional / Power League Event #1',
+    location: 'Kansas City Metro Venue (TBA)',
+    wave: 'AM / PM Wave TBA on AES',
+    status: 'Schedule Pending HOA Release',
+  },
+  {
+    window: team.gender === 'Boys' ? 'January 2027' : 'January – February 2027',
+    event: 'HOA Regional Tournament / Midwest Showcase #2',
+    location: 'Kansas City Metro / Midwest Venue',
+    wave: 'AM / PM Wave TBA on AES',
+    status: 'Schedule Pending HOA Release',
+  },
+  {
+    window: team.gender === 'Boys' ? 'January – February 2027' : 'February – March 2027',
+    event: team.color === 'National' || team.color === 'Black'
+      ? 'National Qualifier / Multi-Day Championship Event'
+      : 'HOA Regional Single-Day / Multi-Day Tournament #3',
+    location: 'TBA Following Team Entry Confirmation',
+    wave: 'Pool Play Wave TBA',
+    status: 'Schedule Pending HOA Release',
+  },
+  {
+    window: team.gender === 'Boys' ? 'February 2027' : 'March – April 2027',
+    event: 'Heart of America (HOA) Regional Bid / Championship Event',
+    location: 'Kansas City Convention Center / Hy-Vee Arena',
+    wave: 'Bracket & Wave TBA',
+    status: 'Official Regional Championship Window',
+  },
+];
+---
+
+<BaseLayout title={`${team.name} (${team.tab}) | Roster, Tournaments & Coaching | Summit Volleyball Club`}>
+  <!-- ========================================================= -->
+  <!-- TEAM HERO BANNER                                          -->
+  <!-- ========================================================= -->
+  <section class="relative bg-athletic-black text-white py-12 md:py-16 border-b-4 border-brand-blue overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-0 w-[480px] h-[480px] bg-brand-blue/15 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10 space-y-6">
+      <!-- Breadcrumb & Back Link -->
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <a
+          href="/teams"
+          class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-brand-blue hover:text-white transition-colors"
+        >
+          <span class="material-symbols-outlined text-sm">arrow_back</span>
+          <span>Back to All SVC Teams</span>
+        </a>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-3 py-1 rounded-sm bg-brand-blue text-athletic-black font-display text-sm font-black uppercase tracking-wider">
+            TEAM TAB: {team.tab}
+          </span>
+          <span class="px-3 py-1 rounded-sm bg-white/10 text-white border border-white/20 font-display text-sm font-bold uppercase tracking-wider">
+            {team.ageGroup} • {team.color}
+          </span>
+        </div>
+      </div>
+
+      <!-- Main Team Title & Summary -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-4">
+          {team.badge && (
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider">
+              <span class="material-symbols-outlined text-sm">emoji_events</span>
+              <span>{team.badge}</span>
+            </div>
+          )}
+          <h1 class="font-display text-5xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight leading-none text-white">
+            {team.name} <span class="text-brand-blue">({team.tab})</span>
+          </h1>
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+            {team.description}
+          </p>
+
+          <!-- Section Jump Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a
+              href="#roster"
+              class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-5 py-2.5 rounded-sm font-display text-lg font-black uppercase tracking-wider transition-colors"
+            >
+              <span class="material-symbols-outlined text-base">groups</span>
+              <span>Team Roster</span>
+            </a>
+            <a
+              href="#tournaments"
+              class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-2.5 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
+            >
+              <span class="material-symbols-outlined text-base">calendar_month</span>
+              <span>Tournament Schedule</span>
+            </a>
+            <a
+              href="#coaching"
+              class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-2.5 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
+            >
+              <span class="material-symbols-outlined text-base">sports</span>
+              <span>Coaching Staff</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Team Image Preview Card -->
+        <div class="lg:col-span-4">
+          <div class="relative h-60 sm:h-64 rounded-sm overflow-hidden border-2 border-white/15 shadow-2xl bg-athletic-charcoal">
+            <img
+              src={team.image}
+              alt={team.name}
+              class="w-full h-full object-cover object-center"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-athletic-black/90 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+              <span class="font-display text-xl font-black uppercase text-white">{team.name}</span>
+              <span class="text-xs font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-xs bg-brand-blue text-athletic-black">
+                {team.age}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- ALL 20 TEAMS QUICK-SWITCHER TAB BAR                       -->
+  <!-- ========================================================= -->
+  <div class="bg-surface-subtle border-b border-slate-200 py-3 overflow-x-auto">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 flex items-center gap-1.5 min-w-max">
+      <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 mr-2">
+        2026–2027 Teams:
+      </span>
+      {allTeams.map((t) => {
+        const isCurrent = t.slug === team.slug;
+        return (
+          <a
+            href={`/teams/${t.slug}`}
+            class:list={[
+              'px-2.5 py-1 rounded-xs font-display text-sm font-black uppercase tracking-wider transition-colors',
+              isCurrent
+                ? 'bg-athletic-black text-brand-blue border border-athletic-black shadow-2xs'
+                : 'bg-white hover:bg-powder-50 text-slate-700 border border-slate-200',
+            ]}
+            title={t.name}
+          >
+            {t.tab}
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 1. COACHING STAFF SECTION                                 -->
+  <!-- ========================================================= -->
+  <section id="coaching" class="scroll-mt-24 py-14 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            TEAM LEADERSHIP • {team.name}
+          </span>
+          <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-athletic-black leading-none mt-1">
+            COACHING STAFF
+          </h2>
+        </div>
+        <a
+          href="/coaches"
+          class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark hover:text-athletic-black flex items-center gap-1"
+        >
+          <span>View Full Club Coaching Directory</span>
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+
+      {matchedCoaches.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {matchedCoaches.map((coach) => (
+            <div class="bg-surface-subtle border border-slate-200 rounded-sm overflow-hidden flex flex-col shadow-xs">
+              <div class="aspect-4/4 bg-athletic-black overflow-hidden">
+                <img
+                  src={coach.image}
+                  alt={coach.name}
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div class="p-6 space-y-2 flex-1 flex flex-col justify-between">
+                <div class="space-y-1.5">
+                  <div class="inline-block px-2.5 py-0.5 rounded-xs bg-brand-blue/25 text-athletic-black font-display text-xs font-black uppercase tracking-wider">
+                    {coach.role}
+                  </div>
+                  <h3 class="font-display text-3xl font-black uppercase text-athletic-black">
+                    {coach.name}
+                  </h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {coach.bio}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="bg-surface-subtle border-2 border-dashed border-slate-300 rounded-sm p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-sm bg-athletic-black text-brand-blue flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-2xl">sports</span>
+            </div>
+            <div class="space-y-1">
+              <div class="inline-block px-2.5 py-0.5 rounded-xs bg-brand-blue/20 text-athletic-black text-[11px] font-extrabold uppercase tracking-wider">
+                2026–2027 COACHING ASSIGNMENT
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+                {team.name} ({team.tab}) Coaching Staff
+              </h3>
+              <p class="text-sm text-slate-600 max-w-2xl leading-relaxed">
+                Head and Assistant Coaching assignments and bio profiles for <strong>{team.name}</strong> are being finalized for the 2026–2027 club season. All SVC coaches are IMPACT and SafeSport certified through USA Volleyball and the Heart of America Region.
+              </p>
+            </div>
+          </div>
+          <a
+            href="/coaches"
+            class="inline-flex items-center gap-1.5 bg-athletic-black hover:bg-athletic-charcoal text-white px-5 py-2.5 rounded-sm font-display text-base font-black uppercase tracking-wider shrink-0 transition-colors"
+          >
+            <span>Meet All SVC Coaches</span>
+            <span class="material-symbols-outlined text-sm text-brand-blue">arrow_forward</span>
+          </a>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 2. TEMPORARY ROSTER SECTION                               -->
+  <!-- ========================================================= -->
+  <section id="roster" class="scroll-mt-24 py-14 bg-surface-subtle border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 space-y-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            2026–2027 OFFICIAL TEAM ROSTER
+          </span>
+          <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-athletic-black leading-none mt-1">
+            {team.name} <span class="text-brand-blue-dark">ROSTER</span>
+          </h2>
+        </div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-sm bg-powder-100 border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider text-athletic-black">
+          <span class="material-symbols-outlined text-base text-brand-blue-dark">pending_actions</span>
+          <span>Temporary Roster Section • Finalizing After Uniform Try-On</span>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-sm shadow-xs overflow-hidden">
+        <div class="p-4 sm:p-5 bg-athletic-black text-white flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-brand-blue">
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-brand-blue">badge</span>
+            <span class="font-display text-xl font-black uppercase tracking-wider">
+              {team.name} ({team.tab}) • {team.ageGroup} Athlete Directory
+            </span>
+          </div>
+          <span class="text-xs text-slate-300">
+            Jersey numbers &amp; player profiles updated post-September Uniform Try-On
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-surface-subtle border-b border-slate-200 text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
+                <th class="py-3.5 px-5 w-24">Jersey #</th>
+                <th class="py-3.5 px-5">Athlete Name</th>
+                <th class="py-3.5 px-5">Position</th>
+                <th class="py-3.5 px-5">Grad Year</th>
+                <th class="py-3.5 px-5">School / Hometown</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-sm">
+              {placeholderRosterSlots.map((player) => (
+                <tr class="hover:bg-powder-50/50 transition-colors">
+                  <td class="py-3.5 px-5 font-display text-lg font-black text-brand-blue-dark">
+                    {player.jersey}
+                  </td>
+                  <td class="py-3.5 px-5 font-bold text-athletic-black">
+                    {player.name}
+                  </td>
+                  <td class="py-3.5 px-5 text-slate-600 font-medium">
+                    {player.position}
+                  </td>
+                  <td class="py-3.5 px-5 text-slate-500">
+                    {player.gradYear}
+                  </td>
+                  <td class="py-3.5 px-5 text-slate-500">
+                    Kansas City Metro
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 3. TEMPORARY TOURNAMENT SCHEDULE SECTION                  -->
+  <!-- ========================================================= -->
+  <section id="tournaments" class="scroll-mt-24 py-14 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 space-y-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            2026–2027 SEASON COMPETITION CALENDAR
+          </span>
+          <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-athletic-black leading-none mt-1">
+            {team.name} <span class="text-brand-blue-dark">TOURNAMENTS</span>
+          </h2>
+        </div>
+        <a
+          href="https://results.advancedeventsystems.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-athletic-black hover:bg-athletic-charcoal text-white px-4 py-2.5 rounded-sm font-display text-base font-black uppercase tracking-wider transition-colors self-start"
+        >
+          <span class="material-symbols-outlined text-sm text-brand-blue">open_in_new</span>
+          <span>Live AES Schedules &amp; Pools</span>
+        </a>
+      </div>
+
+      <div class="bg-surface-subtle border border-slate-200 rounded-sm overflow-hidden shadow-xs">
+        <div class="p-4 sm:p-5 bg-athletic-black text-white flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-brand-blue">
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-brand-blue">calendar_month</span>
+            <span class="font-display text-xl font-black uppercase tracking-wider">
+              {team.name} ({team.tab}) • Provisional Tournament Schedule
+            </span>
+          </div>
+          <span class="text-xs text-slate-300">
+            Official HOA 1-Day &amp; Qualifier entries open November 10th
+          </span>
+        </div>
+
+        <div class="overflow-x-auto bg-white">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-surface-subtle border-b border-slate-200 text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
+                <th class="py-3.5 px-5">Target Dates</th>
+                <th class="py-3.5 px-5">Tournament / Event</th>
+                <th class="py-3.5 px-5">Venue / City</th>
+                <th class="py-3.5 px-5">Playing Wave</th>
+                <th class="py-3.5 px-5">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-sm">
+              {placeholderTournaments.map((tourn) => (
+                <tr class="hover:bg-powder-50/50 transition-colors">
+                  <td class="py-4 px-5 font-bold text-athletic-black whitespace-nowrap">
+                    {tourn.window}
+                  </td>
+                  <td class="py-4 px-5 font-bold text-athletic-black">
+                    {tourn.event}
+                  </td>
+                  <td class="py-4 px-5 text-slate-600">
+                    {tourn.location}
+                  </td>
+                  <td class="py-4 px-5 text-slate-600">
+                    {tourn.wave}
+                  </td>
+                  <td class="py-4 px-5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-xs bg-powder-100 text-athletic-black text-xs font-extrabold uppercase tracking-wider">
+                      {tourn.status}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Parent & Player Quick Links Banner -->
+      <div class="bg-athletic-black text-white p-6 sm:p-8 rounded-sm border-l-4 border-brand-blue flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-1">
+          <div class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">
+            TEAM RESOURCES &amp; SUPPORT
+          </div>
+          <h3 class="font-display text-2xl sm:text-3xl font-black uppercase">
+            HAVE QUESTIONS ABOUT {team.name} ({team.tab})?
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+            Visit our Parent &amp; Player FAQ Directory for SportsEngine linking, HOA membership links, tournament wave times, and uniform try-on details, or contact Club Director Erin Wilson.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3 shrink-0">
+          <a
+            href="/for-parents#faq"
+            class="inline-flex items-center gap-1.5 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-5 py-2.5 rounded-sm font-display text-base font-black uppercase tracking-wider transition-colors"
+          >
+            <span>Parent FAQ</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+          <a
+            href="/contact"
+            class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/20 px-5 py-2.5 rounded-sm font-display text-base font-bold uppercase tracking-wider transition-colors"
+          >
+            <span>Contact Club</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

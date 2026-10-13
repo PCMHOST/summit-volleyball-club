@@ -26,46 +26,237 @@ export const clubInfo = {
 };
 
 export const stats = [
-  { value: "21+", label: "Competitive Club Teams" },
+  { value: "20", label: "Competitive Club Teams" },
   { value: "3X", label: "Consecutive 18 National Bids" },
   { value: "11-0", label: "17 National MEQ Champions" },
   { value: "100%", label: "Whole-Athlete Development" }
 ];
 
-export const girlsTeams = [
+export interface TeamItem {
+  id: string;
+  tab: string;
+  slug: string;
+  name: string;
+  color: string;
+  age: string;
+  ageGroup: string;
+  gender: 'Girls' | 'Boys';
+  tier: string;
+  badge?: string;
+  coaches: string[];
+  image: string;
+  description: string;
+}
+
+export const girlsTeams: TeamItem[] = [
   {
-    id: "team-18-national",
-    name: "SVC 18 National",
-    ageGroup: "18U Girls",
-    tier: "National Travel",
-    badge: "3x Consecutive USAV National Bid Winner",
-    coaches: ["SVC National Staff"],
-    image: "/images/teams/18-national-girls.jpg",
-    description: "Our flagship 18U National squad with 3 consecutive USA Volleyball National Championship qualifications, including Reno, NV."
+    id: "team-11-black",
+    tab: "11-1",
+    slug: "11-black",
+    name: "SVC 11 Black",
+    color: "Black",
+    age: "11U",
+    ageGroup: "11U Girls",
+    gender: "Girls",
+    tier: "11-1 • Black",
+    coaches: ["Jennifer Novogoratz (Assistant Coach)"],
+    image: "/images/gallery/action-4.jpg",
+    description: "Our foundational 11-1 competitive team fostering strong fundamentals, all-around court awareness, and a lifelong love for volleyball."
   },
   {
-    id: "team-18-black",
-    name: "SVC 18 Black",
-    ageGroup: "18U Girls",
-    tier: "National / Regional",
-    coaches: ["Kristin Smoot-Irvin (Head Coach)", "Jocelyn Adams (Assistant Coach)"],
-    image: "/images/teams/18-national-girls.jpg",
-    description: "High-level senior division roster focused on collegiate preparation, high-tempo offense, and competitive qualifier play."
-  },
-  {
-    id: "team-18-premier",
-    name: "SVC 18 Premier",
-    ageGroup: "18U Girls",
-    tier: "Premier",
-    coaches: ["SVC 18U Staff"],
+    id: "team-12-black",
+    tab: "12-1",
+    slug: "12-black",
+    name: "SVC 12 Black",
+    color: "Black",
+    age: "12U",
+    ageGroup: "12U Girls",
+    gender: "Girls",
+    tier: "12-1 • Black",
+    coaches: ["Diana Blackburn (Head Coach)"],
     image: "/images/gallery/action-1.jpg",
-    description: "Competitive 18U Premier roster competing in regional and multi-day showcase tournaments across the Midwest."
+    description: "Coached by 20+ year veteran Diana Blackburn with a standard of technical excellence, self-discipline, and team-first pride."
+  },
+  {
+    id: "team-12-blue",
+    tab: "12-2",
+    slug: "12-blue",
+    name: "SVC 12 Blue",
+    color: "Blue",
+    age: "12U",
+    ageGroup: "12U Girls",
+    gender: "Girls",
+    tier: "12-2 • Blue",
+    coaches: ["SVC 12U Coaching Staff"],
+    image: "/images/gallery/action-2.jpg",
+    description: "12-2 Blue roster building strong 6-rotation fundamentals, serve-receive consistency, and competitive HOA tournament experience."
+  },
+  {
+    id: "team-13-black",
+    tab: "13-1",
+    slug: "13-black",
+    name: "SVC 13 Black",
+    color: "Black",
+    age: "13U",
+    ageGroup: "13U Girls",
+    gender: "Girls",
+    tier: "13-1 • Black",
+    coaches: ["Alex Porter (Head Coach)", "Madison DeLuca (Assistant Coach)"],
+    image: "/images/gallery/action-4.jpg",
+    description: "Dynamic 13-1 roster focused on attacking timing, smart court decision-making, and mental toughness."
+  },
+  {
+    id: "team-13-blue",
+    tab: "13-2",
+    slug: "13-blue",
+    name: "SVC 13 Blue",
+    color: "Blue",
+    age: "13U",
+    ageGroup: "13U Girls",
+    gender: "Girls",
+    tier: "13-2 • Blue",
+    coaches: ["Trevor Gensler (Head Coach)"],
+    image: "/images/gallery/action-5.jpg",
+    description: "Led by 30-year veteran player and collegiate coach Trevor Gensler, instilling elite fundamentals and accountability."
+  },
+  {
+    id: "team-14-national",
+    tab: "14-1",
+    slug: "14-national",
+    name: "SVC 14 National",
+    color: "National",
+    age: "14U",
+    ageGroup: "14U Girls",
+    gender: "Girls",
+    tier: "14-1 • National",
+    coaches: ["Hannah Berry (Head Coach)", "Ava Martin (Assistant Coach)"],
+    image: "/images/gallery/action-1.jpg",
+    description: "Led by Assistant Club Director Hannah Berry and former collegiate libero Ava Martin, preparing 14U athletes for national qualifier competition."
+  },
+  {
+    id: "team-14-blue",
+    tab: "14-2",
+    slug: "14-blue",
+    name: "SVC 14 Blue",
+    color: "Blue",
+    age: "14U",
+    ageGroup: "14U Girls",
+    gender: "Girls",
+    tier: "14-2 • Blue",
+    coaches: ["Olivia Groom (Head Coach)", "Gracie Saale (Assistant Coach)"],
+    image: "/images/gallery/action-2.jpg",
+    description: "Focused on transitioning middle school athletes to high school speed, positional specialization, and team confidence."
+  },
+  {
+    id: "team-14-white",
+    tab: "14-3",
+    slug: "14-white",
+    name: "SVC 14 White",
+    color: "White",
+    age: "14U",
+    ageGroup: "14U Girls",
+    gender: "Girls",
+    tier: "14-3 • White",
+    coaches: ["SVC 14U Coaching Staff"],
+    image: "/images/gallery/action-3.jpg",
+    description: "Competitive 14-3 White roster emphasizing all-around skill mastery, communication, and HOA regional tournament competition."
+  },
+  {
+    id: "team-15-black",
+    tab: "15-1",
+    slug: "15-black",
+    name: "SVC 15 Black",
+    color: "Black",
+    age: "15U",
+    ageGroup: "15U Girls",
+    gender: "Girls",
+    tier: "15-1 • Black",
+    badge: "MEQ Qualifier Contenders",
+    coaches: ["Connie Rogers (Head Coach)", "Samantha Rosales (Assistant Coach)"],
+    image: "/images/teams/15-1-meq-champs.jpg",
+    description: "High-energy 15-1 squad competing in National Qualifiers with a focus on coachability, effort, and strong team chemistry."
+  },
+  {
+    id: "team-15-blue",
+    tab: "15-2",
+    slug: "15-blue",
+    name: "SVC 15 Blue",
+    color: "Blue",
+    age: "15U",
+    ageGroup: "15U Girls",
+    gender: "Girls",
+    tier: "15-2 • Blue",
+    coaches: ["SVC 15U Coaching Staff"],
+    image: "/images/gallery/action-5.jpg",
+    description: "Competitive 15-2 Blue squad focused on high-tempo transition offense, defensive grit, and regional showcase competition."
+  },
+  {
+    id: "team-15-white",
+    tab: "15-3",
+    slug: "15-white",
+    name: "SVC 15 White",
+    color: "White",
+    age: "15U",
+    ageGroup: "15U Girls",
+    gender: "Girls",
+    tier: "15-3 • White",
+    coaches: ["Kelly Daniels (Head Coach)", "Jalyn Crist (Assistant Coach)"],
+    image: "/images/gallery/action-6.jpg",
+    description: "Guided by the PACE philosophy — Positive Attitude, Communication, and Effort — building complete high school athletes."
+  },
+  {
+    id: "team-16-national",
+    tab: "16-1",
+    slug: "16-national",
+    name: "SVC 16 National",
+    color: "National",
+    age: "16U",
+    ageGroup: "16U Girls",
+    gender: "Girls",
+    tier: "16-1 • National",
+    badge: "USAV Nationals Qualifier Tradition",
+    coaches: ["SVC 16U National Staff"],
+    image: "/images/gallery/action-4.jpg",
+    description: "Our 16-1 National squad competing across premier national qualifiers and regional bid championships."
+  },
+  {
+    id: "team-16-blue",
+    tab: "16-2",
+    slug: "16-blue",
+    name: "SVC 16 Blue",
+    color: "Blue",
+    age: "16U",
+    ageGroup: "16U Girls",
+    gender: "Girls",
+    tier: "16-2 • Blue",
+    coaches: ["SVC 16U Coaching Staff"],
+    image: "/images/gallery/action-5.jpg",
+    description: "Competitive 16-2 Blue roster developing advanced offensive systems, serve-receive precision, and college recruiting readiness."
+  },
+  {
+    id: "team-16-white",
+    tab: "16-3",
+    slug: "16-white",
+    name: "SVC 16 White",
+    color: "White",
+    age: "16U",
+    ageGroup: "16U Girls",
+    gender: "Girls",
+    tier: "16-3 • White",
+    coaches: ["SVC 16U Coaching Staff"],
+    image: "/images/gallery/action-2.jpg",
+    description: "High-rep 16-3 White team emphasizing varsity-level skill execution, aggressive serving, and competitive tournament play."
   },
   {
     id: "team-17-national",
+    tab: "17-1",
+    slug: "17-national",
     name: "SVC 17 National",
+    color: "National",
+    age: "17U",
     ageGroup: "17U Girls",
-    tier: "National Travel",
+    gender: "Girls",
+    tier: "17-1 • National",
     badge: "11-0 Undefeated MEQ Champions (120 Teams)",
     coaches: ["Sarah Armstrong (Head Coach)", "Ciera Cory (Assistant Coach)", "Dakota Hearn (Assistant Coach)"],
     image: "/images/teams/17-national-meq.jpg",
@@ -73,192 +264,83 @@ export const girlsTeams = [
   },
   {
     id: "team-17-blue",
+    tab: "17-2",
+    slug: "17-blue",
     name: "SVC 17 Blue",
+    color: "Blue",
+    age: "17U",
     ageGroup: "17U Girls",
-    tier: "National / Premier",
+    gender: "Girls",
+    tier: "17-2 • Blue",
     coaches: ["Erin Wilson (Club Director & Head Coach)"],
     image: "/images/teams/17-1-girls.jpg",
     description: "Led by Club Director Erin Wilson (25+ years coaching experience), emphasizing elite court IQ, discipline, and collegiate recruiting."
   },
   {
-    id: "team-17-silver",
-    name: "SVC 17 Silver",
+    id: "team-17-white",
+    tab: "17-3",
+    slug: "17-white",
+    name: "SVC 17 White",
+    color: "White",
+    age: "17U",
     ageGroup: "17U Girls",
-    tier: "Regional / Select",
-    coaches: ["Amanda Chaney (Assistant Coach)"],
-    image: "/images/gallery/action-2.jpg",
+    gender: "Girls",
+    tier: "17-3 • White",
+    coaches: ["Amanda Chaney (Coach)"],
+    image: "/images/gallery/action-3.jpg",
     description: "Focused on technical execution, mental toughness, and high-rep competitive tournament play in the HOA region."
   },
   {
-    id: "team-17-premier",
-    name: "SVC 17 Premier",
-    ageGroup: "17U Girls",
-    tier: "Premier",
-    coaches: ["SVC 17U Staff"],
-    image: "/images/gallery/action-3.jpg",
-    description: "High-energy 17U Premier team competing in regional qualifiers and Midwest championship events."
-  },
-  {
-    id: "team-16-national",
-    name: "SVC 16 National",
-    ageGroup: "16U Girls",
-    tier: "National Travel",
-    badge: "USAV Las Vegas Nationals Qualifier",
-    coaches: ["SVC 16U National Staff"],
-    image: "/images/gallery/action-4.jpg",
-    description: "Region Bid champions who punched their ticket to the USAV National Championships in Las Vegas with an electric gold-bracket finish."
-  },
-  {
-    id: "team-16-black",
-    name: "SVC 16 Black",
-    ageGroup: "16U Girls",
-    tier: "National / Premier",
-    coaches: ["SVC 16U Staff"],
-    image: "/images/gallery/action-5.jpg",
-    description: "Competitive 16U roster developing advanced offensive systems, serve-receive precision, and recruiting video portfolios."
-  },
-  {
-    id: "team-15-national",
-    name: "SVC 15-1 National",
-    ageGroup: "15U Girls",
-    tier: "National Travel",
-    badge: "MEQ Qualifier Champions",
-    coaches: ["SVC 15U National Staff"],
-    image: "/images/teams/15-1-meq-champs.jpg",
-    description: "15-1 National squad competing at the highest national qualifier level across the Midwest."
-  },
-  {
-    id: "team-15-black",
-    name: "SVC 15 Black",
-    ageGroup: "15U Girls",
-    tier: "National / Premier",
-    coaches: ["Connie Rogers (Head Coach)", "Samantha Rosales (Assistant Coach)"],
-    image: "/images/teams/15-1-meq-champs.jpg",
-    description: "High-energy 15U squad competing in National Qualifiers with a focus on coachability, effort, and strong team chemistry."
-  },
-  {
-    id: "team-15-white",
-    name: "SVC 15 White",
-    ageGroup: "15U Girls",
-    tier: "Regional / Select",
-    coaches: ["Kelly Daniels (Head Coach)", "Jalyn Crist (Assistant Coach)"],
-    image: "/images/gallery/action-6.jpg",
-    description: "Guided by the PACE philosophy — Positive Attitude, Communication, and Effort — building complete high school varsity athletes."
-  },
-  {
-    id: "team-14-national",
-    name: "SVC 14 National",
-    ageGroup: "14U Girls",
-    tier: "National Travel",
-    coaches: ["Hannah Berry (Head Coach)", "Ava Martin (Assistant Coach)"],
-    image: "/images/gallery/action-1.jpg",
-    description: "Led by former SVC National-level libero Hannah Berry and collegiate libero Ava Martin, preparing 14U athletes for national competition."
-  },
-  {
-    id: "team-14-blue",
-    name: "SVC 14 Blue",
-    ageGroup: "14U Girls",
-    tier: "Premier / Select",
-    coaches: ["Olivia Groom (Head Coach)", "Gracie Saale (Assistant Coach)"],
-    image: "/images/gallery/action-2.jpg",
-    description: "Focused on transitioning middle school athletes to high school speed, positional specialization, and team confidence."
-  },
-  {
-    id: "team-14-select",
-    name: "SVC 14 Select",
-    ageGroup: "14U Girls",
-    tier: "Select",
-    coaches: ["SVC 14U Staff"],
-    image: "/images/gallery/action-3.jpg",
-    description: "Competitive 14U Select roster emphasizing all-around skill mastery and HOA regional tournament competition."
-  },
-  {
-    id: "team-13-black",
-    name: "SVC 13 Black",
-    ageGroup: "13U Girls",
-    tier: "National / Premier",
-    coaches: ["Alex Porter (Head Coach)", "Madison DeLuca (Assistant Coach)"],
-    image: "/images/gallery/action-4.jpg",
-    description: "Dynamic 13U roster focused on attacking timing, smart court decision-making, and mental toughness."
-  },
-  {
-    id: "team-13-blue",
-    name: "SVC 13 Blue",
-    ageGroup: "13U Girls",
-    tier: "Premier",
-    coaches: ["Trevor Gensler (Head Coach)"],
-    image: "/images/gallery/action-5.jpg",
-    description: "Led by 30-year veteran player and collegiate coach Trevor Gensler, instilling elite fundamentals and accountability."
-  },
-  {
-    id: "team-13-premier",
-    name: "SVC 13 Premier",
-    ageGroup: "13U Girls",
-    tier: "Premier",
-    coaches: ["SVC 13U Staff"],
-    image: "/images/gallery/action-6.jpg",
-    description: "13U Premier team competing in Heart of America regional tournaments and local showcases."
-  },
-  {
-    id: "team-12-black",
-    name: "SVC 12 Black",
-    ageGroup: "12U Girls",
-    tier: "National / Premier",
-    coaches: ["Diana Blackburn (Head Coach)"],
-    image: "/images/gallery/action-1.jpg",
-    description: "Coached by 20+ year veteran Diana Blackburn with a standard of technical excellence, self-discipline, and team-first pride."
-  },
-  {
-    id: "team-12-premier",
-    name: "SVC 12 Premier",
-    ageGroup: "12U Girls",
-    tier: "Premier",
-    coaches: ["SVC 12U Staff"],
-    image: "/images/gallery/action-2.jpg",
-    description: "12U Premier roster building strong 6-rotation fundamentals and competitive tournament experience."
-  },
-  {
-    id: "team-12-select",
-    name: "SVC 12 Select",
-    ageGroup: "12U Girls",
-    tier: "Select",
-    coaches: ["SVC 12U Staff"],
-    image: "/images/gallery/action-3.jpg",
-    description: "Developmental and competitive 12U Select squad focused on serving, passing, and court awareness."
-  },
-  {
-    id: "team-11-black",
-    name: "SVC 11 Black",
-    ageGroup: "10U / 11U Girls",
-    tier: "Youth Competitive",
-    coaches: ["Jennifer Novogoratz (Assistant Coach)"],
-    image: "/images/gallery/action-4.jpg",
-    description: "Our foundational youth competitive team fostering a supportive, growth-oriented culture and lifelong love for volleyball."
+    id: "team-18-black",
+    tab: "18-1",
+    slug: "18-black",
+    name: "SVC 18 Black",
+    color: "Black",
+    age: "18U",
+    ageGroup: "18U Girls",
+    gender: "Girls",
+    tier: "18-1 • Black",
+    badge: "3x Consecutive USAV National Bid Tradition",
+    coaches: ["Kristin Smoot-Irvin (Head Coach)", "Jocelyn Adams (Assistant Coach)"],
+    image: "/images/teams/18-national-girls.jpg",
+    description: "Our senior 18-1 division squad focused on collegiate preparation, high-tempo offense, and national qualifier competition."
   }
 ];
 
-export const boysTeams = [
+export const boysTeams: TeamItem[] = [
   {
-    id: "team-18-boys",
-    name: "SVC 18-1 Boys National",
-    ageGroup: "17U / 18U Boys",
-    tier: "Boys National Travel",
-    badge: "USA National Bid Winners • Dallas & Reno",
-    coaches: ["SVC Boys National Staff"],
-    image: "/images/teams/18-boys-bid.jpg",
-    description: "Multiple-time USAV Boys Junior National Championship qualifiers competing against the top boys programs in the nation."
-  },
-  {
-    id: "team-16-boys",
-    name: "SVC 16-1 Boys National",
-    ageGroup: "15U / 16U Boys",
-    tier: "Boys National Travel",
+    id: "team-boys-16",
+    tab: "Boys 16-1",
+    slug: "boys-16",
+    name: "SVC 16 Boys",
+    color: "Black",
+    age: "16U",
+    ageGroup: "16U Boys",
+    gender: "Boys",
+    tier: "Boys 16-1 • Black",
     badge: "HOA Regional Champions & USA Bid Winners",
-    coaches: ["SVC Boys National Staff"],
+    coaches: ["SVC Boys Coaching Staff"],
     image: "/images/teams/16-boys-bid.jpg",
     description: "Heart of America Boys Regional Champions and back-to-back USA National Bid winners representing Kansas City on the national stage."
+  },
+  {
+    id: "team-boys-18",
+    tab: "Boys 18-1",
+    slug: "boys-18",
+    name: "SVC 18 Boys",
+    color: "Black",
+    age: "18U",
+    ageGroup: "18U Boys",
+    gender: "Boys",
+    tier: "Boys 18-1 • Black",
+    badge: "USA National Bid Winners • Dallas & Reno",
+    coaches: ["SVC Boys Coaching Staff"],
+    image: "/images/teams/18-boys-bid.jpg",
+    description: "Multiple-time USAV Boys Junior National Championship qualifiers competing against the top boys programs in the nation."
   }
 ];
+
+export const allTeams: TeamItem[] = [...girlsTeams, ...boysTeams];
 
 export const currentQualifications = [
   {

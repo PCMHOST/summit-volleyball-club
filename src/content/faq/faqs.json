@@ -1,21 +1,21 @@
 [
   {
-    "id": "faq-1",
+    "id": "faq-parent-01",
     "number": 1,
     "audience": "parents",
     "section": "A. Registrations, Memberships & Governance",
     "category": "Registrations & Compliance",
     "question": "How do I link my player to Summit Volleyball Club in SportsEngine?",
-    "answer": "Use the official SVC 26–27 Club Assignment link sent by the club director. Log into your household SportsEngine account, select your player, and accept the club assignment to bind them to Summit Volleyball Club for the HOA region."
+    "answer": "Use the official <a href=\"https://memberships.sportsengine.com/org/heart-of-america-volleyball/affiliation/summit-volleyball-club-svc\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">SVC SportsEngine Club Assignment Portal</a>. Log into your household account, select your player, and accept the club assignment to affiliate them with Summit Volleyball Club for the Heart of America region."
   },
   {
-    "id": "faq-2",
+    "id": "faq-parent-02",
     "number": 2,
     "audience": "parents",
     "section": "A. Registrations, Memberships & Governance",
     "category": "Registrations & Compliance",
     "question": "Which USAV/HOA membership is needed for 11U–17U girls and boys?",
-    "answer": "Choose the <strong>26-27 HOA-F3 Junior Player</strong> membership ($60 total). The payment is split between Heart of America ($46) and USA Volleyball ($14)."
+    "answer": "Choose the <strong>26-27 HOA-F3 Junior Player</strong> membership ($60 total) directly within the <a href=\"https://memberships.sportsengine.com/org/heart-of-america-volleyball/affiliation/summit-volleyball-club-svc\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">SportsEngine Membership Checkout</a>. The charge is automatically split between HOA regional fees ($46) and USA Volleyball ($14)."
   },
   {
     "id": "faq-3",
@@ -45,13 +45,13 @@
     "answer": "No. Under HOA and USAV regulations, an athlete may only be affiliated with and compete for one indoor junior club during a sanctioned season. Dual-club participation is strictly prohibited."
   },
   {
-    "id": "faq-6",
+    "id": "faq-parent-06",
     "number": 6,
     "audience": "parents",
     "section": "A. Registrations, Memberships & Governance",
     "category": "Registrations & Compliance",
-    "question": "Where do I upload our medical release and waiver forms?",
-    "answer": "Medical Release forms and the Parent/Player Code of Ethics must be printed, filled out, signed, and turned in directly during the mandatory Uniform Try-On event at TM Fieldhouse."
+    "question": "Where do I find and submit our medical release, code of ethics, and Hudl forms?",
+    "answer": "Access the required packet on the <a href=\"https://erinsummitvc.omailroute.net/x/d?c=52952110&l=3cf44104-9d59-43cf-9310-46931989b9da&r=c1df7e18-e0eb-4671-b760-99d53917715c\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">SVC Parent/Player Forms Portal</a>. Print and sign the USAV Medical Release and Parent/Player Code of Ethics, and submit the embedded Hudl Account Request Form before or during Uniform Try-On."
   },
   {
     "id": "faq-7",
@@ -99,13 +99,13 @@
     "answer": "The 2nd practice shirt is distributed directly at TM Fieldhouse during the September 20th Uniform Try-On event."
   },
   {
-    "id": "faq-12",
+    "id": "faq-parent-12",
     "number": 12,
     "audience": "parents",
     "section": "B. Uniforms, Sizing & Gear",
     "category": "Uniforms & Apparel",
-    "question": "Can family members order extra gear and spirit wear?",
-    "answer": "Yes. An initial SVC Flash Sale opens in late August through Game One with discounted pricing. Following that, the general Game One SVC Team Store stays open all season long for parents, siblings, and fans."
+    "question": "Can family members order extra gear, fan swag, and spirit wear?",
+    "answer": "Yes. Order club apparel, spirit wear, and hoodies through the <a href=\"https://erinsummitvc.omailroute.net/x/d?c=53305669&l=a3b9554a-0712-495c-89ba-af7b4d47786f&r=58e869b3-bdf5-49a0-a506-62d2c493d41c\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">Game One SVC Team Store &amp; Fan Gear Shop</a>. The seasonal storefront carries player hoodies, fan tees, and family gear delivered directly to practices at TM Fieldhouse."
   },
   {
     "id": "faq-13",
@@ -123,11 +123,20 @@
     "section": "B. Uniforms, Sizing & Gear",
     "category": "Uniforms & Apparel",
     "question": "What should my player bring to practice each day?",
-    "answer": "Assigned practice t-shirt, spandex/shorts, court shoes (carried into the gym, not worn outside on asphalt), knee pads, a large refillable water bottle, and their personal volleyball (clearly labeled with their name)."
+    "answer": "Assigned practice t-shirt, spandex/shorts, court shoes (carried into the gym, not worn outside on asphalt), knee pads, a large refillable water bottle (<strong>must have a closed lid and no straws</strong>), and their personal volleyball (clearly labeled with their name)."
+  },
+  {
+    "id": "faq-parent-14",
+    "number": 15,
+    "audience": "parents",
+    "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
+    "category": "Officiating Clinics",
+    "question": "Where do players access and complete their required Score & Ref clinics?",
+    "answer": "Junior scoring, libero tracking, and second referee modules are hosted within USAV Academy. Log in via your <a href=\"https://my.sportsengine.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">SportsEngine Household Dashboard</a>, open the USAV Academy tab, and launch your assigned Heart of America clinic modules. You can also review officiating guidelines at <a href=\"https://hoavb.org/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">hoavb.org</a>."
   },
   {
     "id": "faq-15",
-    "number": 15,
+    "number": 16,
     "audience": "parents",
     "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
     "category": "Officiating Clinics",
@@ -136,7 +145,7 @@
   },
   {
     "id": "faq-16",
-    "number": 16,
+    "number": 17,
     "audience": "parents",
     "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
     "category": "Officiating Clinics",
@@ -145,7 +154,7 @@
   },
   {
     "id": "faq-17",
-    "number": 17,
+    "number": 18,
     "audience": "parents",
     "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
     "category": "Officiating Clinics",
@@ -154,7 +163,7 @@
   },
   {
     "id": "faq-18",
-    "number": 18,
+    "number": 19,
     "audience": "parents",
     "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
     "category": "Officiating Clinics",
@@ -163,7 +172,7 @@
   },
   {
     "id": "faq-19",
-    "number": 19,
+    "number": 20,
     "audience": "parents",
     "section": "C. Officiating & Scorekeeping Clinics (Ref & Score)",
     "category": "Officiating Clinics",
@@ -172,7 +181,7 @@
   },
   {
     "id": "faq-20",
-    "number": 20,
+    "number": 21,
     "audience": "parents",
     "section": "D. Club Budgets, Payments & Installments",
     "category": "Budgets & Payments",
@@ -181,7 +190,7 @@
   },
   {
     "id": "faq-21",
-    "number": 21,
+    "number": 22,
     "audience": "parents",
     "section": "D. Club Budgets, Payments & Installments",
     "category": "Budgets & Payments",
@@ -190,7 +199,7 @@
   },
   {
     "id": "faq-22",
-    "number": 22,
+    "number": 23,
     "audience": "parents",
     "section": "D. Club Budgets, Payments & Installments",
     "category": "Budgets & Payments",
@@ -199,7 +208,7 @@
   },
   {
     "id": "faq-23",
-    "number": 23,
+    "number": 24,
     "audience": "parents",
     "section": "D. Club Budgets, Payments & Installments",
     "category": "Budgets & Payments",
@@ -208,7 +217,7 @@
   },
   {
     "id": "faq-24",
-    "number": 24,
+    "number": 25,
     "audience": "parents",
     "section": "D. Club Budgets, Payments & Installments",
     "category": "Budgets & Payments",
@@ -217,7 +226,7 @@
   },
   {
     "id": "faq-25",
-    "number": 25,
+    "number": 26,
     "audience": "parents",
     "section": "D. Club Budgets, Payments & Installments",
     "category": "Budgets & Payments",
@@ -225,17 +234,17 @@
     "answer": "For national qualifiers (such as Show-Me or MEQ), tournaments mandate that out-of-town teams book lodging through their contracted travel housing partner. Booking outside this system can result in team disqualification."
   },
   {
-    "id": "faq-26",
-    "number": 26,
+    "id": "faq-parent-26",
+    "number": 27,
     "audience": "parents",
     "section": "E. Facility, Practice Logistics & Training Services",
     "category": "Facility & Training",
-    "question": "Where does Summit Volleyball Club practice?",
-    "answer": "All indoor team practices and clinics take place at <strong>TM Fieldhouse</strong>, located at 1550 SE Hamblen Rd, Lee's Summit, MO 64081."
+    "question": "Where does Summit Volleyball Club practice, and how do I get directions?",
+    "answer": "All practices and club clinics take place at TM Fieldhouse. Get turn-by-turn driving directions via <a href=\"https://maps.google.com/?q=TM+Fieldhouse+1550+SE+Hamblen+Rd+Lees+Summit+MO+64081\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">Google Maps: 1550 SE Hamblen Rd, Lee's Summit, MO 64081</a>."
   },
   {
     "id": "faq-27",
-    "number": 27,
+    "number": 28,
     "audience": "parents",
     "section": "E. Facility, Practice Logistics & Training Services",
     "category": "Facility & Training",
@@ -244,7 +253,7 @@
   },
   {
     "id": "faq-28",
-    "number": 28,
+    "number": 29,
     "audience": "parents",
     "section": "E. Facility, Practice Logistics & Training Services",
     "category": "Facility & Training",
@@ -253,7 +262,7 @@
   },
   {
     "id": "faq-29",
-    "number": 29,
+    "number": 30,
     "audience": "parents",
     "section": "E. Facility, Practice Logistics & Training Services",
     "category": "Facility & Training",
@@ -262,7 +271,7 @@
   },
   {
     "id": "faq-30",
-    "number": 30,
+    "number": 31,
     "audience": "parents",
     "section": "E. Facility, Practice Logistics & Training Services",
     "category": "Facility & Training",
@@ -271,7 +280,7 @@
   },
   {
     "id": "faq-31",
-    "number": 31,
+    "number": 32,
     "audience": "parents",
     "section": "E. Facility, Practice Logistics & Training Services",
     "category": "Facility & Training",
@@ -280,7 +289,7 @@
   },
   {
     "id": "faq-32",
-    "number": 32,
+    "number": 33,
     "audience": "parents",
     "section": "E. Facility, Practice Logistics & Training Services",
     "category": "Facility & Training",
@@ -289,7 +298,7 @@
   },
   {
     "id": "faq-33",
-    "number": 33,
+    "number": 34,
     "audience": "parents",
     "section": "E. Facility, Practice Logistics & Training Services",
     "category": "Facility & Training",
@@ -298,7 +307,7 @@
   },
   {
     "id": "faq-34",
-    "number": 34,
+    "number": 35,
     "audience": "parents",
     "section": "E. Facility, Practice Logistics & Training Services",
     "category": "Facility & Training",
@@ -307,7 +316,7 @@
   },
   {
     "id": "faq-35",
-    "number": 35,
+    "number": 36,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
@@ -315,17 +324,17 @@
     "answer": "Boys’ seasons run from late fall through late February (culminating in Region Bids). Girls’ competitive seasons run from January through late March / mid-April (culminating in HOA Regionals and National Qualifiers)."
   },
   {
-    "id": "faq-36",
-    "number": 36,
+    "id": "faq-parent-36",
+    "number": 37,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
-    "question": "Where do I find tournament pool play schedules and playing waves?",
-    "answer": "Most events use <strong>Advanced Event Systems (AES)</strong> (<code>results.advancedeventsystems.com</code>). Tournament directors publish pool assignments, court numbers, and morning/afternoon wave schedules the Wednesday or Thursday prior to tournament weekend."
+    "question": "Where do I track live tournament match times, court numbers, and pool results?",
+    "answer": "Live pools, playing waves, and court assignments are published on <a href=\"https://results.advancedeventsystems.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">Advanced Event Systems (AES)</a>. Search by tournament name or filter by Summit Volleyball Club."
   },
   {
     "id": "faq-37",
-    "number": 37,
+    "number": 38,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
@@ -334,7 +343,7 @@
   },
   {
     "id": "faq-38",
-    "number": 38,
+    "number": 39,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
@@ -343,7 +352,7 @@
   },
   {
     "id": "faq-39",
-    "number": 39,
+    "number": 40,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
@@ -351,8 +360,17 @@
     "answer": "<ul class=\"list-disc pl-5 space-y-1.5\"><li><strong>Developmental Teams (11U–13U):</strong> Coaches emphasize core fundamental growth and balanced opportunities across pool play.</li><li><strong>Competitive / National Teams (14U–18U):</strong> Playing time is earned, merit-based, and situational. Practice attendance, work ethic, attitude, and tactical match matchups dictate playing time during bracket play.</li></ul>"
   },
   {
+    "id": "faq-parent-40",
+    "number": 41,
+    "audience": "parents",
+    "section": "F. Tournaments, Game Days & Team Rules",
+    "category": "Tournaments & Game Days",
+    "question": "How do parents submit weekend scheduling conflicts for tournaments?",
+    "answer": "Families report known multi-day and weekend conflicts using the <a href=\"https://erinsummitvc.omailroute.net/x/d?c=52782444&l=4f385d7f-6f1b-4662-a259-5c68330e39e4&r=4a10e485-1c50-4f7e-99ff-52d5b041100d\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">SVC Tournament Availability Form</a>. If your player has zero conflicts for the upcoming season, you do not need to submit the form."
+  },
+  {
     "id": "faq-40",
-    "number": 40,
+    "number": 42,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
@@ -361,7 +379,7 @@
   },
   {
     "id": "faq-41",
-    "number": 41,
+    "number": 43,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
@@ -370,7 +388,7 @@
   },
   {
     "id": "faq-42",
-    "number": 42,
+    "number": 44,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
@@ -379,7 +397,7 @@
   },
   {
     "id": "faq-43",
-    "number": 43,
+    "number": 45,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
@@ -388,7 +406,7 @@
   },
   {
     "id": "faq-44",
-    "number": 44,
+    "number": 46,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
@@ -397,7 +415,7 @@
   },
   {
     "id": "faq-45",
-    "number": 45,
+    "number": 47,
     "audience": "parents",
     "section": "F. Tournaments, Game Days & Team Rules",
     "category": "Tournaments & Game Days",
@@ -405,13 +423,13 @@
     "answer": "Direct all administrative, billing, and membership verification questions directly to Club Director Erin Wilson at <a href=\"mailto:erinsummitvc@gmail.com\" class=\"text-brand-blue-dark font-bold underline\">erinsummitvc@gmail.com</a>."
   },
   {
-    "id": "faq-46",
+    "id": "faq-coach-46",
     "number": 46,
     "audience": "coaches",
     "section": "A. Credentials, Compliance & Background Screening",
-    "category": "Registrations & Compliance",
-    "question": "What coaching membership do I register for in SportsEngine?",
-    "answer": "Use the SVC Coach Assignment link to select the <strong>26-27 HOA-F2 Adult Coach of Juniors</strong> membership ($60 total: $46 HOA regional fee + $14 background screen)."
+    "category": "Coaching Logistics",
+    "question": "What coaching membership do I register for, and where is the link?",
+    "answer": "Register directly on the <a href=\"https://memberships.sportsengine.com/org/heart-of-america-volleyball/affiliation/summit-volleyball-club-svc\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">SVC Coach SportsEngine Affiliation Link</a>. Select coach participation and check out with the <strong>26-27 HOA-F2 Adult Coach of Juniors</strong> membership ($60 total, reimbursed on your first stipend check in November)."
   },
   {
     "id": "faq-47",
@@ -441,13 +459,13 @@
     "answer": "Only first-time USAV coaches are required to take the USAV IMPACT course. It is an online, self-paced certification located in your USAV Academy account that never expires once completed."
   },
   {
-    "id": "faq-50",
+    "id": "faq-coach-50",
     "number": 50,
     "audience": "coaches",
     "section": "A. Credentials, Compliance & Background Screening",
-    "category": "Officiating Clinics",
-    "question": "Why must I upload my photo to HOA Online before taking the score & ref clinic?",
-    "answer": "Heart of America prints hard-copy coaching credential badges automatically overnight once your coursework is completed. If you do not have a headshot uploaded to your HOA profile beforehand, your badge cannot print, requiring a manual reissue fee."
+    "category": "Coaching Logistics",
+    "question": "Where do coaches upload their headshot for HOA credential badges?",
+    "answer": "Upload your headshot directly to your account at <a href=\"https://hoavb.org/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">Heart of America Volleyball (hoavb.org)</a> BEFORE completing your score and ref clinic modules so your physical badge will print."
   },
   {
     "id": "faq-51",
@@ -468,13 +486,13 @@
     "answer": "You must wear your laminated <strong>HOA Coach Credential Badge</strong> with your printed photo, USAV member ID, and current year validation on a lanyard at all times during HOA and USAV tournaments."
   },
   {
-    "id": "faq-53",
+    "id": "faq-coach-53",
     "number": 53,
     "audience": "coaches",
     "section": "B. Practice Scheduling, Drills & Roving Staff Support",
-    "category": "Facility & Training",
-    "question": "How do head coaches request practice days and court times?",
-    "answer": "Submit your top choices via the SVC Practice Days/Time Request Google Form in mid-August. You must select at least one practice slot on a Tuesday or Wednesday to align with the Speed and Agility training schedule."
+    "category": "Coaching Logistics",
+    "question": "How do head coaches submit practice day and court requests?",
+    "answer": "Submit your preferred court days and time slots on the <a href=\"https://forms.gle/nYyyaXusE6VfrYtv8\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">SVC Practice Days/Time Request Form</a>. At least one of your practice days must fall on Tuesday or Wednesday to coordinate with Speed &amp; Agility training."
   },
   {
     "id": "faq-54",
@@ -555,7 +573,7 @@
     "section": "C. Tournaments, AES Entries & Scheduling",
     "category": "Tournaments & Game Days",
     "question": "How do I find our team's AES Event ID and match schedule?",
-    "answer": "Log into AES (<code>advancedeventsystems.com</code>), navigate to the host event, and search by your official team code (e.g., <code>G13SUMMT1HA</code>). Save the public URL to share with parents."
+    "answer": "Log into AES (<a href=\"https://advancedeventsystems.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">advancedeventsystems.com</a>), navigate to the host event, and search by your official team code (e.g., <code>G13SUMMT1HA</code>). Save the public URL to share with parents."
   },
   {
     "id": "faq-63",
@@ -585,13 +603,13 @@
     "answer": "When your team serves as the officiating work crew, the head coach must review the final paper or electronic scoresheet, verify set scores and substitutions, and ensure both team captains and officials have signed before delivering it to Championship Desk."
   },
   {
-    "id": "faq-66",
+    "id": "faq-coach-66",
     "number": 66,
     "audience": "coaches",
     "section": "D. Team Management, Uniforms & Apparel",
-    "category": "Uniforms & Apparel",
-    "question": "How do coaches order their club apparel?",
-    "answer": "Each coach chooses three club-provided apparel pieces by filling out the Coach Apparel Google Form by late September."
+    "category": "Coaching Logistics",
+    "question": "Where do coaches select their 3 club-provided apparel items?",
+    "answer": "Submit your sizes and selections via the <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdGWjG9KMx_sM05AzaLMPWquzi_Dm--3Hb4aipqy4QdHs_UoA/viewform?usp=header\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-blue-dark underline font-bold hover:text-athletic-black\">SVC Coach Apparel Google Form</a> before the late September cut-off."
   },
   {
     "id": "faq-67",
