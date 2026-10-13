@@ -5,6 +5,7 @@ const currentPath = Astro.url.pathname;
 
 const infoLinks = [
   { label: 'About Us', href: '/about', icon: 'info', desc: 'Our mission, leadership & whole-athlete care' },
+  { label: 'Recruiting & Commits', href: '/recruiting', icon: 'school', desc: 'College coach inquiries & SVC commitments' },
   { label: 'Qualifications', href: '/qualifications', icon: 'emoji_events', desc: 'USAV National Bids & regional titles' },
   { label: 'Coaching Staff', href: '/coaches', icon: 'groups', desc: 'Meet our 20+ USAV & JVA coaches' },
   { label: 'Sponsorships', href: '/sponsorships', icon: 'handshake', desc: 'Partner with Summit Volleyball Club' },
@@ -193,6 +194,18 @@ const isTeamsActive = currentPath.startsWith('/teams');
         Camps &amp; Clinics
       </a>
 
+      <a
+        href="/recruiting"
+        class:list={[
+          'py-2 transition-colors duration-150',
+          currentPath.startsWith('/recruiting')
+            ? 'text-athletic-black border-b-2 border-brand-blue'
+            : 'text-slate-700 hover:text-brand-blue-dark',
+        ]}
+      >
+        Recruiting
+      </a>
+
       <!-- INFORMATION Dropdown -->
       <div class="relative group">
         <button
@@ -261,6 +274,7 @@ const isTeamsActive = currentPath.startsWith('/teams');
       <a href="/teams" class="block px-3 py-2 rounded text-athletic-black hover:bg-powder-50">Teams (Girls &amp; Boys)</a>
       <a href="/tryouts" class="block px-3 py-2 rounded text-athletic-black hover:bg-powder-50">Tryouts</a>
       <a href="/camps-clinics" class="block px-3 py-2 rounded text-athletic-black hover:bg-powder-50">Camps &amp; Clinics</a>
+      <a href="/recruiting" class="block px-3 py-2 rounded text-athletic-black hover:bg-powder-50">Recruiting &amp; Commits</a>
     </div>
 
     <!-- Mobile Teams Quick List -->

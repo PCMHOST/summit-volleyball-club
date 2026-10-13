@@ -1,0 +1,614 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clubInfo, collegeCommits, girlsTeams, boysTeams } from '../data/clubData';
+
+const recruitingPillars = [
+  {
+    icon: 'videocam',
+    title: 'Hudl Match Film & Highlight Reels',
+    desc: 'Every SVC team records tournament matches courtside and uploads film to Hudl. Athletes have full access to clip rallies, build positional highlight reels, and share verified game tape directly with college coaches.',
+  },
+  {
+    icon: 'emoji_events',
+    title: 'National Qualifier & Showcase Exposure',
+    desc: 'Our National and Black/Blue teams compete at premier recruiting events including the Mideast Qualifier (MEQ), Show-Me Qualifier, HOA Regionals, and USAV Girls & Boys Junior National Championships.',
+  },
+  {
+    icon: 'handshake',
+    title: 'Personalized College Fit & Advocacy',
+    desc: 'Our directors and former collegiate players/coaches advocate directly for SVC student-athletes—connecting with college recruiting coordinators across NCAA Division I, II, III, NAIA, and NJCAA programs.',
+  },
+  {
+    icon: 'fitness_center',
+    title: 'Collegiate-Ready Whole Athlete Training',
+    desc: 'With integrated Speed & Agility conditioning, sports nutrition, injury prevention, and courtside sport psychology, SVC athletes arrive on college campuses prepared for the physical and mental demands of college volleyball.',
+  },
+];
+
+const recruitingTimeline = [
+  {
+    year: '14U – 15U • Freshman Year',
+    title: 'Foundation, Film & Target List',
+    items: [
+      'Establish strong high school GPA and core academic coursework.',
+      'Activate team Hudl profile and begin collecting early tournament match clips.',
+      'Build an initial list of 20–30 target colleges across NCAA, NAIA, and NJCAA levels.',
+      'Attend collegiate summer camps to experience campus environments.',
+    ],
+  },
+  {
+    year: '16U • Sophomore Year',
+    title: 'Outreach, Showcases & Eligibility',
+    items: [
+      'Register with the NCAA Eligibility Center and/or NAIA Eligibility Center.',
+      'Create a 2–3 minute positional skills & match highlight reel on Hudl.',
+      'Send introductory emails with your SVC qualifier schedule and court numbers prior to MEQ and Show-Me.',
+      'Review target schools with Club Director Erin Wilson and your SVC head coach.',
+    ],
+  },
+  {
+    year: '17U • Junior Year',
+    title: 'Direct Coach Communication & Visits',
+    items: [
+      'Consistent communication with interested college coaching staffs (June 15th NCAA D1/D2 contact window opens following Sophomore year).',
+      'Invite college recruiters courtside at National Qualifiers and TM Fieldhouse practices.',
+      'Schedule unofficial and official campus visits and overnight team stays.',
+      'Compare academic scholarships, athletic aid packages, and roster fit.',
+    ],
+  },
+  {
+    year: '18U • Senior Year',
+    title: 'Official Offers, Commitments & Signing Day',
+    items: [
+      'Finalize campus visits, financial aid packages, and admissions applications.',
+      'Celebrate your collegiate commitment at SVC Signing Day with teammates and family.',
+      'Compete at peak speed in 18U qualifiers and USAV Nationals to prepare for your freshman collegiate fall season.',
+    ],
+  },
+];
+
+const upperSchoolTeams = [
+  ...girlsTeams.filter((t) => ['15U', '16U', '17U', '18U'].includes(t.age)),
+  ...boysTeams,
+];
+
+const commitmentsDirectory = [
+  {
+    name: 'Grace Lowry',
+    college: 'Stevenson University',
+    mascot: 'Mustangs',
+    level: 'NCAA Division III',
+    location: 'Owings Mills, MD',
+    status: 'Committed / Collegiate Roster',
+    image: '/images/commits/grace-lowry.jpg',
+  },
+  {
+    name: 'Keastin Kitchen',
+    college: 'Sterling College',
+    mascot: 'Warriors',
+    level: 'NAIA • KCAC',
+    location: 'Sterling, KS',
+    status: 'Committed / Collegiate Roster',
+    image: '/images/commits/keastin-kitchen.jpg',
+  },
+  {
+    name: 'Haley Anderson',
+    college: 'Southeast Community College',
+    mascot: 'Bobcats',
+    level: 'NJCAA Region IX',
+    location: 'Beatrice, NE',
+    status: 'Committed / Collegiate Roster',
+    image: '/images/commits/haley-anderson.jpg',
+  },
+  {
+    name: 'Payton Kemp',
+    college: 'Labette Community College',
+    mascot: 'Cardinals',
+    level: 'NJCAA • KJCCC',
+    location: 'Parsons, KS',
+    status: 'Committed / Collegiate Roster',
+    image: '/images/commits/payton-kemp.jpg',
+  },
+  {
+    name: 'Micah Reid',
+    college: "Collegiate Men's Volleyball",
+    mascot: 'Next Level Commit',
+    level: "Men's Collegiate Program",
+    location: 'Midwest Collegiate',
+    status: 'Committed / Collegiate Roster',
+    image: '/images/commits/micah-reid.jpg',
+  },
+];
+---
+
+<BaseLayout title="Collegiate Recruiting & Commitments | Summit Volleyball Club">
+  <!-- ========================================================= -->
+  <!-- HERO BANNER                                               -->
+  <!-- ========================================================= -->
+  <section class="relative bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-blue/15 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-blue/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-5 md:px-12 relative z-10 space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider">
+        <span class="material-symbols-outlined text-sm">school</span>
+        <span>NEXT-LEVEL ATHLETE PATHWAY • NCAA, NAIA &amp; NJCAA RECRUITING</span>
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight leading-none">
+        COLLEGIATE <span class="text-brand-blue">RECRUITING</span> &amp; COMMITMENTS
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed">
+        Our mission at Summit Volleyball Club is to help every student-athlete who aspires to compete at the collegiate level find the right academic, athletic, and cultural fit. Through courtside Hudl match film, national qualifier exposure, and direct coaching advocacy, we guide families and college recruiters every step of the way.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-3 pt-2">
+        <a
+          href="#college-coaches"
+          class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-5 py-3 rounded-sm font-display text-lg font-black uppercase tracking-wider transition-colors"
+        >
+          <span class="material-symbols-outlined text-base">sports</span>
+          <span>For College Coaches</span>
+        </a>
+        <a
+          href="#commitments"
+          class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-3 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
+        >
+          <span class="material-symbols-outlined text-base">workspace_premium</span>
+          <span>Commitments &amp; Signings</span>
+        </a>
+        <a
+          href="#pathway"
+          class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-3 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
+        >
+          <span class="material-symbols-outlined text-base">timeline</span>
+          <span>Recruiting Roadmap</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SECTION 1: FOR COLLEGE COACHES — INQUIRE ABOUT AN ATHLETE -->
+  <!-- ========================================================= -->
+  <section id="college-coaches" class="scroll-mt-24 py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <!-- Left 7 Cols: College Coach Resources & Direct Contacts -->
+      <div class="lg:col-span-7 space-y-6">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            COLLEGE RECRUITERS &amp; SCOUTING PORTAL
+          </span>
+          <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-athletic-black leading-none mt-1">
+            INFORMATION FOR <span class="text-brand-blue-dark">COLLEGE COACHES</span>
+          </h2>
+        </div>
+
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          Thank you for recruiting Summit Volleyball Club student-athletes! Whether you are scouting our Girls (`15U–18U`) or Boys (`16U–18U`) teams at a National Qualifier or evaluating prospects via film, our leadership staff provides prompt, transparent information on our athletes' measurables, academic transcripts, character, and Hudl video links.
+        </p>
+
+        <!-- How College Coaches Can Evaluate SVC Athletes -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+          <div class="bg-surface-subtle border border-slate-200 p-5 rounded-sm space-y-2">
+            <div class="flex items-center gap-2 text-athletic-black font-display text-xl font-black uppercase">
+              <span class="material-symbols-outlined text-brand-blue-dark">play_circle</span>
+              <span>Hudl Film &amp; Rallies</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Request full unedited match film or positional highlight reels for any rostered SVC athlete via our team Hudl accounts.
+            </p>
+          </div>
+
+          <div class="bg-surface-subtle border border-slate-200 p-5 rounded-sm space-y-2">
+            <div class="flex items-center gap-2 text-athletic-black font-display text-xl font-black uppercase">
+              <span class="material-symbols-outlined text-brand-blue-dark">stadium</span>
+              <span>Visit TM Fieldhouse</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              College coaches are welcome at <strong>TM Fieldhouse</strong> (1550 SE Hamblen Rd, Lee's Summit, MO) to evaluate practices in person.
+            </p>
+          </div>
+
+          <div class="bg-surface-subtle border border-slate-200 p-5 rounded-sm space-y-2">
+            <div class="flex items-center gap-2 text-athletic-black font-display text-xl font-black uppercase">
+              <span class="material-symbols-outlined text-brand-blue-dark">calendar_month</span>
+              <span>AES Court Schedules</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Find our live pool play waves and court assignments on <a href="https://results.advancedeventsystems.com/" target="_blank" rel="noopener noreferrer" class="text-brand-blue-dark underline font-bold">Advanced Event Systems (AES)</a>.
+            </p>
+          </div>
+
+          <div class="bg-surface-subtle border border-slate-200 p-5 rounded-sm space-y-2">
+            <div class="flex items-center gap-2 text-athletic-black font-display text-xl font-black uppercase">
+              <span class="material-symbols-outlined text-brand-blue-dark">verified_user</span>
+              <span>Direct Coach References</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Speak directly with Club Director Erin Wilson or our head coaches regarding player coachability, work ethic, and family culture.
+            </p>
+          </div>
+        </div>
+
+        <!-- Recruiting Contacts Strip -->
+        <div class="bg-athletic-black text-white p-6 rounded-sm border-l-4 border-brand-blue space-y-4">
+          <div class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">
+            DIRECT RECRUITING CONTACTS
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="flex items-center gap-3.5">
+              <img
+                src="/images/coaches/erin.png"
+                alt="Erin Wilson - Club Director"
+                class="w-14 h-14 rounded-sm object-cover object-top border border-brand-blue"
+              />
+              <div>
+                <div class="font-display text-xl font-black uppercase text-white">Erin Wilson</div>
+                <div class="text-xs font-bold text-brand-blue uppercase">Club Director &amp; Recruiting Lead</div>
+                <div class="text-xs text-slate-300 mt-1">
+                  <a href="tel:8166008383" class="hover:text-brand-blue underline">{clubInfo.phone}</a> • <a href={`mailto:${clubInfo.email}`} class="hover:text-brand-blue underline">{clubInfo.email}</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5">
+              <img
+                src="/images/coaches/hannah.png"
+                alt="Hannah Berry - Assistant Club Director"
+                class="w-14 h-14 rounded-sm object-cover object-top border border-brand-blue"
+              />
+              <div>
+                <div class="font-display text-xl font-black uppercase text-white">Hannah Berry</div>
+                <div class="text-xs font-bold text-brand-blue uppercase">Assistant Club Director</div>
+                <div class="text-xs text-slate-300 mt-1">
+                  National Qualifier &amp; Athlete Development
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links to Recruiting-Age Team Rosters (15U–18U) -->
+        <div class="space-y-2.5 pt-2">
+          <div class="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+            QUICK ACCESS: HIGH SCHOOL RECRUITING ROSTERS (15U–18U GIRLS &amp; BOYS)
+          </div>
+          <div class="flex flex-wrap gap-2">
+            {upperSchoolTeams.map((t) => (
+              <a
+                href={`/teams/${t.slug}`}
+                class="px-3 py-1.5 rounded-xs bg-surface-subtle hover:bg-athletic-black hover:text-brand-blue text-athletic-black border border-slate-200 font-display text-sm font-black uppercase tracking-wider transition-colors"
+              >
+                {t.name} ({t.tab})
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Right 5 Cols: College Coach Athlete Inquiry Form -->
+      <div class="lg:col-span-5 bg-surface-subtle border-2 border-slate-200 rounded-sm p-6 sm:p-8 shadow-sm space-y-5">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-blue-dark">
+            COLLEGE COACH INQUIRY FORM
+          </span>
+          <h3 class="font-display text-3xl font-black uppercase text-athletic-black mt-0.5">
+            INQUIRE ABOUT AN SVC ATHLETE
+          </h3>
+          <p class="text-xs text-slate-600 mt-1">
+            College coaches: submit an athlete inquiry below to request Hudl film, academic transcripts, practice times, or contact details.
+          </p>
+        </div>
+
+        <form
+          id="coach-inquiry-form"
+          class="space-y-4"
+        >
+          <div>
+            <label class="block text-xs font-extrabold uppercase tracking-wider text-athletic-black mb-1">
+              College Coach Name *
+            </label>
+            <input
+              type="text"
+              name="coachName"
+              required
+              placeholder="e.g. Coach Jane Smith"
+              class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-sm text-sm text-athletic-black focus:outline-none focus:border-brand-blue"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-extrabold uppercase tracking-wider text-athletic-black mb-1">
+                University / College *
+              </label>
+              <input
+                type="text"
+                name="college"
+                required
+                placeholder="University Name"
+                class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-sm text-sm text-athletic-black focus:outline-none focus:border-brand-blue"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-extrabold uppercase tracking-wider text-athletic-black mb-1">
+                Division / Conference
+              </label>
+              <input
+                type="text"
+                name="division"
+                placeholder="NCAA D1/D2/D3, NAIA, NJCAA"
+                class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-sm text-sm text-athletic-black focus:outline-none focus:border-brand-blue"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-extrabold uppercase tracking-wider text-athletic-black mb-1">
+                Coach Email *
+              </label>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="coach@university.edu"
+                class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-sm text-sm text-athletic-black focus:outline-none focus:border-brand-blue"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-extrabold uppercase tracking-wider text-athletic-black mb-1">
+                Cell / Office Phone
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="(555) 555-5555"
+                class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-sm text-sm text-athletic-black focus:outline-none focus:border-brand-blue"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-extrabold uppercase tracking-wider text-athletic-black mb-1">
+              Athlete Name, Jersey #, or Grad Year / Position of Interest *
+            </label>
+            <input
+              type="text"
+              name="athlete"
+              required
+              placeholder="e.g. 2027 Libero / 17 National #4"
+              class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-sm text-sm text-athletic-black focus:outline-none focus:border-brand-blue"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-extrabold uppercase tracking-wider text-athletic-black mb-1">
+              Information Requested (Hudl Film, GPA, Schedule, Coach Eval)
+            </label>
+            <textarea
+              name="message"
+              rows="3"
+              placeholder="Let us know how we can assist with your recruiting evaluation..."
+              class="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-sm text-sm text-athletic-black focus:outline-none focus:border-brand-blue"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full inline-flex items-center justify-center gap-2 bg-athletic-black hover:bg-athletic-charcoal text-white py-3 px-6 rounded-sm font-display text-xl font-black uppercase tracking-wider transition-colors cursor-pointer"
+          >
+            <span>SEND ATHLETE INQUIRY</span>
+            <span class="material-symbols-outlined text-base text-brand-blue">send</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SECTION 2: THE SVC RECRUITING PATHWAY & ROADMAP           -->
+  <!-- ========================================================= -->
+  <section id="pathway" class="scroll-mt-24 py-16 bg-surface-subtle border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 space-y-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="font-display text-xl uppercase tracking-wider font-extrabold text-brand-blue-dark">
+            PREPARING STUDENT-ATHLETES FOR COLLEGE VOLLEYBALL
+          </span>
+          <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-athletic-black leading-none mt-1">
+            THE SUMMIT <span class="text-brand-blue-dark">RECRUITING ADVANTAGE</span>
+          </h2>
+        </div>
+        <p class="text-sm text-slate-600 max-w-md">
+          We combine high-level national tournament exposure with hands-on video and recruiting support for both girls and boys student-athletes.
+        </p>
+      </div>
+
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {recruitingPillars.map((pillar) => (
+          <div class="bg-white border border-slate-200 p-6 rounded-sm shadow-xs space-y-3">
+            <div class="w-11 h-11 rounded-sm bg-athletic-black text-brand-blue flex items-center justify-center">
+              <span class="material-symbols-outlined text-2xl">{pillar.icon}</span>
+            </div>
+            <h3 class="font-display text-2xl font-black uppercase text-athletic-black leading-tight">
+              {pillar.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              {pillar.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <!-- 4-Year High School Recruiting Roadmap -->
+      <div class="space-y-6 pt-4">
+        <div class="border-b border-slate-200 pb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <h3 class="font-display text-3xl font-black uppercase text-athletic-black">
+            YEAR-BY-YEAR COLLEGIATE RECRUITING CHECKLIST
+          </h3>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark">
+            14U THROUGH 18U STUDENT-ATHLETE ROADMAP
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {recruitingTimeline.map((step, idx) => (
+            <div class="bg-white border-t-4 border-t-brand-blue border border-slate-200 p-6 rounded-sm shadow-xs flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-xs bg-athletic-black text-brand-blue font-display text-xs font-black uppercase tracking-wider">
+                  STEP 0{idx + 1} • {step.year}
+                </div>
+                <h4 class="font-display text-2xl font-black uppercase text-athletic-black leading-tight">
+                  {step.title}
+                </h4>
+                <ul class="space-y-2 text-xs text-slate-600 leading-relaxed list-disc pl-4">
+                  {step.items.map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- SECTION 3: COMMITMENTS, SIGNINGS & WHERE THEY PLAY NOW    -->
+  <!-- ========================================================= -->
+  <section id="commitments" class="scroll-mt-24 py-16 bg-athletic-black text-white">
+    <div class="max-w-7xl mx-auto px-5 md:px-12 space-y-12">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/15 pb-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-2">
+            <span class="material-symbols-outlined text-sm">workspace_premium</span>
+            <span>SUMMIT ALUMNI IN COLLEGE VOLLEYBALL</span>
+          </div>
+          <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight leading-none text-white">
+            SVC COLLEGE <span class="text-brand-blue">COMMITMENTS &amp; SIGNINGS</span>
+          </h2>
+        </div>
+        <p class="text-sm text-slate-300 max-w-md">
+          Celebrating Summit Volleyball Club student-athletes who have signed to continue their academic and volleyball careers at the collegiate level.
+        </p>
+      </div>
+
+      <!-- Featured Signing Graphics Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        {collegeCommits.map((commit) => (
+          <div class="bg-athletic-charcoal border border-white/15 rounded-sm overflow-hidden flex flex-col justify-between group hover:border-brand-blue transition-all">
+            <div class="aspect-4/5 bg-black overflow-hidden relative">
+              <img
+                src={commit.image}
+                alt={`${commit.name} - ${commit.college}`}
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="absolute top-2.5 left-2.5">
+                <span class="bg-brand-blue text-athletic-black px-2 py-0.5 rounded-xs font-display text-[11px] font-black uppercase tracking-wider">
+                  {commit.division}
+                </span>
+              </div>
+            </div>
+            <div class="p-4 space-y-1 border-t border-white/10">
+              <h3 class="font-display text-2xl font-black uppercase text-white leading-none">
+                {commit.name}
+              </h3>
+              <div class="text-xs font-extrabold uppercase tracking-wider text-brand-blue">
+                {commit.college}
+              </div>
+              <div class="text-[11px] text-slate-400">
+                {commit.mascot}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Where They Are Playing Now — Commitments Directory Table -->
+      <div class="bg-athletic-charcoal border border-white/15 rounded-sm overflow-hidden shadow-xl">
+        <div class="p-5 sm:p-6 bg-black/50 border-b border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <div class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">
+              COLLEGIATE ROSTER TRACKER
+            </div>
+            <h3 class="font-display text-2xl sm:text-3xl font-black uppercase text-white">
+              COMMITMENTS &amp; WHERE THEY ARE PLAYING NOW
+            </h3>
+          </div>
+          <a
+            href="/contact"
+            class="text-xs font-extrabold uppercase tracking-wider text-brand-blue hover:text-white underline"
+          >
+            Submit an Alumni or Signing Update →
+          </a>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-white/10 bg-black/30 text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
+                <th class="py-3.5 px-5">Athlete</th>
+                <th class="py-3.5 px-5">College / University</th>
+                <th class="py-3.5 px-5">Team / Mascot</th>
+                <th class="py-3.5 px-5">Division / Conference</th>
+                <th class="py-3.5 px-5">Location</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/10 text-sm">
+              {commitmentsDirectory.map((item) => (
+                <tr class="hover:bg-white/5 transition-colors">
+                  <td class="py-4 px-5 font-display text-xl font-black uppercase text-white">
+                    {item.name}
+                  </td>
+                  <td class="py-4 px-5 font-bold text-brand-blue">
+                    {item.college}
+                  </td>
+                  <td class="py-4 px-5 text-slate-300 font-medium">
+                    {item.mascot}
+                  </td>
+                  <td class="py-4 px-5">
+                    <span class="px-2.5 py-0.5 rounded-xs bg-white/10 text-white text-xs font-bold uppercase tracking-wider">
+                      {item.level}
+                    </span>
+                  </td>
+                  <td class="py-4 px-5 text-slate-400">
+                    {item.location}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('coach-inquiry-form') as HTMLFormElement | null;
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const coachName = data.get('coachName') || '';
+    const college = data.get('college') || '';
+    const division = data.get('division') || '';
+    const email = data.get('email') || '';
+    const phone = data.get('phone') || '';
+    const athlete = data.get('athlete') || '';
+    const message = data.get('message') || '';
+
+    const subject = encodeURIComponent(`SVC Recruiting Inquiry: ${athlete} (${college})`);
+    const body = encodeURIComponent(
+      `College Coach Name: ${coachName}\nUniversity / College: ${college} (${division})\nCoach Email: ${email}\nCoach Phone: ${phone}\nAthlete / Position of Interest: ${athlete}\n\nInquiry Details:\n${message}`
+    );
+    window.location.href = `mailto:summitvbclub@gmail.com?subject=${subject}&body=${body}`;
+  });
+</script>
