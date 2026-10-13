@@ -2,6 +2,43 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { clubInfo, collegeCommits, girlsTeams, boysTeams } from '../data/clubData';
 
+interface Commit {
+  name: string;
+  gradYear: number;
+  position: string;
+  highSchool?: string;
+  college: string;
+  division: string;
+  conference?: string;
+  note?: string;
+}
+
+const commits: Commit[] = [
+  { name: "Keastin Kitchen", gradYear: 2026, position: "OH", highSchool: "Santa Fe High School", college: "Sterling College", division: "NAIA", conference: "KCAC" },
+  { name: "Micah Reid", gradYear: 2026, position: "SVC 18 Boys", highSchool: "KC Metro", college: "Central Christian College of Kansas", division: "NAIA", conference: "Sooner Athletic Conference (SAC)" },
+  { name: "Grace Lowry", gradYear: 2026, position: "Pin / All-Around", highSchool: "KC Metro", college: "Stevenson University", division: "NCAA DIII", conference: "MAC Commonwealth" },
+  { name: "Haley Anderson", gradYear: 2026, position: "All-Around", highSchool: "KC Metro", college: "Southeast Community College", division: "NJCAA DII", conference: "Region IX" },
+  { name: "Payton Kemp", gradYear: 2026, position: "All-Around", highSchool: "KC Metro", college: "Labette Community College", division: "NJCAA DII", conference: "KJCCC" },
+  { name: "Kiernan O'Boyle", gradYear: 2025, position: "MB", highSchool: "KC Metro", college: "Missouri S&T", division: "NCAA DII", conference: "GLVC" },
+  { name: "Madison Wright", gradYear: 2024, position: "S / DS", highSchool: "KC Metro", college: "Kansas City Kansas CC", division: "NJCAA DII", conference: "KJCCC" },
+  { name: "Presley Laffoon", gradYear: 2023, position: "OH", highSchool: "Lee's Summit North", college: "UT Tyler", division: "NCAA DII", conference: "Lone Star" },
+  { name: "Leana Samyn", gradYear: 2023, position: "OH", highSchool: "Lee's Summit North", college: "Baker University", division: "NAIA", conference: "Heart of America" },
+  { name: "Rylee Martin", gradYear: 2022, position: "S", highSchool: "Lee's Summit", college: "Graceland University", division: "NAIA", conference: "Heart of America" },
+  { name: "Alexis Palmer", gradYear: 2021, position: "L / DS", highSchool: "Summit Christian Academy", college: "MidAmerica Nazarene University", division: "NAIA", conference: "Heart of America" },
+  { name: "Kassidy Berry", gradYear: 2020, position: "MB / RS", highSchool: "Blue Springs South", college: "Metropolitan Community College", division: "NJCAA DII", conference: "Region XVI" },
+  { name: "Taylor Brungardt", gradYear: 2019, position: "OH", highSchool: "Raymore-Peculiar", college: "Central Methodist University", division: "NAIA", conference: "Heart of America" },
+  { name: "Camryn Miller", gradYear: 2018, position: "MB", highSchool: "Lee's Summit West", college: "Park University", division: "NAIA", conference: "Heart of America" }
+];
+
+// Group and sort descending by year
+const groupedCommits = commits.reduce((acc, commit) => {
+  if (!acc[commit.gradYear]) acc[commit.gradYear] = [];
+  acc[commit.gradYear].push(commit);
+  return acc;
+}, {} as Record<number, Commit[]>);
+
+const sortedYears = Object.keys(groupedCommits).map(Number).sort((a, b) => b - a);
+
 const recruitingPillars = [
   {
     icon: 'videocam',
@@ -71,54 +108,6 @@ const upperSchoolTeams = [
   ...girlsTeams.filter((t) => ['15U', '16U', '17U', '18U'].includes(t.age)),
   ...boysTeams,
 ];
-
-const commitmentsDirectory = [
-  {
-    name: 'Grace Lowry',
-    college: 'Stevenson University',
-    mascot: 'Mustangs',
-    level: 'NCAA Division III',
-    location: 'Owings Mills, MD',
-    status: 'Committed / Collegiate Roster',
-    image: '/images/commits/grace-lowry.jpg',
-  },
-  {
-    name: 'Keastin Kitchen',
-    college: 'Sterling College',
-    mascot: 'Warriors',
-    level: 'NAIA • KCAC',
-    location: 'Sterling, KS',
-    status: 'Committed / Collegiate Roster',
-    image: '/images/commits/keastin-kitchen.jpg',
-  },
-  {
-    name: 'Haley Anderson',
-    college: 'Southeast Community College',
-    mascot: 'Bobcats',
-    level: 'NJCAA Region IX',
-    location: 'Beatrice, NE',
-    status: 'Committed / Collegiate Roster',
-    image: '/images/commits/haley-anderson.jpg',
-  },
-  {
-    name: 'Payton Kemp',
-    college: 'Labette Community College',
-    mascot: 'Cardinals',
-    level: 'NJCAA • KJCCC',
-    location: 'Parsons, KS',
-    status: 'Committed / Collegiate Roster',
-    image: '/images/commits/payton-kemp.jpg',
-  },
-  {
-    name: 'Micah Reid',
-    college: "Collegiate Men's Volleyball",
-    mascot: 'Next Level Commit',
-    level: "Men's Collegiate Program",
-    location: 'Midwest Collegiate',
-    status: 'Committed / Collegiate Roster',
-    image: '/images/commits/micah-reid.jpg',
-  },
-];
 ---
 
 <BaseLayout title="Collegiate Recruiting & Commitments | Summit Volleyball Club">
@@ -161,11 +150,11 @@ const commitmentsDirectory = [
           <span>Commitments &amp; Signings</span>
         </a>
         <a
-          href="#pathway"
+          href="#alumni-commits"
           class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-athletic-black text-white border border-white/25 px-5 py-3 rounded-sm font-display text-lg font-bold uppercase tracking-wider transition-colors"
         >
-          <span class="material-symbols-outlined text-base">timeline</span>
-          <span>Recruiting Roadmap</span>
+          <span class="material-symbols-outlined text-base">history_edu</span>
+          <span>Alumni Tracker by Year</span>
         </a>
       </div>
     </div>
@@ -188,7 +177,7 @@ const commitmentsDirectory = [
         </div>
 
         <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-          Thank you for recruiting Summit Volleyball Club student-athletes! Whether you are scouting our Girls (`15U–18U`) or Boys (`16U–18U`) teams at a National Qualifier or evaluating prospects via film, our leadership staff provides prompt, transparent information on our athletes' measurables, academic transcripts, character, and Hudl video links.
+          Thank you for recruiting Summit Volleyball Club student-athletes! Whether you are scouting our Girls (15U–18U) or Boys (16U–18U) teams at a National Qualifier or evaluating prospects via film, our leadership staff provides prompt, transparent information on our athletes' measurables, academic transcripts, character, and Hudl video links.
         </p>
 
         <!-- How College Coaches Can Evaluate SVC Athletes -->
@@ -304,10 +293,7 @@ const commitmentsDirectory = [
           </p>
         </div>
 
-        <form
-          id="coach-inquiry-form"
-          class="space-y-4"
-        >
+        <form id="coach-inquiry-form" class="space-y-4">
           <div>
             <label class="block text-xs font-extrabold uppercase tracking-wider text-athletic-black mb-1">
               College Coach Name *
@@ -481,7 +467,7 @@ const commitmentsDirectory = [
   </section>
 
   <!-- ========================================================= -->
-  <!-- SECTION 3: COMMITMENTS, SIGNINGS & WHERE THEY PLAY NOW    -->
+  <!-- SECTION 3: COMMITMENTS, SIGNINGS & ALUMNI TRACKER BY YEAR -->
   <!-- ========================================================= -->
   <section id="commitments" class="scroll-mt-24 py-16 bg-athletic-black text-white">
     <div class="max-w-7xl mx-auto px-5 md:px-12 space-y-12">
@@ -532,60 +518,65 @@ const commitmentsDirectory = [
         ))}
       </div>
 
-      <!-- Where They Are Playing Now — Commitments Directory Table -->
-      <div class="bg-athletic-charcoal border border-white/15 rounded-sm overflow-hidden shadow-xl">
-        <div class="p-5 sm:p-6 bg-black/50 border-b border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <div>
-            <div class="text-xs font-extrabold uppercase tracking-widest text-brand-blue">
-              COLLEGIATE ROSTER TRACKER
-            </div>
-            <h3 class="font-display text-2xl sm:text-3xl font-black uppercase text-white">
-              COMMITMENTS &amp; WHERE THEY ARE PLAYING NOW
-            </h3>
-          </div>
-          <a
-            href="/contact"
-            class="text-xs font-extrabold uppercase tracking-wider text-brand-blue hover:text-white underline"
-          >
-            Submit an Alumni or Signing Update →
-          </a>
+      <!-- Alumni Tracker: Collegiate Commitments by Year (2026 down to 2018) -->
+      <div class="pt-10 border-t border-slate-800" id="alumni-commits">
+        <div class="mb-10 text-center sm:text-left">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-blue bg-brand-blue/15 border border-brand-blue/40 px-3 py-1 rounded-full">
+            Alumni Tracker
+          </span>
+          <h3 class="font-display text-4xl sm:text-5xl font-black uppercase text-white mt-3">
+            COLLEGIATE COMMITMENTS BY YEAR
+          </h3>
+          <p class="text-slate-400 text-sm mt-1">
+            SVC alumni competing across NCAA, NAIA, and NJCAA programs.
+          </p>
         </div>
 
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse">
-            <thead>
-              <tr class="border-b border-white/10 bg-black/30 text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
-                <th class="py-3.5 px-5">Athlete</th>
-                <th class="py-3.5 px-5">College / University</th>
-                <th class="py-3.5 px-5">Team / Mascot</th>
-                <th class="py-3.5 px-5">Division / Conference</th>
-                <th class="py-3.5 px-5">Location</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-white/10 text-sm">
-              {commitmentsDirectory.map((item) => (
-                <tr class="hover:bg-white/5 transition-colors">
-                  <td class="py-4 px-5 font-display text-xl font-black uppercase text-white">
-                    {item.name}
-                  </td>
-                  <td class="py-4 px-5 font-bold text-brand-blue">
-                    {item.college}
-                  </td>
-                  <td class="py-4 px-5 text-slate-300 font-medium">
-                    {item.mascot}
-                  </td>
-                  <td class="py-4 px-5">
-                    <span class="px-2.5 py-0.5 rounded-xs bg-white/10 text-white text-xs font-bold uppercase tracking-wider">
-                      {item.level}
-                    </span>
-                  </td>
-                  <td class="py-4 px-5 text-slate-400">
-                    {item.location}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div class="space-y-10">
+          {sortedYears.map((year) => (
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="font-display text-3xl font-black uppercase text-white tracking-tight">
+                  Class of {year}
+                </span>
+                <div class="h-px bg-slate-800 flex-1"></div>
+                <span class="text-xs font-semibold text-brand-blue uppercase tracking-wider">
+                  {groupedCommits[year].length} Signee{groupedCommits[year].length > 1 ? 's' : ''}
+                </span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {groupedCommits[year].map((athlete) => (
+                  <div class="bg-athletic-charcoal border border-slate-800 rounded-sm p-5 flex flex-col justify-between hover:border-brand-blue/60 transition">
+                    <div>
+                      <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold bg-brand-blue/15 text-brand-blue border border-brand-blue/40 px-2.5 py-0.5 rounded-xs uppercase">
+                          {athlete.division}
+                        </span>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-slate-300">
+                          {athlete.position}
+                        </span>
+                      </div>
+                      <h4 class="font-display text-2xl font-black uppercase text-white">
+                        {athlete.name}
+                      </h4>
+                      <p class="text-brand-blue font-bold text-sm mt-0.5">
+                        {athlete.college}
+                      </p>
+                      {athlete.conference && (
+                        <p class="text-xs text-slate-400 mt-0.5">{athlete.conference}</p>
+                      )}
+                    </div>
+                    {athlete.highSchool && (
+                      <div class="mt-4 pt-3 border-t border-slate-800/80 text-xs text-slate-400">
+                        High School: <span class="text-slate-200 font-semibold">{athlete.highSchool}</span>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

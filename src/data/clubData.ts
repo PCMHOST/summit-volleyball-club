@@ -430,9 +430,9 @@ export const collegeCommits = [
   },
   {
     name: "Micah Reid",
-    college: "Collegiate Men's Volleyball",
-    mascot: "Next Level Athlete",
-    division: "Collegiate Commit",
+    college: "Central Christian College of Kansas",
+    mascot: "SVC 18 Boys • Men's Volleyball",
+    division: "NAIA Commit",
     image: "/images/commits/micah-reid.jpg"
   },
   {
