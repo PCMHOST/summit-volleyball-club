@@ -47,15 +47,6 @@ const isTeamsActive = currentPath.startsWith('/teams');
         <span class="w-1.5 h-1.5 rounded-full bg-brand-blue animate-pulse"></span>
         USAV HOA &amp; JVA REGISTERED
       </span>
-      <div class="hidden lg:flex items-center gap-2 text-slate-400">
-        <a aria-label="Facebook" class="hover:text-white transition-colors" href={clubInfo.socials.facebook} target="_blank" rel="noopener noreferrer">FB</a>
-        <span>/</span>
-        <a aria-label="Instagram" class="hover:text-white transition-colors" href={clubInfo.socials.instagram} target="_blank" rel="noopener noreferrer">IG</a>
-      </div>
-      <a class="inline-flex items-center gap-1 text-slate-300 hover:text-brand-blue font-bold transition-colors" href={clubInfo.swagStoreUrl} target="_blank" rel="noopener noreferrer">
-        <span class="material-symbols-outlined text-xs text-brand-blue">shopping_bag</span>
-        SWAG STORE
-      </a>
       <a class="inline-flex items-center gap-1 text-brand-blue hover:text-white font-bold transition-colors" href={clubInfo.sportsEngineClubUrl} target="_blank" rel="noopener noreferrer">
         <span class="material-symbols-outlined text-xs">login</span>
         SPORTSENGINE PORTAL
@@ -254,9 +245,11 @@ const isTeamsActive = currentPath.startsWith('/teams');
     <div class="flex items-center gap-3">
       <a
         class="hidden sm:inline-flex items-center gap-2 bg-athletic-black hover:bg-athletic-charcoal text-white px-4 py-2.5 rounded-sm font-sans text-xs tracking-wider uppercase font-extrabold shadow hover:shadow-md border border-black transition-all active:translate-y-px"
-        href="/tryouts"
+        href={clubInfo.venmoPaymentUrl}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <span>REGISTER FOR TRYOUTS</span>
+        <span>Make a Payment</span>
         <span class="material-symbols-outlined text-sm text-brand-blue">arrow_forward</span>
       </a>
 
@@ -313,10 +306,12 @@ const isTeamsActive = currentPath.startsWith('/teams');
 
     <div class="pt-3 border-t border-slate-100">
       <a
-        href="/tryouts"
+        href={clubInfo.venmoPaymentUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         class="flex items-center justify-center gap-2 w-full bg-athletic-black text-white font-sans font-extrabold text-xs uppercase tracking-wider py-3 rounded-sm shadow"
       >
-        <span>REGISTER FOR TRYOUTS</span>
+        <span>Make a Payment</span>
         <span class="material-symbols-outlined text-sm text-brand-blue">arrow_forward</span>
       </a>
     </div>

@@ -6,6 +6,7 @@ export const clubInfo = {
   phone: "816-600-8383",
   email: "summitvbclub@gmail.com",
   venmo: "@SUMMITVC",
+  venmoPaymentUrl: "https://venmo.com/SummitVC?txn=pay&amount=300&note=Deposit%20for%20[Enter%20Player%20Name]",
   facility: {
     name: "TM Fieldhouse",
     address: "1550 SE Hamblen Rd",
