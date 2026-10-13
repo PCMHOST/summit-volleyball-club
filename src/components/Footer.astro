@@ -6,24 +6,73 @@ const fbEmbedSrc = `https://www.facebook.com/plugins/page.php?href=${fbPageUrl}&
 const igEmbedSrc = 'https://www.instagram.com/svc_kcmetro/embed';
 ---
 
-<!-- Sleek Black / Dark Charcoal Footer with FB & IG Widgets -->
+<!-- Sleek Black / Dark Charcoal Footer: FB -> IG -> Quick Navigation -> Location & Contact -->
 <footer class="bg-athletic-black text-white border-t-4 border-brand-blue">
   <div class="max-w-7xl mx-auto px-5 md:px-12 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-start">
-    <!-- Col 1 (3 cols): Logo + Quick Navigation -->
-    <div class="lg:col-span-3 space-y-5">
-      <a href="/" class="inline-flex items-center group" aria-label="Summit Volleyball Club Home">
-        <img
-          alt="Summit Volleyball Club Kansas City Logo"
-          class="h-14 w-auto rounded-md object-contain bg-white p-1 border border-brand-blue/40 shadow-sm group-hover:scale-105 transition-transform"
-          src="/images/logo.png"
-        />
-      </a>
+    <!-- Col 1 (3 cols): Facebook Feed Widget / Embed -->
+    <div class="lg:col-span-3 space-y-3">
+      <div class="flex items-center justify-between border-b border-white/10 pb-1.5">
+        <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold">
+          FACEBOOK FEED
+        </h3>
+        <a
+          href={clubInfo.socials.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[11px] font-bold uppercase tracking-wider text-slate-300 hover:text-brand-blue"
+        >
+          Follow FB →
+        </a>
+      </div>
+      <div class="bg-white rounded-sm overflow-hidden border border-white/15 shadow-md h-[320px] flex justify-center">
+        <iframe
+          title="Summit Volleyball Club Facebook Page Feed"
+          src={fbEmbedSrc}
+          width="340"
+          height="320"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
 
+    <!-- Col 2 (3 cols): Instagram Feed Widget / Embed -->
+    <div class="lg:col-span-3 space-y-3">
+      <div class="flex items-center justify-between border-b border-white/10 pb-1.5">
+        <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold">
+          INSTAGRAM @SVC_KCMETRO
+        </h3>
+        <a
+          href={clubInfo.socials.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[11px] font-bold uppercase tracking-wider text-slate-300 hover:text-brand-blue"
+        >
+          Follow IG →
+        </a>
+      </div>
+      <div class="bg-white rounded-sm overflow-hidden border border-white/15 shadow-md h-[320px]">
+        <iframe
+          title="Summit Volleyball Club Instagram Embed"
+          src={igEmbedSrc}
+          class="w-full h-full border-0"
+          scrolling="no"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Col 3 (3 cols): Quick Navigation -->
+    <div class="lg:col-span-3 space-y-5">
       <div class="space-y-3">
         <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold border-b border-white/10 pb-1.5">
           QUICK NAVIGATION
         </h3>
-        <ul class="space-y-2 text-xs font-bold uppercase tracking-wider text-slate-300">
+        <ul class="space-y-2.5 text-xs font-bold uppercase tracking-wider text-slate-300">
           <li><a class="hover:text-brand-blue transition-colors" href="/">Home</a></li>
           <li><a class="hover:text-brand-blue transition-colors" href="/teams">Teams</a></li>
           <li><a class="hover:text-brand-blue transition-colors" href="/tryouts">Tryouts</a></li>
@@ -32,9 +81,17 @@ const igEmbedSrc = 'https://www.instagram.com/svc_kcmetro/embed';
           <li><a class="hover:text-brand-blue transition-colors" href="/contact">Contact Us</a></li>
         </ul>
       </div>
+
+      <a href="/" class="inline-flex items-center group pt-2" aria-label="Summit Volleyball Club Home">
+        <img
+          alt="Summit Volleyball Club Kansas City Logo"
+          class="h-14 w-auto rounded-md object-contain bg-white p-1 border border-brand-blue/40 shadow-sm group-hover:scale-105 transition-transform"
+          src="/images/logo.png"
+        />
+      </a>
     </div>
 
-    <!-- Col 2 (3 cols): Location & Contact -->
+    <!-- Col 4 (3 cols): Location & Contact -->
     <div class="lg:col-span-3 space-y-3">
       <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold border-b border-white/10 pb-1.5">
         LOCATION &amp; CONTACT
@@ -68,63 +125,6 @@ const igEmbedSrc = 'https://www.instagram.com/svc_kcmetro/embed';
             JVA AFFILIATE
           </span>
         </div>
-      </div>
-    </div>
-
-    <!-- Col 3 (3 cols): Facebook Feed Widget / Embed -->
-    <div class="lg:col-span-3 space-y-3">
-      <div class="flex items-center justify-between border-b border-white/10 pb-1.5">
-        <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold">
-          FACEBOOK FEED
-        </h3>
-        <a
-          href={clubInfo.socials.facebook}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-[11px] font-bold uppercase tracking-wider text-slate-300 hover:text-brand-blue"
-        >
-          Follow FB →
-        </a>
-      </div>
-      <div class="bg-white rounded-sm overflow-hidden border border-white/15 shadow-md h-[320px] flex justify-center">
-        <iframe
-          title="Summit Volleyball Club Facebook Page Feed"
-          src={fbEmbedSrc}
-          width="340"
-          height="320"
-          style="border:none;overflow:hidden"
-          scrolling="no"
-          frameborder="0"
-          allowfullscreen="true"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          loading="lazy"
-        ></iframe>
-      </div>
-    </div>
-
-    <!-- Col 4 (3 cols): Instagram Feed Widget / Embed -->
-    <div class="lg:col-span-3 space-y-3">
-      <div class="flex items-center justify-between border-b border-white/10 pb-1.5">
-        <h3 class="font-display text-xl uppercase tracking-wide text-brand-blue font-bold">
-          INSTAGRAM @SVC_KCMETRO
-        </h3>
-        <a
-          href={clubInfo.socials.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-[11px] font-bold uppercase tracking-wider text-slate-300 hover:text-brand-blue"
-        >
-          Follow IG →
-        </a>
-      </div>
-      <div class="bg-white rounded-sm overflow-hidden border border-white/15 shadow-md h-[320px]">
-        <iframe
-          title="Summit Volleyball Club Instagram Embed"
-          src={igEmbedSrc}
-          class="w-full h-full border-0"
-          scrolling="no"
-          loading="lazy"
-        ></iframe>
       </div>
     </div>
   </div>
