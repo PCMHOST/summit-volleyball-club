@@ -16,7 +16,7 @@ export const clubInfo = {
   },
   mailingAddress: "7905 SE 5th St, Blue Springs, MO 64014",
   tryoutRegistrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfUNaTqVxhk7yQLBdO3HCRh1X1dzkw2sLQnhuG6wUltKhcKsg/viewform?usp=header",
-  swagStoreUrl: "https://summitvolleyball26.itemorder.com/",
+  swagStoreUrl: "https://shop.game-one.com/nw/nw3/summit-volleyball-club",
   sportsEngineClubUrl: "https://memberships.sportsengine.com/org/heart-of-america-volleyball/affiliation/summit-volleyball-club-svc",
   sportsEngineCoachUrl: "https://memberships.sportsengine.com/org/heart-of-america-volleyball/affiliation/summit-volleyball-club-svc",
   sportsEngineLoginUrl: "https://my.sportsengine.com/",
