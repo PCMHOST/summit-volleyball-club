@@ -1,55 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { clubInfo } from '../data/clubData';
+import { swagProducts } from '../data/swagProducts';
 
-const merchItems = [
-  {
-    name: "SVC Official Quarter-Zip Pullover",
-    category: "ATHLETE & COACH WARMUP",
-    colors: "Athletic Heather / Powder Blue / Black",
-    badge: "FAN FAVORITE",
-    description: "Embroidered Summit Volleyball Club crest on premium moisture-wicking fleece quarter-zip worn by SVC coaches and athletes."
-  },
-  {
-    name: "Summit Volleyball Heavyweight Hoodie",
-    category: "FAN & PARENT APPAREL",
-    colors: "Athletic Black or Carolina Blue",
-    badge: "BEST SELLER",
-    description: "Ultra-soft fleece hoodie featuring bold 'SUMMIT VOLLEYBALL CLUB' chest print in official Carolina Blue and white."
-  },
-  {
-    name: "SVC Practice & Open Gym Performance Tee",
-    category: "COURT TRAINING GEAR",
-    colors: "Jet Black / Powder Blue / Crisp White",
-    badge: "ON-COURT ESSENTIAL",
-    description: "Lightweight breathable athletic poly-blend tee engineered for high-intensity practices and summer open gyms at TM Fieldhouse."
-  },
-  {
-    name: "SVC Tournament Travel Backpack & Duffel",
-    category: "TRAVEL GEAR",
-    colors: "Black with Powder Blue Embroidery",
-    badge: "CUSTOM NUMBER OPTION",
-    description: "Ventilated shoe compartment, padded laptop sleeve, dual water bottle pockets, and optional custom player name/number embroidery."
-  },
-  {
-    name: "SVC Proud Volleyball Parent Crewneck",
-    category: "SPECTATOR COLLECTION",
-    colors: "Charcoal / Powder Blue / White",
-    badge: "SPECTATOR GEAR",
-    description: "Represent Summit from the mezzanine at TM Fieldhouse and national qualifiers across the Midwest."
-  },
-  {
-    name: "SVC Structured Trucker & Dad Hat",
-    category: "HEADWEAR",
-    colors: "Black / White / Carolina Blue",
-    badge: "ONE SIZE FITS MOST",
-    description: "3D embroidered SVC monogram logo on breathable mesh-back or relaxed cotton twill cap."
-  }
-];
+const categories = ['All', 'Tees', 'Hoodies & Sweatshirts', 'Polos & Pullovers'] as const;
 ---
 
-<BaseLayout title="SVC Swag Store & Official Apparel | Summit Volleyball Club">
-  <!-- Hero with Background & Official Apparel Photos -->
+<BaseLayout title="SVC Swag Store & Custom Apparel | Summit Volleyball Club">
+  <!-- Hero with Background & Game One Custom Apparel Header -->
   <section class="bg-athletic-black text-white py-14 md:py-20 border-b-4 border-brand-blue relative overflow-hidden">
     <div class="absolute inset-0 z-0">
       <img
@@ -63,15 +21,15 @@ const merchItems = [
       <div class="lg:col-span-7">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-blue/20 text-brand-blue border border-brand-blue/40 text-xs font-extrabold uppercase tracking-wider mb-3">
           <span class="material-symbols-outlined text-sm">checkroom</span>
-          <span>OFFICIAL CAROLINA BLUE, BLACK &amp; WHITE CLUB GEAR</span>
+          <span>OFFICIAL CUSTOM APPAREL • POWERED BY GAME ONE</span>
         </div>
         <h1 class="font-display text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
           SVC <span class="text-brand-blue">SWAG STORE</span>
         </h1>
         <p class="text-base sm:text-lg text-slate-200 max-w-2xl mt-3">
-          Rep Summit Volleyball Club on the court and in the stands with official player warm-ups, hoodies, practice tees, and parent fan gear.
+          Rep Summit Volleyball Club on the court and in the stands. Browse official player warm-ups, hoodies, performance tees, polos, and fan gear custom printed and embroidered for SVC.
         </p>
-        <div class="pt-6">
+        <div class="pt-6 flex flex-wrap items-center gap-4">
           <a
             href={clubInfo.swagStoreUrl}
             target="_blank"
@@ -79,36 +37,40 @@ const merchItems = [
             class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-7 py-3.5 rounded-sm font-display text-xl uppercase font-black tracking-wider shadow-lg transition-colors"
           >
             <span class="material-symbols-outlined text-lg">shopping_cart</span>
-            <span>SHOP OFFICIAL SVC SWAG STORE</span>
+            <span>SHOP ON GAME ONE</span>
             <span class="material-symbols-outlined text-base">open_in_new</span>
           </a>
+          <span class="text-xs uppercase tracking-wider text-slate-300 font-bold flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            24 Items Available Now
+          </span>
         </div>
       </div>
       <div class="lg:col-span-5 grid grid-cols-2 gap-3">
-        <div class="rounded-sm overflow-hidden border-2 border-brand-blue/50 shadow-xl aspect-4/3 bg-black">
-          <img src="/images/gallery/action-1.jpg" alt="SVC Carolina Blue Jerseys" class="w-full h-full object-cover" />
+        <div class="rounded-sm overflow-hidden border-2 border-brand-blue/50 shadow-xl aspect-4/3 bg-slate-900 flex items-center justify-center p-3">
+          <img src="/images/swag/product-2.png" alt="Gildan Men's Hoodie in Columbia Blue" class="w-full h-full object-contain drop-shadow-md" />
         </div>
-        <div class="rounded-sm overflow-hidden border-2 border-white/20 shadow-xl aspect-4/3 bg-black">
-          <img src="/images/gallery/action-2.jpg" alt="SVC Black & Blue Team Gear" class="w-full h-full object-cover" />
+        <div class="rounded-sm overflow-hidden border-2 border-white/20 shadow-xl aspect-4/3 bg-slate-900 flex items-center justify-center p-3">
+          <img src="/images/swag/product-15.png" alt="Lane Seven Men's Premium Hoodie in Black" class="w-full h-full object-contain drop-shadow-md" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- Team Store Window Callout -->
-  <section class="py-10 bg-powder-50 border-b border-brand-blue/30">
+  <section class="py-8 bg-powder-50 border-b border-brand-blue/30">
     <div class="max-w-7xl mx-auto px-5 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-start sm:items-center gap-4">
         <div class="w-12 h-12 rounded-sm bg-athletic-black text-brand-blue flex items-center justify-center shrink-0">
-          <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+          <span class="material-symbols-outlined text-2xl">local_mall</span>
         </div>
         <div>
-          <div class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark">OFFICIAL ONLINE TEAM STORE</div>
+          <div class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark">OFFICIAL TEAM APPAREL PORTAL</div>
           <h2 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
-            2026–2027 SPIRIT WEAR &amp; FAN APPAREL PORTAL
+            SUMMIT VOLLEYBALL CLUB APPAREL SHOP
           </h2>
           <p class="text-xs sm:text-sm text-slate-600">
-            Order official Summit Volleyball Club hoodies, quarter-zips, practice tees, and fan gear directly through our online storefront.
+            Order directly through our Game One storefront. Select your favorite styles, sizes, and colors delivered right to your home or gym.
           </p>
         </div>
       </div>
@@ -118,57 +80,175 @@ const merchItems = [
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 bg-athletic-black hover:bg-athletic-charcoal text-white px-6 py-3 rounded-sm font-display text-lg uppercase font-black tracking-wider shrink-0 transition-colors"
       >
-        <span>OPEN ONLINE SWAG STORE</span>
+        <span>OPEN FULL STORE</span>
         <span class="material-symbols-outlined text-base text-brand-blue">open_in_new</span>
       </a>
     </div>
   </section>
 
-  <!-- Featured Gear Grid -->
-  <section class="py-14 bg-white">
+  <!-- Product Catalog Section with Category Filters -->
+  <section class="py-14 bg-white" id="catalog">
     <div class="max-w-7xl mx-auto px-5 md:px-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {merchItems.map((item) => (
-          <div class="bg-surface-subtle border border-slate-200 rounded-sm overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-lg transition-all">
+      <!-- Category Filter Bar -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-200 pb-5 mb-8">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-brand-blue-dark">CATALOG SELECTION</span>
+          <h3 class="font-display text-2xl sm:text-3xl font-black uppercase text-athletic-black">
+            FEATURED CLUB GEAR ({swagProducts.length} ITEMS)
+          </h3>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2" id="filter-container">
+          <button
+            type="button"
+            data-filter="All"
+            class="filter-btn active px-4 py-2 rounded-sm text-xs font-extrabold uppercase tracking-wider transition-all bg-athletic-black text-white shadow-xs"
+          >
+            All Items ({swagProducts.length})
+          </button>
+          <button
+            type="button"
+            data-filter="Tees"
+            class="filter-btn px-4 py-2 rounded-sm text-xs font-extrabold uppercase tracking-wider transition-all bg-slate-100 text-slate-700 hover:bg-slate-200"
+          >
+            Tees ({swagProducts.filter((p) => p.category === 'Tees').length})
+          </button>
+          <button
+            type="button"
+            data-filter="Hoodies & Sweatshirts"
+            class="filter-btn px-4 py-2 rounded-sm text-xs font-extrabold uppercase tracking-wider transition-all bg-slate-100 text-slate-700 hover:bg-slate-200"
+          >
+            Hoodies ({swagProducts.filter((p) => p.category === 'Hoodies & Sweatshirts').length})
+          </button>
+          <button
+            type="button"
+            data-filter="Polos & Pullovers"
+            class="filter-btn px-4 py-2 rounded-sm text-xs font-extrabold uppercase tracking-wider transition-all bg-slate-100 text-slate-700 hover:bg-slate-200"
+          >
+            Polos &amp; 1/4 Zips ({swagProducts.filter((p) => p.category === 'Polos & Pullovers').length})
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="product-grid">
+        {swagProducts.map((item) => (
+          <div
+            class="product-card group bg-surface-subtle border border-slate-200 rounded-sm overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-xl hover:border-brand-blue/50 transition-all duration-200"
+            data-category={item.category}
+          >
             <div>
-              <div class="h-48 bg-athletic-black relative flex flex-col items-center justify-center p-6 text-center overflow-hidden">
-                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-blue/25 via-transparent to-transparent"></div>
-                <img src="/images/logo.png" alt="SVC Crest" class="w-20 h-20 object-contain rounded bg-white p-1.5 shadow-md relative z-10 mb-2" />
-                <span class="relative z-10 text-[11px] font-extrabold uppercase tracking-widest text-brand-blue">
-                  {item.category}
+              <!-- Product Image Box -->
+              <div class="relative aspect-square bg-slate-100 flex items-center justify-center p-4 overflow-hidden border-b border-slate-200/80 group-hover:bg-slate-50 transition-colors">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  loading="lazy"
+                  class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-sm"
+                />
+                <!-- Badges -->
+                <span class="absolute top-2.5 left-2.5 bg-brand-blue text-athletic-black px-2 py-0.5 rounded-sm font-display text-[11px] font-black uppercase tracking-wider shadow-xs">
+                  {item.category === 'Hoodies & Sweatshirts' ? 'Hoodie' : item.category === 'Polos & Pullovers' ? 'Polo / 1/4 Zip' : 'T-Shirt'}
                 </span>
-                <span class="absolute top-3 left-3 bg-brand-blue text-athletic-black px-2 py-0.5 rounded-sm font-display text-xs font-black uppercase tracking-wider">
-                  {item.badge}
+                <span class="absolute top-2.5 right-2.5 bg-athletic-black text-white px-2 py-0.5 rounded-sm font-display text-xs font-black tracking-wide shadow-xs">
+                  {item.price}
                 </span>
               </div>
 
-              <div class="p-6 space-y-2.5">
-                <h3 class="font-display text-2xl uppercase font-black text-athletic-black leading-tight">
+              <!-- Product Details -->
+              <div class="p-4 space-y-2">
+                <h4 class="font-display text-lg font-black uppercase text-athletic-black group-hover:text-brand-blue-dark transition-colors line-clamp-2 leading-tight">
                   {item.name}
-                </h3>
-                <div class="text-xs font-bold text-brand-blue-dark uppercase tracking-wider">
-                  Colors: {item.colors}
+                </h4>
+                <div class="flex items-center gap-1.5 text-xs text-slate-600 font-semibold">
+                  <span class="w-2.5 h-2.5 rounded-full inline-block border border-slate-400"
+                    style={{
+                      backgroundColor:
+                        item.color.toLowerCase().includes('blue') ? '#7BA4DB' :
+                        item.color.toLowerCase().includes('dark gray') ? '#4B4F54' :
+                        item.color.toLowerCase().includes('light gray') ? '#C0C0C0' :
+                        item.color.toLowerCase().includes('black') ? '#111111' : '#FFFFFF'
+                    }}
+                  ></span>
+                  <span>{item.color}</span>
                 </div>
-                <p class="text-xs text-slate-600 leading-relaxed">
-                  {item.description}
-                </p>
               </div>
             </div>
 
-            <div class="px-6 py-4 border-t border-slate-200/80 flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-500">Youth &amp; Adult Sizes</span>
+            <!-- Footer / Action -->
+            <div class="p-4 pt-0">
               <a
-                href={clubInfo.swagStoreUrl}
+                href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-xs font-extrabold uppercase tracking-wider text-athletic-black hover:text-brand-blue-dark underline"
+                class="w-full inline-flex items-center justify-center gap-1.5 bg-athletic-black hover:bg-brand-blue hover:text-athletic-black text-white px-3.5 py-2.5 rounded-sm font-display text-sm font-black uppercase tracking-wider transition-colors shadow-xs"
               >
-                Shop Online Store →
+                <span>Customize &amp; Buy</span>
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
               </a>
             </div>
           </div>
         ))}
       </div>
+
+      <!-- Bottom Store Wide Banner -->
+      <div class="mt-14 bg-athletic-black text-white rounded-sm p-8 sm:p-10 border-2 border-brand-blue relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 max-w-2xl">
+          <span class="text-brand-blue font-display text-xs font-black uppercase tracking-widest">
+            MORE STYLES &amp; ACCESSORIES
+          </span>
+          <h3 class="font-display text-3xl sm:text-4xl font-black uppercase tracking-tight">
+            LOOKING FOR DRINKWARE, BAGS &amp; OUTERWEAR?
+          </h3>
+          <p class="text-sm text-slate-300">
+            Game One carries additional official SVC accessories including custom backpacks, insulated drinkware, stadium gear, and button-downs.
+          </p>
+        </div>
+        <a
+          href={clubInfo.swagStoreUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-athletic-black px-7 py-3.5 rounded-sm font-display text-xl uppercase font-black tracking-wider shadow-lg shrink-0 transition-colors"
+        >
+          <span>VIEW FULL CATALOG</span>
+          <span class="material-symbols-outlined text-lg">arrow_forward</span>
+        </a>
+      </div>
     </div>
   </section>
+
+  <!-- Client-side Category Filter Script -->
+  <script>
+    function setupCategoryFilters() {
+      const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+      const cards = document.querySelectorAll<HTMLElement>('.product-card');
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          // Update active button styles
+          buttons.forEach((b) => {
+            b.classList.remove('bg-athletic-black', 'text-white', 'shadow-xs');
+            b.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          btn.classList.remove('bg-slate-100', 'text-slate-700');
+          btn.classList.add('bg-athletic-black', 'text-white', 'shadow-xs');
+
+          // Filter product cards
+          cards.forEach((card) => {
+            const cardCategory = card.getAttribute('data-category');
+            if (filter === 'All' || cardCategory === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', setupCategoryFilters);
+  </script>
 </BaseLayout>
